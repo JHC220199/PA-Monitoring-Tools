@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRS Parliamentary Questions Monitor</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.header {
+  background: #1F4E79;
+  color: white;
+  padding: 18px 24px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.header-title h1 { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+.header-title p  { font-size: 12px; opacity: 0.7; margin-top: 2px; }
+.header-meta     { font-size: 12px; opacity: 0.75; text-align: right; line-height: 1.6; }
+.header-meta strong { opacity: 1; }
+
+/* ── Main container ── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+}
+
+/* ── Stats row ── */
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stat {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 20px;
+  min-width: 120px;
+}
+.stat-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; }
+.stat-value { font-size: 26px; font-weight: 700; color: #1F4E79; margin-top: 3px; line-height: 1; }
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: 9px 12px 9px 34px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #1F4E79;
+  box-shadow: 0 0 0 3px rgba(31,78,121,0.12);
+}
+.btn {
+  padding: 9px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.btn:hover { background: #f1f5f9; border-color: #94a3b8; }
+.btn-primary {
+  background: #1F4E79;
+  color: white;
+  border-color: #1F4E79;
+}
+.btn-primary:hover { background: #1a4268; }
+
+/* ── Card wrapper ── */
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+/* ── Week tabs ── */
+.week-tabs-wrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-x: auto;
+  padding: 0 4px;
+  scrollbar-width: none;
+}
+.week-tabs-wrap::-webkit-scrollbar { display: none; }
+.week-tab {
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #64748b;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+.week-tab:hover { color: #1e293b; }
+.week-tab.active {
+  color: #1F4E79;
+  font-weight: 600;
+  border-bottom-color: #1F4E79;
+}
+.week-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 5px;
+  background: #f1f5f9;
+  color: #64748b;
+  transition: all 0.15s;
+}
+.week-tab.active .week-badge {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* ── Column headers ── */
+.col-headers {
+  display: grid;
+  grid-template-columns: 210px 58px 1fr 128px 128px;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #94a3b8;
+}
+
+/* ── Question rows ── */
+.q-row {
+  display: grid;
+  grid-template-columns: 210px 58px 1fr 128px 128px;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.1s;
+  align-items: start;
+}
+.q-row:last-child { border-bottom: none; }
+.q-row:hover { background: #f8fafc; }
+.q-row.group-start { border-top: 2px solid #e0ecf7; }
+.q-row.group-start:first-child { border-top: none; }
+
+.q-member { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4; }
+.q-member-blank { color: transparent; user-select: none; font-size: 11px; }
+
+.q-text {
+  font-size: 12px;
+  color: #374151;
+  line-height: 1.6;
+}
+.q-text-inner {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.q-text-inner.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+.q-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #1F4E79;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.q-row:hover .q-link,
+.q-text-inner.expanded ~ .q-link { opacity: 1; }
+.q-link:hover { text-decoration: underline; }
+
+.q-date, .q-due {
+  font-size: 12px;
+  color: #64748b;
+  padding-top: 1px;
+}
+
+/* ── Party badges ── */
+.party {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.p-Lab   { background: #fee2e2; color: #991b1b; }
+.p-Con   { background: #dbeafe; color: #1e40af; }
+.p-LD    { background: #fef3c7; color: #92400e; }
+.p-SNP   { background: #fef9c3; color: #854d0e; }
+.p-CB    { background: #f1f5f9; color: #475569; }
+.p-Ind   { background: #f1f5f9; color: #475569; }
+.p-PC    { background: #d1fae5; color: #065f46; }
+.p-Ref   { background: #ffedd5; color: #9a3412; }
+.p-Green { background: #dcfce7; color: #14532d; }
+.p-DUP   { background: #fdf4ff; color: #7e22ce; }
+.p-other { background: #f1f5f9; color: #475569; }
+
+/* ── Empty / loading states ── */
+.state-msg {
+  padding: 48px 24px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+.state-msg svg { display: block; margin: 0 auto 12px; opacity: 0.4; }
+
+/* ── Footer ── */
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+  .col-headers { display: none; }
+  .q-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .q-date, .q-due { display: inline; margin-right: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-title">
+      <h1>Parliamentary Questions Monitor</h1>
+      <p>Private Residential Rented Sector — both Houses</p>
+    </div>
+    <div class="header-meta" id="header-meta">Loading&hellip;</div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="stats" id="stats"></div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+      </svg>
+      <input type="text" class="search-input" id="search" placeholder="Search questions, members or keywords…">
+    </div>
+    <button class="btn btn-primary" id="download-btn">⬇ Download Excel</button>
+  </div>
+
+  <div class="card" id="main-card">
+    <div class="state-msg">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      Loading questions…
+    </div>
+  </div>
+
+  <div class="footer">
+    Data sourced from the <a href="https://questions-statements.parliament.uk/" target="_blank" rel="noopener" style="color:#1F4E79">UK Parliament Written Questions API</a>.
+    Filtered for private residential rented sector relevance.
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+let allData   = { questions: [] };
+let weeks     = [];
+let activeWk  = null;
+let query     = '';
+
+// ── Bootstrap ────────────────────────────────────────────────────────────────
+fetch('data.json')
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => { allData = data; boot(); })
+  .catch(() => {
+    document.getElementById('main-card').innerHTML =
+      '<div class="state-msg">Could not load data.json — make sure the file exists in the same folder.</div>';
+  });
+
+function boot() {
+  buildWeeks();
+  activeWk = weeks[0]?.key ?? null;
+  renderHeader();
+  renderStats();
+  renderCard();
+
+  document.getElementById('search').addEventListener('input', e => {
+    query = e.target.value.toLowerCase().trim();
+    renderCard();
+  });
+  document.getElementById('download-btn').addEventListener('click', downloadExcel);
+}
+
+// ── Data helpers ─────────────────────────────────────────────────────────────
+function buildWeeks() {
+  const map = {};
+  for (const q of allData.questions) {
+    if (!map[q.weekCommencing])
+      map[q.weekCommencing] = { key: q.weekCommencing, label: weekLabel(q.weekCommencing), qs: [] };
+    map[q.weekCommencing].qs.push(q);
+  }
+  weeks = Object.values(map).sort((a, b) => b.key.localeCompare(a.key));
+}
+
+function weekLabel(iso) {
+  const d   = new Date(iso + 'T00:00:00Z');
+  const day = d.getUTCDate();
+  const mon = d.toLocaleString('en-GB', { month: 'long', timeZone: 'UTC' });
+  const s   = ['th','st','nd','rd'];
+  const v   = day % 100;
+  return `WC ${day}${s[(v-20)%10] || s[v] || s[0]} ${mon}`;
+}
+
+function filtered() {
+  if (!query) return allData.questions;
+  return allData.questions.filter(q =>
+    q.question.toLowerCase().includes(query) ||
+    q.memberName.toLowerCase().includes(query) ||
+    (q.party || '').toLowerCase().includes(query)
+  );
+}
+
+function weekFiltered(wkKey) {
+  return filtered().filter(q => q.weekCommencing === wkKey);
+}
+
+// ── Render header ─────────────────────────────────────────────────────────────
+function renderHeader() {
+  const lu  = allData.lastUpdated ? new Date(allData.lastUpdated) : null;
+  const str = lu
+    ? `<strong>Last updated</strong> ${lu.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})} at ${lu.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`
+    : 'Last updated: unknown';
+  document.getElementById('header-meta').innerHTML = str + '<br>Refreshes automatically every weekday morning';
+}
+
+// ── Render stats ──────────────────────────────────────────────────────────────
+function renderStats() {
+  const qs      = allData.questions;
+  const members = new Set(qs.map(q => q.memberName)).size;
+  document.getElementById('stats').innerHTML = [
+    ['Total questions', qs.length],
+    ['Weeks covered',   weeks.length],
+    ['Members',         members],
+  ].map(([l, v]) =>
+    `<div class="stat"><div class="stat-label">${l}</div><div class="stat-value">${v}</div></div>`
+  ).join('');
+}
+
+// ── Render card ───────────────────────────────────────────────────────────────
+function renderCard() {
+  const card = document.getElementById('main-card');
+  if (!weeks.length) {
+    card.innerHTML = '<div class="state-msg">No questions found.</div>';
+    return;
+  }
+
+  // Tabs
+  const tabsHtml = `
+    <div class="week-tabs-wrap" id="week-tabs">
+      ${weeks.map(w => {
+        const cnt = weekFiltered(w.key).length;
+        return `<button class="week-tab ${w.key === activeWk ? 'active' : ''}" data-key="${esc(w.key)}">
+          ${esc(w.label)}<span class="week-badge">${cnt}</span>
+        </button>`;
+      }).join('')}
+    </div>`;
+
+  // Questions for active week
+  const qs = weekFiltered(activeWk);
+  let questionsHtml;
+
+  if (!qs.length) {
+    questionsHtml = `<div class="state-msg">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      ${query ? 'No matching questions for this week.' : 'No questions for this week.'}
+    </div>`;
+  } else {
+    let rows = `<div class="col-headers">
+      <div>Member</div><div>Party</div><div>Question</div>
+      <div>Date tabled</div><div>Answered by</div>
+    </div>`;
+    let lastMember = null;
+    for (const q of qs) {
+      const isNew   = q.memberName !== lastMember;
+      const pClass  = partyClass(q.party);
+      const rowCls  = 'q-row' + (isNew && lastMember !== null ? ' group-start' : '');
+      rows += `
+        <div class="${rowCls}" onclick="toggleRow(this)">
+          <div class="${isNew ? 'q-member' : 'q-member-blank'}">${esc(isNew ? q.memberName : '—')}</div>
+          <div>${isNew && q.party ? `<span class="party ${pClass}">${esc(q.party)}</span>` : ''}</div>
+          <div class="q-text">
+            <div class="q-text-inner">${esc(q.question)}</div>
+            <a class="q-link" href="${esc(q.url)}" target="_blank" rel="noopener"
+               onclick="event.stopPropagation()">View on Parliament website →</a>
+          </div>
+          <div class="q-date">${esc(q.dateTabled)}</div>
+          <div class="q-due">${esc(q.dateForAnswer)}</div>
+        </div>`;
+      lastMember = q.memberName;
+    }
+    questionsHtml = rows;
+  }
+
+  card.innerHTML = tabsHtml + questionsHtml;
+
+  // Attach tab click handlers
+  card.querySelectorAll('.week-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeWk = btn.dataset.key;
+      renderCard();
+    });
+  });
+}
+
+function toggleRow(row) {
+  row.querySelector('.q-text-inner').classList.toggle('expanded');
+}
+
+function partyClass(p) {
+  const safe = (p || '').replace(/[^a-zA-Z]/g, '');
+  const known = ['Lab','Con','LD','SNP','CB','Ind','PC','Ref','Green','DUP'];
+  return known.includes(safe) ? `p-${safe}` : 'p-other';
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Excel download ────────────────────────────────────────────────────────────
+function downloadExcel() {
+  const wb = XLSX.utils.book_new();
+  for (const wk of [...weeks].reverse()) {
+    const qs = wk.qs;
+    if (!qs.length) continue;
+    const rows = [['Member','Party','Question','Date Tabled','Answered?']];
+    let last = null;
+    for (const q of qs) {
+      const same = q.memberName === last;
+      rows.push([same?'':q.memberName, same?'':q.party, q.question, q.dateTabled, q.dateForAnswer]);
+      last = q.memberName;
+    }
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    ws['!cols'] = [{wch:28},{wch:8},{wch:85},{wch:16},{wch:16}];
+    qs.forEach((q, i) => {
+      const addr = XLSX.utils.encode_cell({r:i+1, c:2});
+      if (ws[addr]) ws[addr].l = { Target: q.url };
+    });
+    XLSX.utils.book_append_sheet(wb, ws, wk.label.slice(0,31));
+  }
+  XLSX.writeFile(wb, `Written_Questions_${new Date().toISOString().slice(0,10)}.xlsx`);
+}
+</script>
+</body>
+</html>
