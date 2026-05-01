@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-30T16:09:24.767546",
+  "lastUpdated": "2026-05-01T11:53:20.960392",
   "questions": [
     {
       "id": 1903496,
@@ -24,6 +24,42 @@
       "dateForAnswer": "Due 6th May",
       "weekCommencing": "2026-04-27",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130112"
+    },
+    {
+      "id": 1903497,
+      "memberName": "Gareth Bacon",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what discussions he has had with the Secretary of State for Justice on the resourcing of an alternative body to make initial rent determinations in cases of Section 13 rent appea",
+      "dateTabled": "28th April",
+      "dateTabledRaw": "2026-04-28",
+      "dateForAnswer": "Due 6th May",
+      "weekCommencing": "2026-04-27",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130114"
+    },
+    {
+      "id": 1903468,
+      "memberName": "Chris Evans",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, what assessment his department has made of the impact of the decision not to uprate Local Housing Allowance on the affordability of the private rented sector for people in receipt of benefits in Wales.",
+      "dateTabled": "28th April",
+      "dateTabledRaw": "2026-04-28",
+      "dateForAnswer": "Due 30th April",
+      "weekCommencing": "2026-04-27",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130048"
+    },
+    {
+      "id": 1903555,
+      "memberName": "Jon Trickett",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Chancellor of the Exchequer, what assessment she has made of the potential impact of national rent controls on living standards.",
+      "dateTabled": "28th April",
+      "dateTabledRaw": "2026-04-28",
+      "dateForAnswer": "Due 30th April",
+      "weekCommencing": "2026-04-27",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130040"
     },
     {
       "id": 1903208,
