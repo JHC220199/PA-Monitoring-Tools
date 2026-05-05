@@ -66,6 +66,8 @@ KEYWORDS = [
     # Other
     'making tax digital landlord',
     'landlord registration',
+    'property licensing landlord',
+    'personal independence payment rent',
 ]
 
 PARTY_MAP = {
@@ -244,6 +246,15 @@ def is_prs(text):
         return True
     if re.search(r'\brented\b.{0,30}\b(standard|condition|quality|propert|home|sector)\b', t):
         return True
+
+    # ── PIP / disability benefits used to cover rent ───────────────────────────
+    if re.search(r'personal independence payment', t) and re.search(r'\b(rent|housing cost|housing benefit)\b', t):
+        return True
+
+    # ── Property licensing in a residential landlord context ───────────────────
+    if re.search(r'property licens', t) and re.search(r'\blandlord', t):
+        if not re.search(r'\b(commercial landlord|retail|commercial propert)\b', t):
+            return True
 
     return False
 
