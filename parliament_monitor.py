@@ -20,37 +20,52 @@ MEMBERS_API   = 'https://members-api.parliament.uk/api/Members'
 
 # Search terms sent to the Parliament API
 KEYWORDS = [
+    # Core PRS tenancy
     'landlord',
-    'leasehold',
     'section 21',
+    'renters rights',
     'rent repayment order',
     'tenancy deposit',
-    'renters rights',
     'assured shorthold',
+    'private rented',
+    'private renting',
+    'letting agent',
+    'landlord licensing',
+    # Rent levels / market
     'rent control',
     'rent stabilisation',
-    'lha freeze',
-    'housing allowance freeze',
-    'lha rates',
-    'decent homes',
-    'prs database',
-    'prs ombudsman',
-    'rogue landlord',
+    'rent inflation',
     'rent determination',
-    'warm home',
-    'energy company obligation',
+    'build-to-rent',
+    'rental accommodation',
+    'rental housing',
+    # Leasehold
+    'leasehold',
     'leaseholder',
     'ground rent',
     'commonhold',
+    # Benefits / LHA
+    'lha freeze',
+    'lha rates',
+    'housing allowance freeze',
     'housing benefit landlord',
-    'energy performance certificate',
+    # Regulation / enforcement
+    'prs database',
+    'prs ombudsman',
+    'rogue landlord',
+    'decent homes',
+    # Energy efficiency (broad — affects landlords via MEES)
+    'energy company obligation',
+    'eco4',
+    'warm home',
     'minimum energy efficiency',
-    'private rented',
-    'private renting',
-    'build-to-rent',
-    'letting agent',
+    'energy performance certificate',
+    'rented homes energy',
+    'private rented energy',
+    'retrofit housing',
+    # Other
     'making tax digital landlord',
-    'landlord licensing',
+    'landlord registration',
 ]
 
 PARTY_MAP = {
@@ -97,23 +112,36 @@ def q_url(date_tabled, uin):
 # ── PRS relevance filter ───────────────────────────────────────────────────────
 
 def is_prs(text):
-    """Returns True if the question is about the private residential rented sector."""
+    """
+    Returns True if the question relates to the private residential rented sector,
+    leasehold reform, housing energy efficiency, or related housing policy.
+    """
     t = text.lower()
 
-    # Hard exclusions — discard regardless of other matches
-    if re.search(
-        r'\b(regulator of social housing|housing association|social landlord|'
-        r'social rented sector|social housing stock|housing trust|registered provider|'
-        r'commercial tenant|commercial landlord|commercial rental|commercial lease|'
-        r'commercial property|commercial premises|commercial space|'
-        r'non.domestic building|non.domestic propert|industrial unit|'
-        r'retail premises|business premises|farm business tenancy|'
-        r'agricultural tenancy)\b', t
-    ):
+    # ── Check whether residential/landlord context is present ─────────────────
+    has_residential = bool(re.search(
+        r'\b(landlord|tenant|tenancy|leaseholder|private rent|rented|rental|renters?|letting)\b', t
+    ))
+
+    # ── Hard exclusions — only apply when there is no residential context ──────
+    # (e.g. a question about non-domestic EPC that ALSO mentions landlords is kept)
+    if not has_residential:
+        if re.search(r'\b(regulator of social housing|housing association|social landlord|'
+                     r'social rented sector|social housing stock|housing trust|registered provider)\b', t):
+            return False
+        if re.search(r'\b(commercial tenant|commercial landlord|commercial rental|'
+                     r'commercial lease|commercial property|commercial premises|'
+                     r'industrial unit|retail premises|business premises|'
+                     r'farm business tenancy|agricultural tenancy)\b', t):
+            return False
+
+    # Social housing: always exclude unless residential/landlord context present
+    if re.search(r'\b(regulator of social housing|housing association)\b', t) and not has_residential:
         return False
 
-    # Strong direct signals — any one is sufficient to include
+    # ── Strong direct signals — any one is sufficient to include ───────────────
     strong = [
+        # Core PRS
         r'private rented sector', r'private renter', r'private rental',
         r'private landlord', r'private tenant', r'private renting',
         r'rented sector', r'rental sector',
@@ -121,61 +149,82 @@ def is_prs(text):
         r'rent repayment', r'section 21', r'assured shorthold', r'tenancy deposit',
         r'buy.to.let', r'build.to.rent',
         r'\bhmo\b', r'house in multiple occupation',
+        # Benefits
         r'local housing allowance', r'\blha\b',
         r'lha (rate|level|freeze|cap)', r'housing allowance (freeze|rate|level)',
+        # Leasehold
         r'ground rent',
         r'leasehold reform', r'leasehold and commonhold', r'commonhold',
         r'leasehold enfranchis', r'leaseholder', r'leasehold house', r'leasehold flat',
         r'right to manage', r'managing agent', r'right to rent', r'letting agent',
+        # Landlord regulation
         r'landlord licens', r'landlord registr', r'landlord database',
         r'institutional landlord',
+        # Eviction / possession
         r'no.fault eviction', r'section 21 eviction', r'pre.emptive eviction',
+        # Rent / tribunal
         r'rent appeal', r'property chamber',
         r'section 13 rent', r'rent determination', r'market rent determination',
         r'rent control', r'rent stabilisation', r'rent inflation',
         r'rent freeze', r'rent cap',
+        # Standards / regulation
         r'decent homes standard', r'decent homes',
         r'prs database', r'prs ombudsman', r'landlord ombudsman',
+        # Energy (with explicit PRS/housing context)
         r'warm homes plan', r'warm home',
-        r'energy company obligation', r'awaab',
+        r'energy company obligation', r'\beco4\b',
+        r'awaab',
+        # Enforcement
         r'rogue landlord',
         r'civil penalt.{0,20}landlord', r'landlord.{0,20}civil penalt',
+        # Other PRS
         r'spray foam insulation',
         r'guarantor.{0,20}(rent|tenancy)',
         r'making tax digital.{0,20}landlord', r'landlord.{0,20}making tax digital',
         r'rental income.{0,20}(tax|hmrc)',
         r'licensed accommodation',
+        # Rental market broadly
+        r'rented propert',       # "rented properties", "rented property"
+        r'rented home',          # "rented homes"
+        r'rental housing',
+        r'rental accommodation',
+        r'rental market',
+        r'private rent inflation',
+        r'multifamily.{0,30}(rent|housing|sector)',
     ]
     for p in strong:
         if re.search(p, t):
             return True
 
-    # Contextual: landlord in a residential housing context
+    # ── Contextual: landlord + residential housing ─────────────────────────────
     if re.search(r'\blandlord\b', t) and re.search(
         r'\b(tenant|tenancy|rented|possession|evict|rent|letting|dwelling|home|flat|house)\b', t
     ):
         return True
 
-    # EPC / MEES — only if explicitly tied to residential renting
-    if re.search(r'\b(epc|energy performance certificate|mees|minimum energy efficiency)\b', t):
-        if re.search(
-            r'\b(private landlord|private rented|rented home|rented property|tenant|letting)\b', t
-        ):
+    # ── Energy efficiency for HOMES / HOUSING (residential, not commercial) ────
+    # Include broadly — EPC/MEES/retrofit policy all affects landlords and tenants
+    energy_terms = r'\b(energy efficiency|energy performance|epc|mees|minimum energy efficiency|' \
+                   r'retrofit|insulation|warm homes|eco4|energy company obligation)\b'
+    home_terms   = r'\b(home|house|housing|homes|houses|domestic|dwelling|rural|' \
+                   r'residential|building stock|housing stock|solid wall|buildings?)\b'
+
+    if re.search(energy_terms, t) and re.search(home_terms, t):
+        # Exclude if ONLY about purely commercial/industrial with no residential signal
+        if not re.search(r'\b(purely commercial|industrial build|office build|retail store|commercial build)\b', t):
             return True
 
-    # Energy efficiency — only if linked to private renting
-    if re.search(r'energy efficiency.{0,80}(private rent|rented home|tenant.{0,20}home)', t):
-        return True
-    if re.search(r'(private rent|rented home).{0,80}energy efficiency', t):
+    # ── EPC methodology / standards broadly (affects rental compliance) ────────
+    if re.search(r'\bepc\b', t) and re.search(r'\b(standard|rating|valuation|methodology|compliance|certificate|band)\b', t):
         return True
 
-    # Universal Credit / housing benefit — only when tied to private landlords/renting
+    # ── UC / housing benefit paid to private landlords ─────────────────────────
     if re.search(r'(universal credit|housing benefit|housing element).{0,80}(landlord|private rent)', t):
         return True
     if re.search(r'housing (benefit|element).{0,60}(private|rented|rental|tenant)', t):
         return True
 
-    # Residential leasehold
+    # ── Residential leasehold ──────────────────────────────────────────────────
     if re.search(r'\bleasehold\b', t):
         if re.search(
             r'\b(leaseholder|ground rent|service charge|residential|flat|commonhold|'
@@ -184,13 +233,20 @@ def is_prs(text):
         ):
             return True
 
-    # LHA / housing allowance — with poverty/rental context
+    # ── LHA / housing allowance ────────────────────────────────────────────────
     if re.search(r'housing allowance', t) and re.search(
         r'\b(rent|rented|private|tenant|poverty|homelessness)\b', t
     ):
         return True
 
+    # ── "Standards of rented X" / "renting properties" etc ───────────────────
+    if re.search(r'\b(standard|condition|quality).{0,30}rented\b', t):
+        return True
+    if re.search(r'\brented\b.{0,30}\b(standard|condition|quality|propert|home|sector)\b', t):
+        return True
+
     return False
+
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
