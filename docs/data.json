@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T17:39:00.214567",
+  "lastUpdated": "2026-05-13T09:01:38.529700",
   "questions": [
     {
       "id": 1903496,
@@ -11,7 +11,11 @@
       "dateTabledRaw": "2026-04-28",
       "dateForAnswer": "Due 6th May",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130113"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130113",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1903497,
@@ -23,7 +27,11 @@
       "dateTabledRaw": "2026-04-28",
       "dateForAnswer": "Due 6th May",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130114"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130114",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1903495,
@@ -35,7 +43,11 @@
       "dateTabledRaw": "2026-04-28",
       "dateForAnswer": "Due 6th May",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130112"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130112",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1903468,
@@ -47,7 +59,11 @@
       "dateTabledRaw": "2026-04-28",
       "dateForAnswer": "Due 30th April",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130048"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130048",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1903555,
@@ -59,7 +75,11 @@
       "dateTabledRaw": "2026-04-28",
       "dateForAnswer": "Due 30th April",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130040"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-28/130040",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1903375,
@@ -71,7 +91,13 @@
       "dateTabledRaw": "2026-04-27",
       "dateForAnswer": "Due 29th April",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-27/129903"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-27/129903",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "29th April",
+      "answeringMember": "Blair McDougall",
+      "answeringParty": "Lab",
+      "answerSummary": "It has not proved possible to respond to the Member in the time available before Prorogation."
     },
     {
       "id": 1903208,
@@ -83,7 +109,13 @@
       "dateTabledRaw": "2026-04-27",
       "dateForAnswer": "Due 29th April",
       "weekCommencing": "2026-04-27",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-27/129923"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-27/129923",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "29th April",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "It has not proved possible to respond to the hon. Member in the time available before Prorogation."
     },
     {
       "id": 1903028,
@@ -95,7 +127,11 @@
       "dateTabledRaw": "2026-04-24",
       "dateForAnswer": "Due 30th April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-24/129733"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-24/129733",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1902392,
@@ -107,7 +143,32 @@
       "dateTabledRaw": "2026-04-22",
       "dateForAnswer": "Due 27th April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-22/129324"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-22/129324",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "29th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answers given to Questions UIN 123090 on 31 March 2026 and UIN 85213 on 4 November 2025."
+    },
+    {
+      "id": 1902347,
+      "uin": "129257",
+      "memberName": "Wendy Chamberlain",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, pursuant to the Answer of 31 March 2026 to Question 122806 on the Warm Homes Plan, what value of funding has been reallocated between projects under the Warm Homes: Local Grant and the Warm H",
+      "dateTabled": "22nd April",
+      "dateTabledRaw": "2026-04-22",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-04-20",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-22/129257",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "28th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes: Local Grant and Warm Homes: Social Housing Fund will support hundreds of thousands of homes to become warmer and cheaper to run throughout the course of this Parliament, as part of our \u00a315 billion Warm Homes Plan."
     },
     {
       "id": 1902040,
@@ -119,7 +180,13 @@
       "dateTabledRaw": "2026-04-21",
       "dateForAnswer": "Due 23rd April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128836"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128836",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "29th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Government recognises that leasehold ownership can create additional complexity, as many must secure consent from freeholders before installations can proceed. The Warm Homes Plan committed to working with relevant organisations on how to remove barri..."
     },
     {
       "id": 1901801,
@@ -131,7 +198,13 @@
       "dateTabledRaw": "2026-04-21",
       "dateForAnswer": "Due 23rd April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128739"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128739",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "On 4 July 2025, the government published a consultation, jointly with the Welsh Government, on strengthening leaseholder protections over charges and services. The consultation included proposals to increase transparency over service charges and enhance a..."
     },
     {
       "id": 1901750,
@@ -143,7 +216,13 @@
       "dateTabledRaw": "2026-04-21",
       "dateForAnswer": "Due 23rd April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128722"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-21/128722",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "28th April",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The Secretary of State for Work and Pensions reviewed Local Housing Allowance rates and confirmed in his written statement on 26 November 2025 (HCWS1101) that rates would be maintained at their current levels for 2026/27. Renters facing a shortfall in mee..."
     },
     {
       "id": 1901440,
@@ -155,7 +234,13 @@
       "dateTabledRaw": "2026-04-20",
       "dateForAnswer": "Due 22nd April",
       "weekCommencing": "2026-04-20",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-20/128557"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-20/128557",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "28th April",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "Personal Independence Payment (PIP) is a non\u2011means\u2011tested benefit intended as a contribution towards extra costs arising from a long\u2011term health condition or disability, and recipients are free to use it in the way that best meets their individual needs. ..."
     },
     {
       "id": 1900813,
@@ -167,7 +252,13 @@
       "dateTabledRaw": "2026-04-17",
       "dateForAnswer": "Due 21st April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128156"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128156",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "It is unacceptable for a managing agent to refuse to vacate a site when it loses a contract to another agent. Landlords may seek legal advice on possible courses of action when such circumstances arise."
     },
     {
       "id": 1900811,
@@ -179,7 +270,13 @@
       "dateTabledRaw": "2026-04-17",
       "dateForAnswer": "Due 21st April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128155"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128155",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "It is unacceptable for a managing agent to refuse to vacate a site when it loses a contract to another agent. Landlords may seek legal advice on possible courses of action when such circumstances arise."
     },
     {
       "id": 1900807,
@@ -191,7 +288,13 @@
       "dateTabledRaw": "2026-04-17",
       "dateForAnswer": "Due 21st April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128154"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-17/128154",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "It is unacceptable for a managing agent to refuse to vacate a site when it loses a contract to another agent. Landlords may seek legal advice on possible courses of action when such circumstances arise."
     },
     {
       "id": 1900616,
@@ -203,7 +306,13 @@
       "dateTabledRaw": "2026-04-16",
       "dateForAnswer": "Due 30th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-16/HL16468"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-16/HL16468",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "29th April",
+      "answeringMember": "Baroness Levitt",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice publishes quarterly possession statistics which monitor the volume and timeliness of possession claims in the County Court. The Civil Procedure Rules state that possession hearings should be listed between 4 and 8 weeks of a claim ..."
     },
     {
       "id": 1900678,
@@ -215,7 +324,13 @@
       "dateTabledRaw": "2026-04-16",
       "dateForAnswer": "Due 30th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-16/HL16471"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-16/HL16471",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd April",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "I refer the noble Lord to the answers given to the oral question Renters\u2019 Rights Act: Definition of Court Readiness on Tuesday 24th March 2026."
     },
     {
       "id": 1900133,
@@ -227,7 +342,32 @@
       "dateTabledRaw": "2026-04-15",
       "dateForAnswer": "Due 20th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-15/127713"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-15/127713",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "All renters, regardless of tenure or agreement type, deserve to live in safe and secure homes. Those with a licence to occupy accommodation are protected from eviction and harassment and have a right to report health and safety concerns about their proper..."
+    },
+    {
+      "id": 1900049,
+      "uin": "127518",
+      "memberName": "Liz Saville Roberts",
+      "party": "PC",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, whether a fraud risk assessment was carried out during the design of the Warm Homes Plan.",
+      "dateTabled": "15th April",
+      "dateTabledRaw": "2026-04-15",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-04-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-15/127518",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Government has a zero-tolerance approach to fraud. The Government requires robust counter\u2011fraud controls to be built into the design and delivery of all energy efficiency and clean heat schemes, in line with cross\u2011government standards and Public Secto..."
     },
     {
       "id": 1898988,
@@ -239,7 +379,13 @@
       "dateTabledRaw": "2026-04-13",
       "dateForAnswer": "Due 27th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16233"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16233",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "22nd April",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "The Government is clear that there is no need for landlords to evict tenants ahead of the ban on no fault evictions on 1 May and landlords should give tenants the housing security they deserve. We will continue to engage across the sector ahead of 1 May t..."
     },
     {
       "id": 1898958,
@@ -251,7 +397,13 @@
       "dateTabledRaw": "2026-04-13",
       "dateForAnswer": "Due 27th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16237"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16237",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd April",
+      "answeringMember": "Baroness Levitt",
+      "answeringParty": "Lab",
+      "answerSummary": "This Government is deeply committed to the principle of open justice and transparency, ensuring that our justice system is both accountable and accessible to the public. In the context of the First-tier Tribunal (Property Chamber), ahead of the commenceme..."
     },
     {
       "id": 1899026,
@@ -263,7 +415,13 @@
       "dateTabledRaw": "2026-04-13",
       "dateForAnswer": "Due 16th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/126860"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/126860",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "16th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes Plan will cut bills, with an offer for every household, whether they own their home, rent privately, or live in social housing. We will reach up to five million homes by 2030, through direct support for those on low incomes and in fuel pove..."
     },
     {
       "id": 1899027,
@@ -275,7 +433,13 @@
       "dateTabledRaw": "2026-04-13",
       "dateForAnswer": "Due 16th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/126861"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/126861",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "16th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes Plan will cut bills, with an offer for every household, whether they own their home, rent privately, or live in social housing. We will reach up to five million homes by 2030, through direct support for those on low incomes and in fuel pove..."
     },
     {
       "id": 1898972,
@@ -287,7 +451,51 @@
       "dateTabledRaw": "2026-04-13",
       "dateForAnswer": "Due 27th April",
       "weekCommencing": "2026-04-13",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16191"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16191",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Lord Whitehead",
+      "answeringParty": "Lab",
+      "answerSummary": "Smart Meter Enabled Thermal Efficiency Ratings (SMETERs) can provide valuable additional insight on the thermal performance of homes in practice with potential to play an important role in delivering warmer homes more affordably."
+    },
+    {
+      "id": 1898971,
+      "uin": "HL16192",
+      "memberName": "Lord Foster of Bath",
+      "party": "LD",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government what plans they have to introduce smart meter enabled thermal efficiency ratings as a voluntary measure within existing warm home schemes and other policies.",
+      "dateTabled": "13rd April",
+      "dateTabledRaw": "2026-04-13",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-04-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/HL16192",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th April",
+      "answeringMember": "Lord Whitehead",
+      "answeringParty": "Lab",
+      "answerSummary": "Smart Meter Enabled Thermal Efficiency Ratings (SMETERs) can provide valuable additional insight on the thermal performance of homes in practice with potential to play an important role in delivering warmer homes more affordably."
+    },
+    {
+      "id": 1898934,
+      "uin": "126904",
+      "memberName": "Chris Coghlan",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what assessment his Department has made of the potential impact of the Warm Homes Plan\u2019s funding allocation on the retention of the skilled retrofit workforce; and what steps he is taking to ",
+      "dateTabled": "13rd April",
+      "dateTabledRaw": "2026-04-13",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-04-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-13/126904",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "21st April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes Plan will create 180,000 high-quality jobs in energy efficiency and clean heating by 2030. Chapter Six of the plan outlines the actions that the Government will be taking to support and facilitate growth, jobs and innovation."
     },
     {
       "id": 1896919,
@@ -299,7 +507,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124903"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124903",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "Landlords can report changes of this nature through a range of routes, including by email and via the Department\u2019s Employment and Partnership Manager network. However, Universal Credit is designed around the principle that claimants are responsible for re..."
     },
     {
       "id": 1898518,
@@ -311,7 +525,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/126460"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/126460",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department does not expect a spike in Section 21 notices ahead of implementation Phase 1 of the Renters\u2019 Rights Act on 1 May 2026.The latest Ministry of Justice official possession statistics, which can be found on gov.uk here, show that there was a 17..."
     },
     {
       "id": 1896704,
@@ -323,7 +543,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124646"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124646",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Department for Energy Security and Net Zero has engaged extensively with businesses, landlords and the property sector on the proposed changes to the policy on minimum energy performance standards for privately rented non-domestic property."
     },
     {
       "id": 1896877,
@@ -335,7 +561,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124788"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124788",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department publishes guidance on gov.uk for residential and commercial leaseholders, including a \u2018How to Lease\u2019 guide for residential leaseholders.The government-funded Leasehold Advisory Service (LEASE) provides extensive guidance and free initial leg..."
     },
     {
       "id": 1897596,
@@ -347,7 +579,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 20th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/125542"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/125542",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Sarah Sackman",
+      "answeringParty": "Lab",
+      "answerSummary": "All the programmes of work detailed in the answer to Question 106177 are expected to be completed by implementation of the Renters\u2019 Rights Act 2025 on 1 May 2026. This includes recruitment exercises for additional administrative staff, establishment of a ..."
     },
     {
       "id": 1898519,
@@ -359,7 +597,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/126461"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/126461",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department does not expect a spike in Section 21 notices ahead of implementation Phase 1 of the Renters\u2019 Rights Act on 1 May 2026.The latest Ministry of Justice official possession statistics, which can be found on gov.uk here, show that there was a 17..."
     },
     {
       "id": 1896878,
@@ -371,7 +615,13 @@
       "dateTabledRaw": "2026-04-10",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-04-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124789"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-04-10/124789",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "20th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Through our Moving to commonhold: banning leasehold for new flats consultation, which can be found on gov.uk here, the government is seeking views from industry and consumers on questions relating to scope, exemptions, timings, transitional arrangements, ..."
     },
     {
       "id": 1896437,
@@ -383,7 +633,13 @@
       "dateTabledRaw": "2026-03-27",
       "dateForAnswer": "Due 14th April",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-27/HL16161"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-27/HL16161",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "On forfeiture reform, I refer the Noble Lord to the Written Ministerial Statement on 27 January 2026 (HLWS1278).The government is committed to ensuring that those living in the rented and leasehold sectors are protected from abuse and poor service at the ..."
     },
     {
       "id": 1895614,
@@ -395,7 +651,89 @@
       "dateTabledRaw": "2026-03-26",
       "dateForAnswer": "Due 13rd April",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/124368"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/124368",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Reformed Energy Performance Certificates will assess properties\u2019 energy performance against several metrics, one of which is fabric performance. The new minimum energy efficiency standards will require private rented homes to first meet a \u2018C\u2019 rating for f..."
+    },
+    {
+      "id": 1895620,
+      "uin": "124371",
+      "memberName": "Mr Lee Dillon",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what consideration he has given to embedding independent architectural design expertise as a key pillar in developing retrofits funded through the Warm Homes Plan.",
+      "dateTabled": "26th March",
+      "dateTabledRaw": "2026-03-26",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/124371",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Government recognises that good retrofit design is essential to high-quality home upgrades. The Warm Homes Plan takes a whole-house approach, supporting packages of measures including clean heat, solar, batteries and insulation, according to what is m..."
+    },
+    {
+      "id": 1895622,
+      "uin": "124373",
+      "memberName": "Mr Lee Dillon",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what steps his department is taking to address a) accreditation, b) oversight and c) verification failings of the Energy Company Obligation (ECO) and other previous programmes, and to ensure ",
+      "dateTabled": "26th March",
+      "dateTabledRaw": "2026-03-26",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/124373",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Department has taken action to improve the oversight and quality of installations in the current system. This includes increased oversight of TrustMark, tighter certification rules limiting installers to one PAS 2030 certification per measure and upda..."
+    },
+    {
+      "id": 1895948,
+      "uin": "HL16100",
+      "memberName": "Baroness McIntosh of Pickering",
+      "party": "Con",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government what level of support is available for energy costs under the cost of living provisions and additional support under the warm homes discount; whether that support totals \u00a3300; and if not, whether they will correct the figur",
+      "dateTabled": "26th March",
+      "dateTabledRaw": "2026-03-26",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/HL16100",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "13rd April",
+      "answeringMember": "Lord Whitehead",
+      "answeringParty": "Lab",
+      "answerSummary": "We announced in the Autumn Budget that we would cut the cost of living, and as a result, the price cap fell by 7% / \u00a3117 to \u00a31,641 per year for an average dual fuel customer paying by Direct Debit. This action follows the decision to expand the Warm Home ..."
+    },
+    {
+      "id": 1895751,
+      "uin": "124158",
+      "memberName": "Liz Saville Roberts",
+      "party": "PC",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, if he refer the issue of fraud within ECO4 and Great British Insulation Scheme to the Serious Fraud Office as recommended by the Public Account Committee report on Faulty Energy Efficiency In",
+      "dateTabled": "26th March",
+      "dateTabledRaw": "2026-03-26",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-26/124158",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "13rd April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Department will be responding to the Public Accounts Committee via Treasury Minute as is the standard process."
     },
     {
       "id": 1895247,
@@ -407,7 +745,13 @@
       "dateTabledRaw": "2026-03-25",
       "dateForAnswer": "Due 10th April",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/HL16039"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/HL16039",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "8th April",
+      "answeringMember": "Lord Timpson",
+      "answeringParty": "Lab",
+      "answerSummary": "Currently, HM Courts and Tribunals Services (HMCTS) publishes quarterly data on the Residential Property Chamber. The latest data is attached but can also be found via the following link: Tribunals statistics quarterly: January to March 2025 - GOV.UK.HMCT..."
     },
     {
       "id": 1895171,
@@ -419,7 +763,13 @@
       "dateTabledRaw": "2026-03-25",
       "dateForAnswer": "Due 13rd April",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/124046"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/124046",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Neither the Secretary of State nor I have regular discussions with individual property management companies regarding effective communications with leaseholders. I have had no further direct discussions with FirstPort subsequent to my meeting with Martin ..."
     },
     {
       "id": 1894727,
@@ -431,7 +781,13 @@
       "dateTabledRaw": "2026-03-25",
       "dateForAnswer": "Due 13rd April",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/123702"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-25/123702",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Neither the Secretary of State nor I have regular discussions with individual property management companies regarding effective communications with leaseholders. I have had no further direct discussions with FirstPort subsequent to my meeting with Martin ..."
     },
     {
       "id": 1894507,
@@ -443,7 +799,13 @@
       "dateTabledRaw": "2026-03-24",
       "dateForAnswer": "Due 26th March",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123341"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123341",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "On 13 November 2025, the government published a roadmap for implementing the Renters' Rights Act, which can be found on gov.uk here.In implementation Phase 2 from late 2026, we will introduce the national Private Rented Sector Database and Private Rented ..."
     },
     {
       "id": 1894571,
@@ -455,7 +817,13 @@
       "dateTabledRaw": "2026-03-24",
       "dateForAnswer": "Due 26th March",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123552"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123552",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Ofgem was introduced as the heat network regulator in January 2026. While many leaseholders can benefit from the new consumer protections, including protection against poor service standards, we are aware that there are still some challenges where heat ch..."
     },
     {
       "id": 1894435,
@@ -467,7 +835,51 @@
       "dateTabledRaw": "2026-03-24",
       "dateForAnswer": "Due 26th March",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123311"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123311",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th March",
+      "answeringMember": "Samantha Dixon",
+      "answeringParty": "Lab",
+      "answerSummary": "Funding is not currently available for buildings under 11 metres in height. However, the Department announced targeted funding for multi-occupied residential buildings under 11 metres in the Remediation Acceleration Plan update."
+    },
+    {
+      "id": 1894470,
+      "uin": "123514",
+      "memberName": "Llinos Medi",
+      "party": "PC",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what elements of the Warm Homes Plan will be delivered in Wales by (a) Local authorities and (b) Welsh Government.",
+      "dateTabled": "24th March",
+      "dateTabledRaw": "2026-03-24",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123514",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "13rd April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "All eligible households in England and Wales can benefit from the expanded Boiler Upgrade Scheme, funded with \u00a32.7 billion to 2030. The Clean Heat Market Mechanism (CHMM) applies to the whole of the UK, as will round 2 of the Heat Pump Investment Accelera..."
+    },
+    {
+      "id": 1894341,
+      "uin": "123444",
+      "memberName": "Perran Moon",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what mechanism the Government intends to use to allocate funding under the Warm Homes Plan to local areas; and whether allocations will be made directly to Local Authorities.",
+      "dateTabled": "24th March",
+      "dateTabledRaw": "2026-03-24",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-24/123444",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Autumn 2024 Budget allocated \u00a3500 million to the Warm Homes Local Grant to be delivered from 2025-28 by eligible local authorities. The WH:LG used an expression of interest model to allocate funding, with all eligible local authorities in England who ..."
     },
     {
       "id": 1894055,
@@ -479,7 +891,13 @@
       "dateTabledRaw": "2026-03-23",
       "dateForAnswer": "Due 25th March",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/123091"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/123091",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "13rd April",
+      "answeringMember": "Samantha Dixon",
+      "answeringParty": "Lab",
+      "answerSummary": "Regarding cladding, the Department is committed to protecting residential leaseholders from bearing the costs of remediating historic fire safety-related defects as far as is proportionate and offering support to both residents and leaseholders.The Remedi..."
     },
     {
       "id": 1894054,
@@ -491,7 +909,51 @@
       "dateTabledRaw": "2026-03-23",
       "dateForAnswer": "Due 25th March",
       "weekCommencing": "2026-03-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/123090"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/123090",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "31st March",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "On 4 July 2025, the government published a consultation, jointly with the Welsh Government, on strengthening leaseholder protections over charges and services. The consultation included proposals to increase transparency over service charges and enhance a..."
+    },
+    {
+      "id": 1893826,
+      "uin": "122806",
+      "memberName": "Wendy Chamberlain",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what estimate his Department has made of the level of underspend, or projected underspend, in the first year of the Warm Homes Local Grant and Warm Homes Social Fund; how many local authoriti",
+      "dateTabled": "23rd March",
+      "dateTabledRaw": "2026-03-23",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-23",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/122806",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "31st March",
+      "answeringMember": "Michael Shanks",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes: Local Grant (WH:LG) and the Warm Homes: Social Housing Fund (WH:SHF) schemes began delivery in April 2025. Both schemes were oversubscribed demonstrating the high ambition of local authorities and social housing providers."
+    },
+    {
+      "id": 1893355,
+      "uin": "122494",
+      "memberName": "Mike Wood",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Minister for the Cabinet Office, with reference to the guidance entitled the approvals process for the creation of new arm's-length bodies, published on 15 March 2018, whether the Cabinet Office Public Bodies Team assessed the Warm Homes Agency",
+      "dateTabled": "20th March",
+      "dateTabledRaw": "2026-03-20",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-20/122494",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th March",
+      "answeringMember": "Anna Turley",
+      "answeringParty": "Lab",
+      "answerSummary": "The formation of the Warm Homes Agency is still under consideration and will be announced in due course. Subject to agreement, the WHA will consolidate the existing delivery landscape by closing the existing body, Salix, and integrating its functions, alo..."
     },
     {
       "id": 1893022,
@@ -503,7 +965,13 @@
       "dateTabledRaw": "2026-03-19",
       "dateForAnswer": "Due 23rd March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-19/122375"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-19/122375",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 116835 on 9 March 2026."
     },
     {
       "id": 1892701,
@@ -515,7 +983,13 @@
       "dateTabledRaw": "2026-03-18",
       "dateForAnswer": "Due 23rd March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121800"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121800",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "In November 2025, my Department launched a multi-platform communications campaign to raise awareness of reforms to the private rented sector in England resulting from the Renters\u2019 Rights Act. To date, the campaign has seen strong engagement and achieved a..."
     },
     {
       "id": 1892683,
@@ -527,7 +1001,13 @@
       "dateTabledRaw": "2026-03-18",
       "dateForAnswer": "Due 23rd March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121798"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121798",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government expects that letting agents will be able to carry out certain functions relating to the Private Rented Sector Database on landlords\u2019 behalf. The detailed requirements and any roles that may be undertaken by agents will be set out in regulat..."
     },
     {
       "id": 1892693,
@@ -539,7 +1019,13 @@
       "dateTabledRaw": "2026-03-18",
       "dateForAnswer": "Due 23rd March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121799"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121799",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 107063 on 28 January 2026."
     },
     {
       "id": 1892744,
@@ -551,7 +1037,32 @@
       "dateTabledRaw": "2026-03-18",
       "dateForAnswer": "Due 23rd March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121937"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/121937",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "27th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes: Local Grant and Warm Homes: Social Housing Fund support eligible households\u2013 including in rural areas and off gas grid to upgrade their homes, with measures including insulation, solar, batteries, and heat pumps."
+    },
+    {
+      "id": 1894112,
+      "uin": "908495",
+      "memberName": "Peter Lamb",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what assessment he has made of the potential impact of the Warm Homes Plan on levels of fuel poverty in Crawley constituency.",
+      "dateTabled": "18th March",
+      "dateTabledRaw": "2026-03-18",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-18/908495",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "24th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "For too long, British families have paid the price for our nation\u2019s energy insecurity and energy bills remain too high. The Warm Homes Plan will tackle fuel poverty, helping lift up to one million households out of fuel poverty by 2030 through public inve..."
     },
     {
       "id": 1892009,
@@ -563,7 +1074,13 @@
       "dateTabledRaw": "2026-03-17",
       "dateForAnswer": "Due 24th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121457"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121457",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "26th March",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The causes of rough sleeping and homelessness are multifaceted and are driven by a range of factors, both personal and structural. Local Housing Allowance (LHA) rates are annually reviewed, usually in the Autumn."
     },
     {
       "id": 1892050,
@@ -575,7 +1092,89 @@
       "dateTabledRaw": "2026-03-17",
       "dateForAnswer": "Due 19th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121605"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121605",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "25th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "All households that have a domestic electricity account, regardless of their heating type will benefit from the budget announced savings from moving 75% of the RO levy to the Exchequer. This will include the vast majority of heat network customers."
+    },
+    {
+      "id": 1892137,
+      "uin": "121281",
+      "memberName": "Maria Eagle",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what transitional arrangements will be put in place following the ending of ECO4 to support companies in the supply chain.",
+      "dateTabled": "17th March",
+      "dateTabledRaw": "2026-03-17",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121281",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The government recognises that the decision to close ECO4 presents immediate challenges. In the Warm Homes Plan, we committed to supporting the workforce accessing opportunities from \u00a315 billion of funding, regulations in the rented sector and the future ..."
+    },
+    {
+      "id": 1892161,
+      "uin": "121289",
+      "memberName": "Maria Eagle",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, whether he expects redundancies in the sector or a reduction in the available workforce as a consequence of the closure of the ECO4 scheme.",
+      "dateTabled": "17th March",
+      "dateTabledRaw": "2026-03-17",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121289",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The government recognises that the decision to close ECO4 presents immediate challenges. In the Warm Homes Plan, we committed to supporting the workforce accessing opportunities from \u00a315 billion of funding, regulations in the rented sector and the future ..."
+    },
+    {
+      "id": 1892160,
+      "uin": "121288",
+      "memberName": "Maria Eagle",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, whether he expects any companies currently doing work under ECO4 to close as a consequence of the closure of the scheme.",
+      "dateTabled": "17th March",
+      "dateTabledRaw": "2026-03-17",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121288",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "23rd March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The government recognises that the decision to close ECO4 presents immediate challenges. In the Warm Homes Plan, we committed to supporting the workforce accessing opportunities from \u00a315 billion of funding, regulations in the rented sector and the future ..."
+    },
+    {
+      "id": 1891983,
+      "uin": "121437",
+      "memberName": "Dr Kieran Mullan",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what role deep geothermal heat will play in delivering the Warm Homes Plan.",
+      "dateTabled": "17th March",
+      "dateTabledRaw": "2026-03-17",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-17/121437",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "25th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "In homes and buildings, a heat network is required to make use of deep geothermal heat. The Warm Homes Plan set out our support for low-carbon heat networks, including Heat Network Zoning and \u00a31bn in investment over the course of this Parliament."
     },
     {
       "id": 1891150,
@@ -587,7 +1186,13 @@
       "dateTabledRaw": "2026-03-16",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/120999"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/120999",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "1st April",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department collects data on the private rented sector through the English Housing Survey, which is published annually and can be found on gov.uk here, and through ongoing longitudinal survey of private tenants. My Department also publishes data showing..."
     },
     {
       "id": 1891544,
@@ -599,7 +1204,13 @@
       "dateTabledRaw": "2026-03-16",
       "dateForAnswer": "Due 26th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121176"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121176",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "26th March",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Office for National Statistics publishes annual estimates of private rented sector dwellings in each local authority. These estimates can be found on gov.uk here."
     },
     {
       "id": 1891524,
@@ -611,7 +1222,13 @@
       "dateTabledRaw": "2026-03-16",
       "dateForAnswer": "Due 19th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121167"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121167",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "19th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The analysis in the impact assessment is produced using the Department\u2019s National Buildings Model, which is based on the English Housing Survey and therefore covers England only. The results are scaled to reflect the number of dwellings in Wales, with Wal..."
     },
     {
       "id": 1891531,
@@ -623,7 +1240,70 @@
       "dateTabledRaw": "2026-03-16",
       "dateForAnswer": "Due 19th March",
       "weekCommencing": "2026-03-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121172"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121172",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "19th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "From 1 October 2030, private rented homes must meet the required standard of EPC C, or have a valid exemption registered, to be let. Government has committed to developing a property-value adjustment exemption for privately rented properties that are valu..."
+    },
+    {
+      "id": 1891651,
+      "uin": "121241",
+      "memberName": "Amanda Hack",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what discussions he has had with the Secretary of State for Energy Security and Net Zero regarding transitional funding proposals to support workforce continuity between ECO and the Warm Home",
+      "dateTabled": "16th March",
+      "dateTabledRaw": "2026-03-16",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121241",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "24th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "We recognise closing ECO presents immediate challenges for the supply chain. In the Warm Homes Plan, we committed to supporting the workforce to access opportunities through \u00a315 billion of funding and through regulations in the rented sector and for futur..."
+    },
+    {
+      "id": 1891277,
+      "uin": "120759",
+      "memberName": "Mr Gregory Campbell",
+      "party": "DUP",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, how many homes have had insulation measures carried out under the ECO4 and GBIS schemes since 2022.",
+      "dateTabled": "16th March",
+      "dateTabledRaw": "2026-03-16",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/120759",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "19th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "To the end of December 2025, 294,456 insulation measures were installed under ECO4 (including ECO3 Interim and Surplus Actions). This is published in Table 1.6 of Household Energy Efficiency Statistics, headline release: Februa..."
+    },
+    {
+      "id": 1891652,
+      "uin": "121242",
+      "memberName": "Amanda Hack",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what guidance his Department has issued on SME participation, risk allocation and quality assurance within procurement frameworks for the Warm Homes Plan.",
+      "dateTabled": "16th March",
+      "dateTabledRaw": "2026-03-16",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-03-16",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-16/121242",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "24th March",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "DESNZ officials are currently working on detailed delivery arrangements for the Warm Homes Plan. This includes scheme design and how the implementing entities will be identified and managed for overseeing schemes, commissioning works and delivering instal..."
     },
     {
       "id": 1891098,
@@ -635,7 +1315,11 @@
       "dateTabledRaw": "2026-03-13",
       "dateForAnswer": "Due 27th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/HL15562"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/HL15562",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1891110,
@@ -647,7 +1331,11 @@
       "dateTabledRaw": "2026-03-13",
       "dateForAnswer": "Due 27th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/HL15559"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/HL15559",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1891042,
@@ -659,7 +1347,11 @@
       "dateTabledRaw": "2026-03-13",
       "dateForAnswer": "Due 17th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/120744"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-13/120744",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890877,
@@ -671,7 +1363,11 @@
       "dateTabledRaw": "2026-03-12",
       "dateForAnswer": "Due 26th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/HL15514"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/HL15514",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890549,
@@ -683,7 +1379,11 @@
       "dateTabledRaw": "2026-03-12",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120542"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120542",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890673,
@@ -695,7 +1395,11 @@
       "dateTabledRaw": "2026-03-12",
       "dateForAnswer": "Due 19th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120314"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120314",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890659,
@@ -707,7 +1411,11 @@
       "dateTabledRaw": "2026-03-12",
       "dateForAnswer": "Due 19th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120311"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-12/120311",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890264,
@@ -719,7 +1427,11 @@
       "dateTabledRaw": "2026-03-11",
       "dateForAnswer": "Due 16th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-11/120132"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-11/120132",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1890084,
@@ -731,7 +1443,11 @@
       "dateTabledRaw": "2026-03-11",
       "dateForAnswer": "Due 16th March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-11/120136"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-11/120136",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1889511,
@@ -743,7 +1459,11 @@
       "dateTabledRaw": "2026-03-10",
       "dateForAnswer": "Due 12nd March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119360"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119360",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1889648,
@@ -755,7 +1475,11 @@
       "dateTabledRaw": "2026-03-10",
       "dateForAnswer": "Due 12nd March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119540"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119540",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1889335,
@@ -767,7 +1491,11 @@
       "dateTabledRaw": "2026-03-10",
       "dateForAnswer": "Due 12nd March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119750"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-10/119750",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1888952,
@@ -779,7 +1507,11 @@
       "dateTabledRaw": "2026-03-09",
       "dateForAnswer": "Due 11st March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-09/118850"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-09/118850",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1888568,
@@ -791,7 +1523,11 @@
       "dateTabledRaw": "2026-03-09",
       "dateForAnswer": "Due 11st March",
       "weekCommencing": "2026-03-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-09/118769"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-09/118769",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1888088,
@@ -803,7 +1539,11 @@
       "dateTabledRaw": "2026-03-05",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-05/118244"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-05/118244",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887742,
@@ -815,7 +1555,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15220"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15220",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887744,
@@ -827,7 +1571,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15218"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15218",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887745,
@@ -839,7 +1587,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15217"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15217",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887485,
@@ -851,7 +1603,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117865"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117865",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887512,
@@ -863,7 +1619,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/118081"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/118081",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887743,
@@ -875,7 +1635,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 18th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15219"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/HL15219",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887472,
@@ -887,7 +1651,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117860"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117860",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887484,
@@ -899,7 +1667,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117864"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117864",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887481,
@@ -911,7 +1683,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117863"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117863",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887475,
@@ -923,7 +1699,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117862"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117862",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887488,
@@ -935,7 +1715,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117868"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117868",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887513,
@@ -947,7 +1731,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/118082"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/118082",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887451,
@@ -959,7 +1747,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117856"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117856",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887490,
@@ -971,7 +1763,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117870"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117870",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887489,
@@ -983,7 +1779,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117869"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117869",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887491,
@@ -995,7 +1795,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117871"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117871",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887658,
@@ -1007,7 +1811,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117970"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117970",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1887656,
@@ -1019,7 +1827,11 @@
       "dateTabledRaw": "2026-03-04",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117969"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-04/117969",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886722,
@@ -1031,7 +1843,11 @@
       "dateTabledRaw": "2026-03-03",
       "dateForAnswer": "Due 5th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117387"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117387",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886666,
@@ -1043,7 +1859,11 @@
       "dateTabledRaw": "2026-03-03",
       "dateForAnswer": "Due 5th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117297"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117297",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886664,
@@ -1055,7 +1875,11 @@
       "dateTabledRaw": "2026-03-03",
       "dateForAnswer": "Due 5th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117295"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117295",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886241,
@@ -1067,7 +1891,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 16th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/HL15053"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/HL15053",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886203,
@@ -1079,7 +1907,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116836"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116836",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886099,
@@ -1091,7 +1923,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117042"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117042",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886434,
@@ -1103,7 +1939,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117176"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117176",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886202,
@@ -1115,7 +1955,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116835"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116835",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886442,
@@ -1127,7 +1971,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 5th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116691"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/116691",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886494,
@@ -1139,7 +1987,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117194"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117194",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886495,
@@ -1151,7 +2003,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117195"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117195",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886098,
@@ -1163,7 +2019,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117041"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117041",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886096,
@@ -1175,7 +2035,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117039"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117039",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886093,
@@ -1187,7 +2051,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117038"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117038",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1886091,
@@ -1199,7 +2067,11 @@
       "dateTabledRaw": "2026-03-02",
       "dateForAnswer": "Due 4th March",
       "weekCommencing": "2026-03-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117037"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-02/117037",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885884,
@@ -1211,7 +2083,11 @@
       "dateTabledRaw": "2026-02-27",
       "dateForAnswer": "Due 3rd March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-27/116551"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-27/116551",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885812,
@@ -1223,7 +2099,11 @@
       "dateTabledRaw": "2026-02-27",
       "dateForAnswer": "Due 3rd March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-27/116622"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-27/116622",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885341,
@@ -1235,7 +2115,11 @@
       "dateTabledRaw": "2026-02-26",
       "dateForAnswer": "Due 2nd March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-26/116243"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-26/116243",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885558,
@@ -1247,7 +2131,11 @@
       "dateTabledRaw": "2026-02-26",
       "dateForAnswer": "Due 2nd March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-26/116407"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-26/116407",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885202,
@@ -1259,7 +2147,11 @@
       "dateTabledRaw": "2026-02-25",
       "dateForAnswer": "Due 11st March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14895"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14895",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885203,
@@ -1271,7 +2163,11 @@
       "dateTabledRaw": "2026-02-25",
       "dateForAnswer": "Due 11st March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14894"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14894",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1885201,
@@ -1283,7 +2179,11 @@
       "dateTabledRaw": "2026-02-25",
       "dateForAnswer": "Due 11st March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14896"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-25/HL14896",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884393,
@@ -1295,7 +2195,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115497"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115497",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884398,
@@ -1307,7 +2211,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115500"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115500",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884391,
@@ -1319,7 +2227,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115496"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115496",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884257,
@@ -1331,7 +2243,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115399"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/115399",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884722,
@@ -1343,7 +2259,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14843"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14843",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884724,
@@ -1355,7 +2275,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14841"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14841",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884723,
@@ -1367,7 +2291,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14842"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14842",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884721,
@@ -1379,7 +2307,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14844"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14844",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884725,
@@ -1391,7 +2323,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14840"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14840",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1884720,
@@ -1403,7 +2339,11 @@
       "dateTabledRaw": "2026-02-24",
       "dateForAnswer": "Due 10th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14845"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-24/HL14845",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883854,
@@ -1415,7 +2355,11 @@
       "dateTabledRaw": "2026-02-23",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/115254"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/115254",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883804,
@@ -1427,7 +2371,11 @@
       "dateTabledRaw": "2026-02-23",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/115226"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/115226",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883517,
@@ -1439,7 +2387,11 @@
       "dateTabledRaw": "2026-02-23",
       "dateForAnswer": "Due 9th March",
       "weekCommencing": "2026-02-23",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/HL14676"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-23/HL14676",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882160,
@@ -1451,7 +2403,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113533"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113533",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882273,
@@ -1463,7 +2419,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113918"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113918",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883301,
@@ -1475,7 +2435,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114656"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114656",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882164,
@@ -1487,7 +2451,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113534"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113534",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883266,
@@ -1499,7 +2467,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114621"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114621",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882169,
@@ -1511,7 +2483,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113535"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113535",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882620,
@@ -1523,7 +2499,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114386"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114386",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882624,
@@ -1535,7 +2515,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114390"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114390",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882623,
@@ -1547,7 +2531,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114389"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/114389",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1882267,
@@ -1559,7 +2547,11 @@
       "dateTabledRaw": "2026-02-20",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-16",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113626"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-20/113626",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881342,
@@ -1571,7 +2563,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/113165"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/113165",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881799,
@@ -1583,7 +2579,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14569"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14569",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881791,
@@ -1595,7 +2595,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14571"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14571",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1883427,
@@ -1607,7 +2611,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/907917"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/907917",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881761,
@@ -1619,7 +2627,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14641"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14641",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881763,
@@ -1631,7 +2643,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14640"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14640",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881792,
@@ -1643,7 +2659,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14570"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14570",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881782,
@@ -1655,7 +2675,11 @@
       "dateTabledRaw": "2026-02-12",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14572"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-12/HL14572",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881100,
@@ -1667,7 +2691,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14534"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14534",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880745,
@@ -1679,7 +2707,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112747"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112747",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880916,
@@ -1691,7 +2723,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112576"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112576",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880722,
@@ -1703,7 +2739,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112631"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112631",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881096,
@@ -1715,7 +2755,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14538"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14538",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880723,
@@ -1727,7 +2771,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112632"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112632",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880918,
@@ -1739,7 +2787,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112578"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112578",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880917,
@@ -1751,7 +2803,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112577"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112577",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1881097,
@@ -1763,7 +2819,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 25th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14537"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/HL14537",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880624,
@@ -1775,7 +2835,11 @@
       "dateTabledRaw": "2026-02-11",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112682"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-11/112682",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880325,
@@ -1787,7 +2851,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112506"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112506",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880323,
@@ -1799,7 +2867,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112504"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112504",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880332,
@@ -1811,7 +2883,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112509"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112509",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880149,
@@ -1823,7 +2899,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112261"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112261",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880338,
@@ -1835,7 +2915,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112512"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112512",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880330,
@@ -1847,7 +2931,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112508"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112508",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880324,
@@ -1859,7 +2947,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112505"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112505",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880328,
@@ -1871,7 +2963,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112507"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112507",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880333,
@@ -1883,7 +2979,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112510"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112510",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880298,
@@ -1895,7 +2995,11 @@
       "dateTabledRaw": "2026-02-10",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112147"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-10/112147",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880013,
@@ -1907,7 +3011,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 24th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111638"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111638",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880020,
@@ -1919,7 +3027,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 11st February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/112044"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/112044",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1880011,
@@ -1931,7 +3043,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 26th February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111637"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111637",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1879541,
@@ -1943,7 +3059,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 23rd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/HL14445"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/HL14445",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1879629,
@@ -1955,7 +3075,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 12nd February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111805"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111805",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1879809,
@@ -1967,7 +3091,11 @@
       "dateTabledRaw": "2026-02-09",
       "dateForAnswer": "Due 11st February",
       "weekCommencing": "2026-02-09",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111891"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-09/111891",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     },
     {
       "id": 1879430,
@@ -1979,7 +3107,11 @@
       "dateTabledRaw": "2026-02-06",
       "dateForAnswer": "Due 10th February",
       "weekCommencing": "2026-02-02",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-06/111505"
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-02-06/111505",
+      "answered": false,
+      "answerSummary": null,
+      "answeringMember": null,
+      "isHolding": false
     }
   ]
 }
