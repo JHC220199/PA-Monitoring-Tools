@@ -4,16 +4,16 @@ Parliament PRS Monitor — Daily updater
 Fetches written questions about the private residential rented sector,
 checks for new answers, and generates AI summaries via Claude API.
 """
- 
+
 import json, os, re, subprocess, time
 from datetime import datetime, timedelta
 from urllib.parse import urlencode
- 
+
 DATA_FILE = os.path.join('docs', 'data.json')
 QUESTIONS_API = 'https://questions-statements-api.parliament.uk/api/writtenquestions/questions'
 MEMBERS_API   = 'https://members-api.parliament.uk/api/Members'
- 
- 
+
+
 KEYWORDS = [
     'landlord', 'section 21', 'renters rights', 'rent repayment order',
     'tenancy deposit', 'assured shorthold', 'private rented', 'privately rented',
@@ -29,7 +29,7 @@ KEYWORDS = [
     'property licensing', 'personal independence payment',
     'estate management charge', 'estate rent charge', 'local housing allowance',
 ]
- 
+
 PARTY_MAP = {
     'Labour':'Lab','Conservative':'Con','Liberal Democrat':'LD',
     'Scottish National Party':'SNP','Crossbench':'CB','Independent':'Ind',
@@ -38,92 +38,92 @@ PARTY_MAP = {
     'Alliance Party':'Alliance','Ulster Unionist Party':'UUP',
     'Social Democratic and Labour Party':'SDLP',
 }
- 
+
 # ── HTTP helpers ───────────────────────────────────────────────────────────────
- 
+
 def http_get(url, timeout=25):
     r = subprocess.run(
         ['curl','-s',f'--max-time',str(timeout),'-H','User-Agent: PRS-Monitor/1.0',url],
         capture_output=True, text=True)
     try: return json.loads(r.stdout) if r.stdout.strip() else None
     except: return None
- 
- 
+
+
 # ── Date helpers ───────────────────────────────────────────────────────────────
- 
+
 def ordinal(n):
     s=['th','st','nd','rd']; v=n%100
     return f"{n}{s[(v-20)%10] if (v-20)%10<4 else s[v] if v<4 else s[0]}"
- 
+
 def fmt_date(iso):
     if not iso: return ''
     d = datetime.fromisoformat(iso[:19])
     return f"{ordinal(d.day)} {d.strftime('%B')}"
- 
+
 def monday_of(iso):
     d = datetime.fromisoformat(iso[:19]).date()
     return d - timedelta(days=d.weekday())
- 
+
 def q_url(dt, uin):
     return f"https://questions-statements.parliament.uk/written-questions/detail/{dt[:10]}/{uin}"
- 
+
 # ── AI summarisation ───────────────────────────────────────────────────────────
- 
+
 def summarise_answer(question, answer_text, is_holding=False):
     """Extract the first 2 meaningful sentences from a minister's answer."""
     if is_holding:
         return "The minister provided a holding answer; a substantive response will follow."
     if not answer_text or len(answer_text.strip()) < 30:
         return None
- 
+
     import html as html_module
- 
+
     # Strip HTML tags
     clean = re.sub(r'<[^>]+>', ' ', answer_text)
     # Decode HTML entities (&amp; &lt; etc.)
     clean = html_module.unescape(clean)
     # Collapse whitespace
     clean = re.sub(r'\s+', ' ', clean).strip()
- 
+
     if len(clean) < 30:
         return None
- 
+
     # Split into sentences on ". ", "? ", "! " followed by a capital letter
     sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z\'\"])', clean)
- 
+
     # Filter out very short fragments (likely numbering or labels)
     sentences = [s.strip() for s in sentences if len(s.strip()) > 30]
- 
+
     if not sentences:
         # Fall back: just take first 300 chars
         return clean[:300].rsplit(' ', 1)[0] + '…' if len(clean) > 300 else clean
- 
+
     # Take first 2 sentences, capped at 400 chars total
     summary = ' '.join(sentences[:2])
     if len(summary) > 400:
         summary = summary[:400].rsplit(' ', 1)[0] + '…'
     return summary
- 
+
 # ── PRS filter ─────────────────────────────────────────────────────────────────
- 
- 
+
+
 def is_prs(text):
     t = text.lower()
- 
+
     # ── HARD EXCLUSIONS — checked first, always trump inclusions ──────────────
- 
+
     # Social rented sector (distinct from private rented)
     if re.search(r'\bsocial rented\b', t):
         return False
- 
+
     # Park homes — not PRS
     if re.search(r'\bpark home', t):
         return False
- 
+
     # Commercial rental — always exclude regardless of other signals
     if re.search(r'\bcommercial rental\b', t):
         return False
- 
+
     # Commercial / non-residential (only exclude when no residential landlord context)
     has_residential = bool(re.search(
         r'\b(landlord|tenant|tenancy|leaseholder|private rent|privately rent|'
@@ -134,7 +134,7 @@ def is_prs(text):
                      r'industrial unit|retail premises|business premises|'
                      r'farm business tenancy|agricultural tenancy)\b', t):
             return False
- 
+
     # ── STRONG DIRECT SIGNALS — any one is sufficient to include ──────────────
     strong = [
         r'private rented sector', r'private renter', r'private rental',
@@ -186,13 +186,13 @@ def is_prs(text):
     ]
     for p in strong:
         if re.search(p, t): return True
- 
+
     # ── CONTEXTUAL: landlord + residential housing ─────────────────────────────
     # Note: 'propert' without trailing \b so it matches 'property', 'properties' etc.
     if re.search(r'\blandlord\b', t) and re.search(
         r'\b(tenant|tenancy|rented|possession|evict|rent|letting|dwelling|home|flat|house|propert)', t):
         return True
- 
+
     # ── ENERGY EFFICIENCY SCHEME OVERSIGHT + HOMES ────────────────────────────
     # Catches questions about oversight/redress/quality of energy scheme installations
     # that affect homeowners and tenants (Liz Jarvis, Dave Doogan type questions)
@@ -201,27 +201,27 @@ def is_prs(text):
         if re.search(r'\b(home|household|housing|domestic|building|publicly funded)\b', t):
             if not re.search(r'\b(commercial|industrial|park home)\b', t):
                 return True
- 
+
     # ── WARM HOMES PLAN CONSULTATION / GOVERNANCE ─────────────────────────────
     # Catches Warm Homes Plan governance/consultation questions (Liz Saville-Roberts)
     if re.search(r'warm homes plan', t) and re.search(
         r'\b(consultation|oversight|governance|agency|accountability|microgeneration)\b', t):
         return True
- 
+
     # ── MAKING TAX DIGITAL + LANDLORD ─────────────────────────────────────────
     if re.search(r'making tax digital', t) and re.search(r'\blandlord', t):
         return True
- 
+
     # ── PROPERTY LICENSING + RESIDENTIAL LANDLORD ────────────────────────────
     if re.search(r'property licens', t) and re.search(r'\blandlord', t):
         if not re.search(r'\b(commercial landlord|retail|commercial propert)\b', t):
             return True
- 
+
     # ── PIP / DISABILITY BENEFITS + RENT ──────────────────────────────────────
     if re.search(r'personal independence payment', t) and re.search(
         r'\b(rent|housing cost|housing benefit)\b', t):
         return True
- 
+
     # ── EPC / ENERGY EFFICIENCY — tightly controlled ──────────────────────────
     # Rule: only include if there is ALSO an explicit private renting/landlord signal
     # OR the question is specifically about MEES exemptions (affects landlords)
@@ -235,7 +235,7 @@ def is_prs(text):
         # EPC methodology/valuation questions affect rental compliance broadly
         if re.search(r'\b(valuation|methodology|standard|rating|band|compliance)', t):
             return True
- 
+
     if re.search(r'\b(energy efficiency|retrofit|insulation)\b', t):
         if re.search(prs_energy_signal, t):
             return True
@@ -248,18 +248,18 @@ def is_prs(text):
                 r'geothermal|community energy|chinese import|park home|'
                 r'commercial|industrial|high.street|town.centre|vat)\b', t):
                 return True
- 
+
     # ── WARM HOMES PLAN / ECO4 — only with explicit PRS/landlord signal ───────
     if re.search(r'\b(warm homes plan|warm homes local grant|warm homes social fund|'
                  r'eco4|energy company obligation|great british insulation)\b', t):
         if re.search(prs_energy_signal, t):
             return True
- 
+
     # ── WARM HOMES DISCOUNT — only with tenant/private renting context ─────────
     if re.search(r'\bwarm home.{0,10}discount\b', t):
         if re.search(r'\b(private rent|rented|tenant|landlord)\b', t):
             return True
- 
+
     # ── UC / HOUSING BENEFIT — only tied to private renting (not social) ──────
     if re.search(r'(universal credit|housing benefit|housing element).{0,80}'
                  r'(private landlord|private rent)', t): return True
@@ -268,7 +268,7 @@ def is_prs(text):
     if re.search(r'(universal credit|housing benefit|housing element).{0,80}landlord', t):
         if not re.search(r'\b(social rented|social housing|housing association)\b', t):
             return True
- 
+
     # ── RESIDENTIAL LEASEHOLD ──────────────────────────────────────────────────
     if re.search(r'\bleasehold\b', t):
         if re.search(
@@ -276,39 +276,39 @@ def is_prs(text):
             r'enfranchis|reform bill|freehold reform|managing agent|right to manage|'
             r'estate management|estate rent charge)\b', t):
             return True
- 
+
     # ── LHA / HOUSING ALLOWANCE ────────────────────────────────────────────────
     if re.search(r'housing allowance', t) and re.search(
         r'\b(rent|rented|private|tenant|poverty|homelessness)\b', t):
         return True
- 
+
     # ── STANDARDS OF RENTED PROPERTIES ────────────────────────────────────────
     if re.search(r'\b(standard|condition|quality).{0,30}rented\b', t):
         return True
     if re.search(r'\brented\b.{0,30}\b(standard|condition|quality|propert|home|sector)\b', t):
         return True
- 
+
     return False
- 
- 
+
+
 def main():
     os.makedirs('docs', exist_ok=True)
- 
+
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE) as f: data = json.load(f)
         print(f"Loaded {len(data['questions'])} existing questions")
     else:
         data = {'lastUpdated': None, 'questions': []}
         print("Starting fresh")
- 
+
     # Index existing questions by ID for fast lookup
     existing = {q['id']: q for q in data['questions']}
- 
+
     # Always fetch last 60 days so we catch both new questions and answer updates
     from_date = (datetime.now() - timedelta(days=60)).strftime('%Y-%m-%d')
     to_date   = datetime.now().strftime('%Y-%m-%d')
     print(f"Fetching {from_date} → {to_date} (60-day window for new questions + answer updates)")
- 
+
     # Fetch all questions across keywords
     seen = {}
     for i, kw in enumerate(KEYWORDS, 1):
@@ -330,12 +330,12 @@ def main():
             skip += 100
             if not results or skip >= total: break
             time.sleep(1)
- 
+
     # ── Process: new questions + answer updates ────────────────────────────────
     new_questions  = []
     answer_updates = []
     member_cache   = {}
- 
+
     def get_member(mid):
         if mid in member_cache: return member_cache[mid]
         d = http_get(f'{MEMBERS_API}/{mid}', timeout=15)
@@ -343,9 +343,9 @@ def main():
         member_cache[mid] = m
         time.sleep(0.3)
         return m
- 
+
     for qid, raw in seen.items():
- 
+
         if qid in existing:
             # ── Existing question — check for new answer ───────────────────
             rec = existing[qid]
@@ -378,7 +378,7 @@ def main():
                 'answerSummary':   summary,
             })
             answer_updates.append(rec)
- 
+
         else:
             # ── New question — add if PRS-relevant ────────────────────────
             if not is_prs(raw['questionText']):
@@ -389,13 +389,13 @@ def main():
             if po: party = PARTY_MAP.get(po.get('name',''), po.get('abbreviation','') or po.get('name',''))
             mon = monday_of(raw['dateTabled'])
             da  = raw.get('dateForAnswer','')
- 
+
             # If already answered at time of first fetch, summarise immediately
             answer_text = raw.get('answerText','') if raw.get('dateAnswered') else ''
             is_holding  = bool(raw.get('answerIsHolding'))
             answered    = bool(raw.get('dateAnswered') and answer_text)
             summary     = summarise_answer(raw['questionText'], answer_text, is_holding) if answered else None
- 
+
             answering_name = ''
             answering_party = ''
             if answered and raw.get('answeringMemberId'):
@@ -406,7 +406,7 @@ def main():
                     if apo:
                         answering_party = PARTY_MAP.get(apo.get('name',''),
                                           apo.get('abbreviation','') or apo.get('name',''))
- 
+
             new_questions.append({
                 'id':              raw['id'],
                 'uin':             raw.get('uin',''),
@@ -426,7 +426,7 @@ def main():
                 'answeringParty':  answering_party,
                 'answerSummary':   summary,
             })
- 
+
     # ── Migrate existing records to include new answer fields if missing ────────
     for q in data['questions']:
         if 'answered' not in q:
@@ -437,20 +437,20 @@ def main():
             q['answeringMember'] = None
         if 'isHolding' not in q:
             q['isHolding'] = False
- 
+
     # ── Merge and save ─────────────────────────────────────────────────────────
     data['questions'].extend(new_questions)
     data['lastUpdated'] = datetime.now().isoformat()
     cutoff = (datetime.now() - timedelta(weeks=52)).strftime('%Y-%m-%d')
     data['questions'] = [q for q in data['questions'] if q.get('dateTabledRaw','') >= cutoff]
     data['questions'].sort(key=lambda q: q.get('dateTabledRaw',''), reverse=True)
- 
+
     with open(DATA_FILE,'w') as f: json.dump(data, f, indent=2)
- 
+
     print(f"\n✓ {len(new_questions)} new questions added")
     print(f"✓ {len(answer_updates)} answers updated")
     print(f"✓ Total stored: {len(data['questions'])}")
- 
- 
+
+
 if __name__ == '__main__':
     main()
