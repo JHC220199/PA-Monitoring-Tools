@@ -417,10 +417,12 @@ function renderHeader() {
  
 // ── Render stats ──────────────────────────────────────────────────────────────
 function renderStats() {
-  const qs      = allData.questions;
-  const members = new Set(qs.map(q => q.memberName)).size;
+  const qs       = allData.questions;
+  const members  = new Set(qs.map(q => q.memberName)).size;
+  const answered = qs.filter(q => q.answered && !q.isHolding).length;
   document.getElementById('stats').innerHTML = [
     ['Total questions', qs.length],
+    ['Answered',        answered],
     ['Weeks covered',   weeks.length],
     ['Members',         members],
   ].map(([l, v]) =>
@@ -474,6 +476,7 @@ function renderCard() {
           <div>${isNew && q.party ? `<span class="party ${pClass}">${esc(q.party)}</span>` : ''}</div>
           <div class="q-text">
             <div class="q-text-inner">${esc(q.question)}</div>
+            ${renderAnswerDetail(q)}
             <a class="q-link" href="${esc(q.url)}" target="_blank" rel="noopener"
                onclick="event.stopPropagation()">View on Parliament website →</a>
           </div>
@@ -498,6 +501,30 @@ function renderCard() {
  
 function toggleRow(row) {
   row.querySelector('.q-text-inner').classList.toggle('expanded');
+}
+
+function renderAnswerBadge(q) {
+  if (!q.answered) {
+    return q.dateForAnswer
+      ? `<span class="ans-badge ans-pending">${esc(q.dateForAnswer)}</span>`
+      : '';
+  }
+  if (q.isHolding) {
+    return `<span class="ans-badge ans-holding">⏳ Holding answer</span>`;
+  }
+  return `<span class="ans-badge ans-answered">✓ Answered</span>`;
+}
+
+function renderAnswerDetail(q) {
+  if (!q.answered) return '';
+  const summaryClass = q.isHolding ? 'ans-summary holding' : 'ans-summary';
+  const summary = q.answerSummary
+    ? `<div class="${summaryClass}">${esc(q.answerSummary)}</div>`
+    : '';
+  const minister = q.answeringMember
+    ? `<div class="ans-minister">Answered by <strong>${esc(q.answeringMember)}</strong>${q.answeringParty ? ` (${esc(q.answeringParty)})` : ''}${q.dateAnswered ? ` — ${esc(q.dateAnswered)}` : ''}</div>`
+    : '';
+  return summary + minister;
 }
  
 function partyClass(p) {
