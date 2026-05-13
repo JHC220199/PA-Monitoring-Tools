@@ -1,36 +1,34 @@
 name: Update Parliamentary Questions
- 
+
 on:
   schedule:
     - cron: '0 8 * * 1-5'   # 9am BST (British Summer Time, late Mar–late Oct)
     - cron: '0 9 * * 1-5'   # 9am GMT (Greenwich Mean Time, late Oct–late Mar)
-  workflow_dispatch:         # Manual trigger from the Actions tab
- 
+  workflow_dispatch:
+
 permissions:
   contents: write
- 
+
 jobs:
   update:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
- 
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
- 
-      - name: Fetch and update questions
+
+      - name: Fetch, update questions and check answers
         run: python parliament_monitor.py
- 
+
       - name: Commit and push updated data
         run: |
           git config user.name  "Parliament Monitor Bot"
           git config user.email "action@github.com"
           git add docs/data.json
-          # Always commit — even if data unchanged — to keep the repo active
-          # (prevents GitHub from disabling the scheduled workflow)
           git commit --allow-empty -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
           git push
