@@ -419,10 +419,8 @@ function renderHeader() {
 function renderStats() {
   const qs       = allData.questions;
   const members  = new Set(qs.map(q => q.memberName)).size;
-  const answered = qs.filter(q => q.answered && !q.isHolding).length;
   document.getElementById('stats').innerHTML = [
     ['Total questions', qs.length],
-    ['Answered',        answered],
     ['Weeks covered',   weeks.length],
     ['Members',         members],
   ].map(([l, v]) =>
@@ -502,7 +500,7 @@ function renderCard() {
 function toggleRow(row) {
   row.querySelector('.q-text-inner').classList.toggle('expanded');
 }
-
+ 
 function renderAnswerBadge(q) {
   if (!q.answered) {
     return q.dateForAnswer
@@ -514,7 +512,7 @@ function renderAnswerBadge(q) {
   }
   return `<span class="ans-badge ans-answered">✓ Answered</span>`;
 }
-
+ 
 function renderAnswerDetail(q) {
   if (!q.answered) return '';
   const summaryClass = q.isHolding ? 'ans-summary holding' : 'ans-summary';
@@ -563,8 +561,3 @@ function downloadExcel() {
 </script>
 </body>
 </html>
- 
-
-
-
-
