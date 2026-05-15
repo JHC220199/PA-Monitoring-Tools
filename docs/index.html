@@ -398,7 +398,9 @@ function filtered() {
   return allData.questions.filter(q =>
     q.question.toLowerCase().includes(query) ||
     q.memberName.toLowerCase().includes(query) ||
-    (q.party || '').toLowerCase().includes(query)
+    (q.party || '').toLowerCase().includes(query) ||
+    (q.answeringMember || '').toLowerCase().includes(query) ||
+    (q.answeringParty || '').toLowerCase().includes(query)
   );
 }
  
