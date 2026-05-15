@@ -12,6 +12,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+ 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -28,6 +29,7 @@ jobs:
         run: |
           git config user.name  "Parliament Monitor Bot"
           git config user.email "action@github.com"
+          git pull --rebase origin main
           git add docs/data.json
           git commit -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
           git push
