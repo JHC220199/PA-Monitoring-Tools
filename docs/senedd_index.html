@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senedd PRS Written Questions Monitor</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.header h1 { font-size: 18px; font-weight: 600; letter-spacing: -0.2px; }
+.header-meta { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.header-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+.badge-senedd {
+  background: #c9187e;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+
+.controls {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 28px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.controls input[type=text] {
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+  padding: 7px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.controls input[type=text]:focus { outline: 2px solid #1a1a2e; border-color: transparent; }
+
+.btn {
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.1s;
+}
+.btn:hover { background: #f5f5f5; }
+.btn-primary { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+.btn-primary:hover { background: #2d2d4a; }
+
+.stats {
+  display: flex;
+  gap: 12px;
+  padding: 16px 28px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+.stat {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+.stat-label { font-size: 11px; color: #6b7280; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+.stat-value { font-size: 22px; font-weight: 600; color: #1a1a2e; }
+
+.main { padding: 20px 28px; }
+
+.week-group { margin-bottom: 10px; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; }
+
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #f8f9fa;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+.week-header:hover { background: #f0f0f0; }
+.week-title { font-weight: 600; font-size: 14px; color: #1a1a2e; }
+.week-count { font-size: 12px; color: #6b7280; }
+.chevron { transition: transform 0.2s; display: inline-block; }
+.chevron.open { transform: rotate(180deg); }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+thead th {
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 9px 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+tbody tr { border-bottom: 1px solid #f0f0f0; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover { background: #f5f5f5; }
+td { padding: 10px 14px; vertical-align: top; font-size: 13px; }
+
+.col-member { width: 160px; }
+.col-area   { width: 160px; }
+.col-q      { min-width: 320px; }
+.col-date   { width: 100px; white-space: nowrap; }
+.col-ans    { width: 100px; }
+.col-link   { width: 80px; text-align: center; }
+
+.member-name { font-weight: 600; color: #1a1a2e; }
+.wq-ref { font-size: 11px; color: #9ca3af; margin-top: 2px; }
+.area-text { color: #4b5563; font-size: 12px; }
+.q-text { line-height: 1.5; color: #374151; }
+.q-text .toggle-link { color: #1a1a2e; cursor: pointer; font-size: 12px; text-decoration: underline; white-space: nowrap; }
+.date-cell { color: #6b7280; font-size: 12px; }
+.answered-yes { color: #16a34a; font-weight: 600; font-size: 12px; }
+.answered-no  { color: #d97706; font-weight: 600; font-size: 12px; }
+.answered-by  { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+
+.link-cell a {
+  color: #1a1a2e;
+  font-size: 12px;
+  text-decoration: none;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 3px 8px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.link-cell a:hover { background: #f5f5f5; }
+
+.party-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  margin-top: 3px;
+}
+
+.empty-msg { padding: 40px 28px; text-align: center; color: #6b7280; font-size: 14px; }
+.loading   { padding: 60px 28px; text-align: center; color: #6b7280; }
+
+.updated-msg { font-size: 12px; color: rgba(255,255,255,0.55); }
+
+.no-results { padding: 20px; text-align: center; color: #6b7280; background: #fff; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Senedd PRS Written Questions Monitor</h1>
+    <div class="header-meta" id="updated-meta">Loading…</div>
+  </div>
+  <div class="header-right">
+    <span class="badge-senedd">7th Senedd</span>
+    <button class="btn btn-primary" onclick="downloadExcel()">⬇ Download Excel</button>
+  </div>
+</div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Filter by member, constituency or keyword…" oninput="applyFilter()">
+  <button class="btn" onclick="expandAll()">Expand all</button>
+  <button class="btn" onclick="collapseAll()">Collapse all</button>
+</div>
+
+<div class="stats" id="stats" style="display:none">
+  <div class="stat"><div class="stat-label">Questions found</div><div class="stat-value" id="stat-total">—</div></div>
+  <div class="stat"><div class="stat-label">Weeks covered</div><div class="stat-value" id="stat-weeks">—</div></div>
+  <div class="stat"><div class="stat-label">Monitoring since</div><div class="stat-value" id="stat-since">—</div></div>
+</div>
+
+<div class="main" id="main">
+  <div class="loading">Loading questions…</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+let ALL_DATA = null;
+let OPEN_WEEKS = {};
+
+const PARTY_STYLES = {
+  "Labour":              { bg: "#E4002B", color: "#fff", abbrev: "Lab" },
+  "Welsh Conservatives": { bg: "#003087", color: "#fff", abbrev: "Con" },
+  "Conservative":        { bg: "#003087", color: "#fff", abbrev: "Con" },
+  "Plaid Cymru":         { bg: "#3F9142", color: "#fff", abbrev: "PC"  },
+  "Liberal Democrats":   { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
+  "Liberal Democrat":    { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
+  "Reform UK":           { bg: "#12B6CF", color: "#fff", abbrev: "Ref" },
+  "Independent":         { bg: "#808080", color: "#fff", abbrev: "Ind" },
+  "Wales Green Party":   { bg: "#00B140", color: "#fff", abbrev: "Green"},
+};
+
+function partyBadge(party) {
+  const s = PARTY_STYLES[party];
+  if (!s) return "";
+  return `<span class="party-badge" style="background:${s.bg};color:${s.color}">${s.abbrev}</span>`;
+}
+
+function fmtWeek(iso) {
+  const d = new Date(iso + "T00:00:00");
+  const n = d.getDate();
+  const sfx = ([,11,12,13].includes(n%100)) ? "th" : (["","st","nd","rd"][n%10] || "th");
+  return `WC ${n}${sfx} ${d.toLocaleDateString("en-GB",{month:"long",year:"numeric"})}`;
+}
+
+async function load() {
+  try {
+    const r = await fetch("senedd_data.json");
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    ALL_DATA = await r.json();
+
+    document.getElementById("updated-meta").textContent =
+      "Last updated: " + new Date(ALL_DATA.generated).toLocaleString("en-GB", {
+        day: "numeric", month: "short", year: "numeric",
+        hour: "2-digit", minute: "2-digit"
+      });
+
+    document.getElementById("stat-total").textContent = (ALL_DATA.questions || []).length;
+    document.getElementById("stat-weeks").textContent = Object.keys(ALL_DATA.weeks || {}).length;
+    const since = new Date(ALL_DATA.senedd_start + "T00:00:00");
+    document.getElementById("stat-since").textContent =
+      since.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+    document.getElementById("stats").style.display = "flex";
+
+    const weeks = Object.keys(ALL_DATA.weeks || {}).sort();
+    weeks.forEach(w => { OPEN_WEEKS[w] = true; });
+
+    render();
+  } catch (e) {
+    document.getElementById("main").innerHTML =
+      `<div class="empty-msg">Could not load senedd_data.json — make sure the file exists in the same folder.<br><small>${e.message}</small></div>`;
+  }
+}
+
+function applyFilter() { render(); }
+
+function render() {
+  if (!ALL_DATA) return;
+  const filter = (document.getElementById("search").value || "").toLowerCase().trim();
+  const weeks  = Object.keys(ALL_DATA.weeks || {}).sort();
+  const main   = document.getElementById("main");
+
+  if (weeks.length === 0) {
+    main.innerHTML = `<div class="empty-msg">No PRS-related questions found yet.<br>The 7th Senedd is still in its early days — check back soon.</div>`;
+    return;
+  }
+
+  let html = "";
+  let totalShown = 0;
+
+  weeks.forEach(w => {
+    let qs = (ALL_DATA.weeks[w] || []).filter(q => {
+      if (!filter) return true;
+      return [q.snippet, q.full_question, q.member_name, q.member_area, q.wq_ref]
+        .some(f => (f || "").toLowerCase().includes(filter));
+    });
+    if (qs.length === 0) return;
+    totalShown += qs.length;
+    const isOpen = OPEN_WEEKS[w] !== false;
+
+    html += `<div class="week-group">
+      <button class="week-header" onclick="toggleWeek('${w}')">
+        <span class="week-title">${fmtWeek(w)}</span>
+        <span style="display:flex;align-items:center;gap:10px">
+          <span class="week-count">${qs.length} question${qs.length !== 1 ? "s" : ""}</span>
+          <span class="chevron ${isOpen ? "open" : ""}">▼</span>
+        </span>
+      </button>`;
+
+    if (isOpen) {
+      html += `<div class="table-wrap"><table>
+        <thead><tr>
+          <th class="col-member">Member</th>
+          <th class="col-area">Constituency / Region</th>
+          <th class="col-q">Question</th>
+          <th class="col-date">Tabled</th>
+          <th class="col-ans">Answered?</th>
+          <th class="col-link">Link</th>
+        </tr></thead><tbody>`;
+
+      qs.forEach((q, i) => {
+        const qUrl  = `https://record.senedd.wales${q.url_path || ""}`;
+        const txt   = q.full_question || q.snippet || "";
+        const isAns = !!q.answered_on;
+        const id    = `q-${w}-${i}`;
+
+        html += `<tr>
+          <td class="col-member">
+            <div class="member-name">${esc(q.member_name || "—")}</div>
+            ${q.party ? partyBadge(q.party) : ""}
+            <div class="wq-ref">${esc(q.wq_ref || "")}</div>
+          </td>
+          <td class="col-area"><span class="area-text">${esc(q.member_area || "—")}</span></td>
+          <td class="col-q">
+            <div class="q-text" id="${id}-text">${esc(txt.slice(0,150))}${txt.length > 150 ? "…" : ""}</div>
+            ${txt.length > 150 ? `<span class="toggle-link" onclick="toggleQ('${id}','${esc(txt.replace(/'/g,"\\'"))}')">Show more</span>` : ""}
+          </td>
+          <td class="col-date"><span class="date-cell">${esc(q.tabled_str || "—")}</span></td>
+          <td class="col-ans">
+            <div class="${isAns ? "answered-yes" : "answered-no"}">${isAns ? "Yes" : "Pending"}</div>
+            ${isAns ? `<div class="answered-by">${esc(q.answered_on || "")}</div>` : ""}
+          </td>
+          <td class="col-link"><div class="link-cell"><a href="${qUrl}" target="_blank" rel="noopener">View ↗</a></div></td>
+        </tr>`;
+      });
+
+      html += `</tbody></table></div>`;
+    }
+    html += `</div>`;
+  });
+
+  if (totalShown === 0) {
+    html = `<div class="no-results">No questions match your filter.</div>`;
+  }
+
+  main.innerHTML = html;
+}
+
+function toggleWeek(w) {
+  OPEN_WEEKS[w] = !OPEN_WEEKS[w];
+  render();
+}
+function expandAll()   { Object.keys(ALL_DATA?.weeks||{}).forEach(w => OPEN_WEEKS[w] = true);  render(); }
+function collapseAll() { Object.keys(ALL_DATA?.weeks||{}).forEach(w => OPEN_WEEKS[w] = false); render(); }
+
+function toggleQ(id, fullText) {
+  const el = document.getElementById(`${id}-text`);
+  const btn = el?.nextElementSibling;
+  if (!el || !btn) return;
+  if (btn.textContent === "Show more") {
+    el.textContent = fullText;
+    btn.textContent = "Show less";
+  } else {
+    el.textContent = fullText.slice(0,150) + (fullText.length > 150 ? "…" : "");
+    btn.textContent = "Show more";
+  }
+}
+
+function esc(s) {
+  return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+function downloadExcel() {
+  if (!ALL_DATA) return;
+  const wb = XLSX.utils.book_new();
+  const weeks = Object.keys(ALL_DATA.weeks || {}).sort();
+
+  // Summary sheet
+  const sumRows = [
+    ["Senedd PRS Written Questions Monitor"],
+    [`Generated: ${new Date(ALL_DATA.generated).toLocaleString("en-GB")}`],
+    [`Total questions: ${ALL_DATA.total}`],
+    [],
+    ["Week", "Questions"],
+    ...weeks.map(w => [fmtWeek(w), (ALL_DATA.weeks[w]||[]).length]),
+  ];
+  const sumSheet = XLSX.utils.aoa_to_sheet(sumRows);
+  sumSheet["!cols"] = [{wch:30},{wch:12}];
+  XLSX.utils.book_append_sheet(wb, sumSheet, "Summary");
+
+  // Weekly sheets
+  weeks.forEach(w => {
+    const qs = ALL_DATA.weeks[w] || [];
+    const rows = [["Member","Party","Constituency/Region","Question","Tabled","Answered?","Answered by","Link"]];
+    qs.forEach(q => rows.push([
+      q.member_name || "",
+      q.party || "",
+      q.member_area || "",
+      q.full_question || q.snippet || "",
+      q.tabled_str || "",
+      q.answered_on ? "Yes" : "Pending",
+      q.answered_by || "",
+      `https://record.senedd.wales${q.url_path || ""}`,
+    ]));
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    ws["!cols"] = [20,8,22,65,12,10,35,40].map(w => ({wch:w}));
+    XLSX.utils.book_append_sheet(wb, ws, fmtWeek(w).slice(0,31));
+  });
+
+  const today = new Date().toISOString().split("T")[0];
+  XLSX.writeFile(wb, `senedd_wq_${today}.xlsx`);
+}
+
+load();
+</script>
+</body>
+</html>
