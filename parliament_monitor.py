@@ -48,6 +48,31 @@ def http_get(url, timeout=25):
     try: return json.loads(r.stdout) if r.stdout.strip() else None
     except: return None
  
+def extract_followup_uin(text):
+    """Extract a referenced question UIN from follow-up question text.
+    Handles patterns like:
+      'pursuant to the Answer of 9 March 2026 to Question 116836'
+      'pursuant to the answer given in response to Question UIN 116835'
+    Returns the UIN string, or None if not a UIN-referencing follow-up.
+    """
+    t = text.lower()
+    if not re.search(r'\b(pursuant to|further to the answer)', t):
+        return None
+    m = re.search(r'question\s+(?:uin\s+)?(\d{4,7})', t)
+    return m.group(1) if m else None
+ 
+def fetch_by_uin(uin):
+    """Fetch a question from the Parliament API by its UIN."""
+    time.sleep(1)
+    params = urlencode({'searchTerm': uin, 'take': 10})
+    d = http_get(f'{QUESTIONS_API}?{params}')
+    if not d or not d.get('results'):
+        return None
+    for r in d['results']:
+        if str(r['value'].get('uin', '')) == str(uin):
+            return r['value']
+    return None
+ 
  
 # ── Date helpers ───────────────────────────────────────────────────────────────
  
@@ -395,7 +420,15 @@ def main():
         else:
             # ── New question — add if PRS-relevant ────────────────────────
             if not is_prs(raw['questionText']):
-                continue
+                # Not directly PRS — check if it's a follow-up to a PRS question
+                uin_ref = extract_followup_uin(raw['questionText'])
+                if not uin_ref:
+                    continue  # no question reference found, skip
+                original = fetch_by_uin(uin_ref)
+                if not original or not is_prs(original.get('questionText', '')):
+                    continue  # original question isn't PRS either, skip
+                # Original is PRS — include this follow-up
+                print(f"  Follow-up included (orig Q{uin_ref} is PRS): {raw['questionText'][:70]}...")
             m = get_member(raw['askingMemberId'])
             po = m.get('latestParty') if m else None
             party = ''
