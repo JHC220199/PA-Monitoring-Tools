@@ -1,0 +1,32 @@
+name: Parliament Hansard Monitor
+
+on:
+  schedule:
+    - cron: '0 7 * * 1-5'   # 7am UTC, Monday–Friday
+  workflow_dispatch:          # allows manual test runs
+
+jobs:
+  run-monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests msal
+
+      - name: Run monitor
+        env:
+          AZURE_TENANT_ID:         ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID:         ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET:     ${{ secrets.AZURE_CLIENT_SECRET }}
+          SHAREPOINT_SITE_NAME:    ${{ secrets.SHAREPOINT_SITE_NAME }}
+          SHAREPOINT_FOLDER_PATH:  ${{ secrets.SHAREPOINT_FOLDER_PATH }}
+          SHAREPOINT_HOST:         ${{ secrets.SHAREPOINT_HOST }}
+        run: python parliament_hansard_monitor.py
