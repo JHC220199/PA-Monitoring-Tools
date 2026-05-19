@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
  
+concurrency:
+  group: parliament-monitor
+  cancel-in-progress: false
+ 
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -36,4 +40,3 @@ jobs:
           git add docs/data.json
           git commit -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
           git push
- 
