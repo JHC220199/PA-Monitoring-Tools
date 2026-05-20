@@ -300,7 +300,11 @@ def get_access_token() -> str:
  
  
 def get_sharepoint_site_id(token: str) -> str:
-    url  = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
+    # Root site (no /sites/SiteName in URL) — query by hostname only
+    if not SITE_NAME:
+        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}"
+    else:
+        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
     resp = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
     resp.raise_for_status()
     return resp.json()["id"]
