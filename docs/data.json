@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T08:09:49.212972",
+  "lastUpdated": "2026-05-20T18:21:56.175639",
   "questions": [
     {
       "id": 1907504,
@@ -203,12 +203,12 @@
       "dateForAnswer": "Due 19th May",
       "weekCommencing": "2026-05-11",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-14/1328",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th May",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department monitors the performance of the two government-approved redress schemes: the Property Ombudsman and the Property Redress Scheme.This includes reviewing monthly data provided by the schemes and assessing their progress against the approval cr..."
     },
     {
       "id": 1905119,
@@ -241,12 +241,12 @@
       "dateForAnswer": "Due 20th May",
       "weekCommencing": "2026-05-11",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-13/816",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th May",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government recognises that pets can bring joy and comfort to their owners, as well as supporting their mental and physical wellbeing. At present, the ability of a leaseholder to keep a pet will depend on the terms of their lease."
     },
     {
       "id": 1905198,
@@ -355,12 +355,12 @@
       "dateForAnswer": "Due 20th May",
       "weekCommencing": "2026-05-11",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-13/823",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th May",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The Secretary of State for Work and Pensions reviewed Local Housing Allowance (LHA) rates and confirmed in his written ministerial statement on 26th November 2025 that rates would be maintained at their current levels for 2026/27."
     },
     {
       "id": 1904192,
