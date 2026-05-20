@@ -9,9 +9,10 @@ from msal import ConfidentialClientApplication
 TENANT_ID         = os.environ["AZURE_TENANT_ID"]
 CLIENT_ID         = os.environ["AZURE_CLIENT_ID"]
 CLIENT_SECRET     = os.environ["AZURE_CLIENT_SECRET"]
-SITE_NAME         = os.environ["SHAREPOINT_SITE_NAME"]
+SITE_NAME         = os.environ.get("SHAREPOINT_SITE_NAME", "")
+LIBRARY_NAME      = os.environ.get("SHAREPOINT_LIBRARY", "Documents")
 FOLDER_PATH       = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
-SHAREPOINT_HOST   = os.environ.get("SHAREPOINT_HOST", "nrla.sharepoint.com")
+SHAREPOINT_HOST   = os.environ.get("SHAREPOINT_HOST", "rlateam.sharepoint.com")
  
 TODAY      = datetime.utcnow().date()
 YESTERDAY  = TODAY - timedelta(days=1)
@@ -310,10 +311,25 @@ def get_sharepoint_site_id(token: str) -> str:
     return resp.json()["id"]
  
  
+def get_drive_id(token: str, site_id: str) -> str:
+    """Find the drive ID for the named document library."""
+    url  = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drives"
+    resp = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
+    resp.raise_for_status()
+    drives = resp.json().get("value", [])
+    for drive in drives:
+        if drive.get("name", "").lower() == LIBRARY_NAME.lower():
+            print(f"Found drive: {drive['name']} ({drive['id']})")
+            return drive["id"]
+    available = [d.get("name") for d in drives]
+    raise RuntimeError(f"Drive '{LIBRARY_NAME}' not found. Available drives: {available}")
+ 
+ 
 def upload_to_sharepoint(token: str, site_id: str, filename: str, html_content: str):
-    """Upload an HTML file to the SharePoint folder via Graph API."""
+    """Upload an HTML file to the correct SharePoint document library via Graph API."""
+    drive_id     = get_drive_id(token, site_id)
     encoded_path = requests.utils.quote(f"{FOLDER_PATH}/{filename}")
-    url  = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drive/root:/{encoded_path}:/content"
+    url  = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root:/{encoded_path}:/content"
     resp = requests.put(
         url,
         headers={
