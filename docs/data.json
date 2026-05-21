@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-05-21T17:50:43.317693",
+  "lastUpdated": "2026-05-21T18:12:27.090918",
   "questions": [
+    {
+      "id": 1908894,
+      "uin": "4055",
+      "memberName": "Hannah Spencer",
+      "party": "Green",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, what recent estimate he has made of the number of older private renters in receipt of Housing Benefit whose rent exceeds the Local Housing Allowance (LHA) rate; and what assessment he has made of the im",
+      "dateTabled": "21st May",
+      "dateTabledRaw": "2026-05-21",
+      "dateForAnswer": "Due 1st June",
+      "weekCommencing": "2026-05-18",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-21/4055",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1908257,
       "uin": "3729",
