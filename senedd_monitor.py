@@ -4,34 +4,34 @@ Senedd PRS Monitor — Daily updater
 Fetches written questions about the private rented sector from the Welsh
 Parliament (Senedd) and saves them to docs/senedd_data.json for the web
 dashboard.
-
+ 
 No external dependencies beyond the stdlib + requests + beautifulsoup4.
 Install: pip install requests beautifulsoup4
 """
-
+ 
 import json
 import os
 import re
 import time
 from datetime import date, datetime, timedelta
 from collections import defaultdict
-
+ 
 import requests
 from bs4 import BeautifulSoup
-
+ 
 # ── Configuration ──────────────────────────────────────────────────────────────
-
+ 
 DATA_FILE = os.path.join("docs", "senedd_data.json")
-
+ 
 # First sitting of the 7th Senedd — do not fetch questions before this date
 SENEDD_START = date(2026, 5, 12)
-
+ 
 # How far back to search on each run (catches any missed questions)
 LOOKBACK_DAYS = 21
-
+ 
 BASE_URL   = "https://record.senedd.wales"
 MEMBER_URL = "https://business.senedd.wales/mgUserInfo.aspx?UID={uid}"
-
+ 
 KEYWORDS = [
     # Welsh-specific legislation & terms
     "renting homes wales",
@@ -41,8 +41,12 @@ KEYWORDS = [
     "rent smart wales",
     "section 173",
     "housing (wales) act",
+    # Welsh Government housing bodies & initiatives
+    "unnos",
     # General PRS terms
     "private rented sector",
+    "renting in wales",
+    "renting",
     "landlord",
     "local housing allowance",
     "energy performance certificate",
@@ -58,8 +62,13 @@ KEYWORDS = [
     "lha",
     "epc",
     "renters",
+    # Building safety
+    "cladding",
+    "fire safety defects",
+    "building safety",
+    "remediation",
 ]
-
+ 
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": (
@@ -68,14 +77,14 @@ SESSION.headers.update({
         "Chrome/124.0.0.0 Safari/537.36"
     )
 })
-
+ 
 _party_cache: dict = {}
-
+ 
 # ── Helpers ────────────────────────────────────────────────────────────────────
-
+ 
 def clean(t: str) -> str:
     return re.sub(r"\s+", " ", t).strip()
-
+ 
 def parse_dmy(s: str):
     if not s:
         return None
@@ -83,16 +92,16 @@ def parse_dmy(s: str):
         return datetime.strptime(s, "%d/%m/%Y").date()
     except ValueError:
         return None
-
+ 
 def week_commencing(d: date) -> str:
     monday = d - timedelta(days=d.weekday())
     return monday.isoformat()
-
+ 
 def buf_date(d: date, days: int) -> str:
     return (d + timedelta(days=days)).strftime("%d/%m/%Y")
-
+ 
 # ── Data Fetching ──────────────────────────────────────────────────────────────
-
+ 
 def get_party(uid: str) -> str:
     if not uid:
         return ""
@@ -110,7 +119,7 @@ def get_party(uid: str) -> str:
         pass
     _party_cache[uid] = ""
     return ""
-
+ 
 def parse_cards(html_items) -> list:
     results = []
     for html in html_items:
@@ -120,12 +129,12 @@ def parse_cards(html_items) -> list:
             else:
                 soup = html
             card = soup.find("div") if soup.name != "div" else soup
-
+ 
             link = card.find("a", class_="detail") if card else None
             if not link:
                 continue
             url_path = link.get("href", "").replace("..", "")
-
+ 
             title_el = card.find("span", class_="title") if card else None
             if not title_el:
                 continue
@@ -133,14 +142,14 @@ def parse_cards(html_items) -> list:
             if not wq_match:
                 continue
             wq_ref = wq_match.group(1)
-
+ 
             sub = clean(card.find("span", class_="subTitle").get_text()) if card.find("span", class_="subTitle") else ""
             tabled_m = re.search(r"Tabled on (\d{2}/\d{2}/\d{4})", sub)
             answer_m = re.search(r"for answer on (\d{2}/\d{2}/\d{4})", sub)
-
+ 
             ctx = card.find("div", class_="context") if card else None
             snippet = clean(ctx.get_text()) if ctx else ""
-
+ 
             member_name = member_area = member_uid = ""
             bar = card.find("div", class_="memberBar") if card else None
             if bar:
@@ -152,7 +161,7 @@ def parse_cards(html_items) -> list:
                 if u:
                     um = re.search(r"UID=(\d+)", u.get("href", ""))
                     if um: member_uid = um.group(1)
-
+ 
             results.append({
                 "wq_ref":      wq_ref,
                 "url_path":    url_path,
@@ -166,14 +175,14 @@ def parse_cards(html_items) -> list:
         except Exception:
             continue
     return results
-
-
+ 
+ 
 def search_keyword(keyword: str, date_from: date, date_to: date) -> list:
     results = []
     fetch_from = buf_date(date_from, -7)
     fetch_to   = buf_date(date_to,    7)
     page = 1
-
+ 
     while page <= 25:
         try:
             r = SESSION.get(
@@ -205,14 +214,14 @@ def search_keyword(keyword: str, date_from: date, date_to: date) -> list:
         except Exception as e:
             print(f"    ⚠ Error page {page} for '{keyword}': {e}")
             break
-
+ 
     # Client-side strict date filter
     return [q for q in results if (
         parse_dmy(q["tabled_str"]) is not None and
         date_from <= parse_dmy(q["tabled_str"]) <= date_to
     )]
-
-
+ 
+ 
 def fetch_full_question(url_path: str) -> dict:
     result = {"full_question": "", "answered_by": "", "answered_on": ""}
     try:
@@ -235,20 +244,20 @@ def fetch_full_question(url_path: str) -> dict:
     except Exception:
         pass
     return result
-
+ 
 # ── Main ───────────────────────────────────────────────────────────────────────
-
+ 
 def main():
     today       = date.today()
     lookback    = max(SENEDD_START, today - timedelta(days=LOOKBACK_DAYS))
     date_from   = lookback
     date_to     = today
-
+ 
     print(f"Senedd PRS Monitor — {today.isoformat()}")
     print(f"Fetching: {date_from} → {date_to}")
     print(f"Keywords: {len(KEYWORDS)}")
     print()
-
+ 
     # Load existing data
     os.makedirs("docs", exist_ok=True)
     existing = {}
@@ -261,11 +270,11 @@ def main():
             print(f"Loaded {len(existing)} existing questions from {DATA_FILE}")
         except Exception as e:
             print(f"Could not load existing data: {e}")
-
+ 
     # Fetch new questions
     seen = set(existing.keys())
     new_count = 0
-
+ 
     for i, kw in enumerate(KEYWORDS, 1):
         print(f"  [{i:02}/{len(KEYWORDS)}] '{kw}'...", end=" ", flush=True)
         hits = search_keyword(kw, date_from, date_to)
@@ -278,7 +287,7 @@ def main():
                 new_count += 1
         print(f"{len(hits)} found, {added} new")
         time.sleep(0.3)
-
+ 
     print(f"\nFetching full text for {new_count} new questions...")
     for i, (wq_ref, q) in enumerate(existing.items(), 1):
         if q.get("full_question"):
@@ -289,20 +298,20 @@ def main():
         if i % 10 == 0:
             print(f"  {i}/{len(existing)}", flush=True)
         time.sleep(0.2)
-
+ 
     # Sort all questions by tabled date
     all_questions = sorted(
         existing.values(),
         key=lambda q: q.get("tabled_str", ""),
     )
-
+ 
     # Build weekly groups for the JSON
     weeks = defaultdict(list)
     for q in all_questions:
         d = parse_dmy(q.get("tabled_str", ""))
         if d and d >= SENEDD_START:
             weeks[week_commencing(d)].append(q)
-
+ 
     output = {
         "generated":      datetime.utcnow().isoformat() + "Z",
         "senedd_start":   SENEDD_START.isoformat(),
@@ -312,13 +321,14 @@ def main():
             w: qs for w, qs in sorted(weeks.items())
         },
     }
-
+ 
     with open(DATA_FILE, "w") as f:
         json.dump(output, f, indent=2)
-
+ 
     print(f"\n✅  Done. {len(all_questions)} total questions saved to {DATA_FILE}")
     print(f"    New this run: {new_count}")
-
-
+ 
+ 
 if __name__ == "__main__":
     main()
+ 
