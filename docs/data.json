@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T18:12:27.090918",
+  "lastUpdated": "2026-05-22T17:01:02.683671",
   "questions": [
     {
       "id": 1908894,
@@ -13,6 +13,25 @@
       "dateForAnswer": "Due 1st June",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-21/4055",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1908940,
+      "uin": "HL378",
+      "memberName": "Baroness Lister of Burtersett",
+      "party": "Lab",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government whether they have made a qualitative assessment of the impact of the decision not to uprate Local Housing Allowance in 2026\u201327 on homelessness among households in receipt of Universal Credit where at least one individual is",
+      "dateTabled": "21st May",
+      "dateTabledRaw": "2026-05-21",
+      "dateForAnswer": "Due 5th June",
+      "weekCommencing": "2026-05-18",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-21/HL378",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
@@ -659,12 +678,12 @@
       "dateForAnswer": "Due 18th May",
       "weekCommencing": "2026-05-11",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-13/494",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd May",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Government consulted on strengthening the non-domestic PRS minimum energy efficiency standards to EPC C by 1 April 2027, and EPC B by 1 April 2030. We are currently reviewing the policy design, including the timelines, to ensure that it remains fair and p..."
     },
     {
       "id": 1905117,
@@ -678,12 +697,12 @@
       "dateForAnswer": "Due 18th May",
       "weekCommencing": "2026-05-11",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-13/1061",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd May",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "At Autumn Budget 2025, the Secretary of State for Work and Pensions reviewed LHA and decided to maintain rates at current levels for 2026/27. Rent levels across Great Britian were considered alongside other factors, including wider benefit priorities, sup..."
     },
     {
       "id": 1903496,
