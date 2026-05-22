@@ -213,19 +213,39 @@ let ALL_DATA = null;
 let OPEN_WEEKS = {};
  
 const PARTY_STYLES = {
-  "Labour":              { bg: "#E4002B", color: "#fff", abbrev: "Lab" },
-  "Welsh Conservatives": { bg: "#003087", color: "#fff", abbrev: "Con" },
-  "Conservative":        { bg: "#003087", color: "#fff", abbrev: "Con" },
-  "Plaid Cymru":         { bg: "#3F9142", color: "#fff", abbrev: "PC"  },
-  "Liberal Democrats":   { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
-  "Liberal Democrat":    { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
-  "Reform UK":           { bg: "#12B6CF", color: "#fff", abbrev: "Ref" },
-  "Independent":         { bg: "#808080", color: "#fff", abbrev: "Ind" },
-  "Wales Green Party":   { bg: "#00B140", color: "#fff", abbrev: "Green"},
+  // Labour variants
+  "Labour":                    { bg: "#E4002B", color: "#fff", abbrev: "Lab" },
+  "Welsh Labour":              { bg: "#E4002B", color: "#fff", abbrev: "Lab" },
+  // Conservative variants
+  "Welsh Conservatives":       { bg: "#003087", color: "#fff", abbrev: "Con" },
+  "Welsh Conservative Party":  { bg: "#003087", color: "#fff", abbrev: "Con" },
+  "Conservative":              { bg: "#003087", color: "#fff", abbrev: "Con" },
+  // Plaid Cymru
+  "Plaid Cymru":               { bg: "#3F9142", color: "#fff", abbrev: "PC"  },
+  "Plaid Cymru Group":         { bg: "#3F9142", color: "#fff", abbrev: "PC"  },
+  // Lib Dems
+  "Liberal Democrats":         { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
+  "Liberal Democrat":          { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
+  "Welsh Liberal Democrats":   { bg: "#FAA61A", color: "#fff", abbrev: "LD"  },
+  // Reform UK
+  "Reform UK":                 { bg: "#12B6CF", color: "#fff", abbrev: "Ref" },
+  "Reform UK Group":           { bg: "#12B6CF", color: "#fff", abbrev: "Ref" },
+  // Greens
+  "Wales Green Party":         { bg: "#00B140", color: "#fff", abbrev: "Green"},
+  "Green Party":               { bg: "#00B140", color: "#fff", abbrev: "Green"},
+  // Independents
+  "Independent":               { bg: "#808080", color: "#fff", abbrev: "Ind" },
+  "Non-affiliated":            { bg: "#808080", color: "#fff", abbrev: "Ind" },
 };
  
+// Normalise party name then look up — handles e.g. "Welsh Conservative Party Group"
 function partyBadge(party) {
-  const s = PARTY_STYLES[party];
+  let s = PARTY_STYLES[party];
+  if (!s) {
+    // Try partial match for unexpected suffixes like "Group"
+    const key = Object.keys(PARTY_STYLES).find(k => party.startsWith(k) || k.startsWith(party));
+    s = key ? PARTY_STYLES[key] : null;
+  }
   if (!s) return "";
   return `<span class="party-badge" style="background:${s.bg};color:${s.color}">${s.abbrev}</span>`;
 }
