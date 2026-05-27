@@ -1,23 +1,38 @@
+#!/usr/bin/env python3
+"""
+NRLA Parliament Hansard Monitor — Daily runner
+Fetches yesterday's PRS-relevant parliamentary activity and uploads an HTML
+briefing to SharePoint. A Power Automate flow watching that folder will then
+email the briefing to the policy team.
+ 
+Sources covered:
+  - Written Ministerial Statements (made yesterday)
+  - Hansard contributions (Commons, Lords, Grand Committee)
+ 
+Required environment variables (all set as GitHub Secrets):
+  AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET
+  SHAREPOINT_SITE_NAME, SHAREPOINT_FOLDER_PATH, SHAREPOINT_HOST
+"""
+ 
 import os
-import json
-import requests
 from datetime import datetime, timedelta
+ 
+import requests
 from msal import ConfidentialClientApplication
  
-# ── Configuration ─────────────────────────────────────────────────────────────
+# ── Configuration ──────────────────────────────────────────────────────────────
  
-TENANT_ID         = os.environ["AZURE_TENANT_ID"]
-CLIENT_ID         = os.environ["AZURE_CLIENT_ID"]
-CLIENT_SECRET     = os.environ["AZURE_CLIENT_SECRET"]
-SITE_NAME         = os.environ.get("SHAREPOINT_SITE_NAME", "")
-LIBRARY_NAME      = os.environ.get("SHAREPOINT_LIBRARY", "Documents")
-FOLDER_PATH       = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
-SHAREPOINT_HOST   = os.environ.get("SHAREPOINT_HOST", "rlateam.sharepoint.com")
+TENANT_ID       = os.environ["AZURE_TENANT_ID"]
+CLIENT_ID       = os.environ["AZURE_CLIENT_ID"]
+CLIENT_SECRET   = os.environ["AZURE_CLIENT_SECRET"]
+SITE_NAME       = os.environ["SHAREPOINT_SITE_NAME"]
+FOLDER_PATH     = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
+SHAREPOINT_HOST = os.environ.get("SHAREPOINT_HOST", "nrla.sharepoint.com")
  
 TODAY      = datetime.utcnow().date()
 YESTERDAY  = TODAY - timedelta(days=1)
 DATE_STR   = YESTERDAY.strftime("%Y-%m-%d")
-DATE_LABEL = YESTERDAY.strftime("%A %-d %B %Y")
+DATE_LABEL = YESTERDAY.strftime(f"%A {YESTERDAY.day} %B %Y")
  
 # ── PRS keyword tiers (mirrors the WQ tool logic) ─────────────────────────────
  
@@ -58,6 +73,8 @@ EXCLUSIONS = [
     "commercial landlord", "commercial tenant", "commercial rental",
     "commercial property", "park home", "agricultural tenancy",
     "agricultural tenancies",
+    "scotland", "scottish government", "scottish parliament",
+    "holyrood", "wales", "welsh government", "senedd",
 ]
  
  
@@ -76,40 +93,12 @@ def is_prs_relevant(text: str) -> bool:
             return True
     return False
  
- 
 # ── Parliament API helpers ─────────────────────────────────────────────────────
  
-def fetch_written_questions() -> list[dict]:
-    """Fetch written questions answered or tabled on the target date."""
-    results = []
-    url = (
-        f"https://questions-statements-api.parliament.uk/api/writtenquestions/questions"
-        f"?answeredWhenFrom={DATE_STR}&answeredWhenTo={DATE_STR}&take=100"
-    )
-    try:
-        resp = requests.get(url, timeout=20)
-        resp.raise_for_status()
-        data = resp.json()
-        for q in data.get("results", []):
-            value = q.get("value", {})
-            question_text = value.get("questionText", "")
-            answer_text   = value.get("answerText", "")
-            combined      = f"{question_text} {answer_text}"
-            if is_prs_relevant(combined):
-                results.append({
-                    "chamber":  value.get("house", "Unknown"),
-                    "type":     "Written Question",
-                    "title":    value.get("answeringBodyName", ""),
-                    "speaker":  value.get("askingMemberName", ""),
-                    "excerpt":  question_text[:300],
-                    "link":     f"https://questions-statements-api.parliament.uk/api/writtenquestions/questions/{value.get('id', '')}",
-                })
-    except Exception as e:
-        print(f"Written questions error: {e}")
-    return results
  
  
-def fetch_written_statements() -> list[dict]:
+ 
+def fetch_written_statements() -> list:
     """Fetch written ministerial statements made on the target date."""
     results = []
     url = (
@@ -125,27 +114,27 @@ def fetch_written_statements() -> list[dict]:
             text  = value.get("text", "")
             if is_prs_relevant(text):
                 results.append({
-                    "chamber":  value.get("house", "Unknown"),
-                    "type":     "Written Statement",
-                    "title":    value.get("title", ""),
-                    "speaker":  value.get("memberName", ""),
-                    "excerpt":  text[:300],
-                    "link":     f"https://questions-statements-api.parliament.uk/api/writtenstatements/statements/{value.get('id', '')}",
+                    "chamber": value.get("house", "Unknown"),
+                    "type":    "Written Statement",
+                    "title":   value.get("title", ""),
+                    "speaker": value.get("memberName", ""),
+                    "excerpt": text[:300],
+                    "link":    f"https://questions-statements-api.parliament.uk/api/writtenstatements/statements/{value.get('id', '')}",
                 })
     except Exception as e:
         print(f"Written statements error: {e}")
     return results
  
  
-def fetch_hansard() -> list[dict]:
+def fetch_hansard() -> list:
     """Search Hansard for PRS-relevant debates."""
-    results     = []
+    results      = []
+    seen_ids     = set()
     search_terms = [
         "private rented sector", "landlord tenant", "section 21",
         "local housing allowance", "letting agent", "tenancy deposit",
         "renters reform", "leasehold residential", "HMO licensing",
     ]
-    seen_ids = set()
     for term in search_terms:
         url = (
             f"https://hansard.parliament.uk/search/Contributions"
@@ -168,29 +157,28 @@ def fetch_hansard() -> list[dict]:
                     chamber_raw = item.get("House", "")
                     chamber     = "Grand Committee" if "grand" in chamber_raw.lower() else chamber_raw
                     results.append({
-                        "chamber":  chamber,
-                        "type":     item.get("ContributionType", "Debate"),
-                        "title":    item.get("DebateSection", ""),
-                        "speaker":  item.get("AttributedTo", ""),
-                        "excerpt":  item.get("Value", "")[:300],
-                        "link":     f"https://hansard.parliament.uk{item.get('HansardMemberUrl', '')}",
+                        "chamber": chamber,
+                        "type":    item.get("ContributionType", "Debate"),
+                        "title":   item.get("DebateSection", ""),
+                        "speaker": item.get("AttributedTo", ""),
+                        "excerpt": item.get("Value", "")[:300],
+                        "link":    f"https://hansard.parliament.uk{item.get('HansardMemberUrl', '')}",
                     })
         except Exception as e:
             print(f"Hansard search error ({term}): {e}")
     return results
  
- 
 # ── Email HTML builder ─────────────────────────────────────────────────────────
  
 CHAMBER_COLOURS = {
-    "Commons":        "#006400",
-    "Lords":          "#722F37",
-    "Grand Committee":"#B8860B",
-    "Committees":     "#1a5276",
+    "Commons":         "#006400",
+    "Lords":           "#722F37",
+    "Grand Committee": "#B8860B",
+    "Committees":      "#1a5276",
 }
  
  
-def build_html_email(items: list[dict]) -> tuple[str, str]:
+def build_html_email(items: list) -> tuple:
     """Return (subject, html_body) for the daily digest."""
     count = len(items)
     subject = (
@@ -200,11 +188,11 @@ def build_html_email(items: list[dict]) -> tuple[str, str]:
     )
  
     commons_n = sum(1 for i in items if "commons" in i["chamber"].lower())
-    lords_n   = sum(1 for i in items if "lords"   in i["chamber"].lower() and "grand" not in i["chamber"].lower())
-    gc_n      = sum(1 for i in items if "grand"   in i["chamber"].lower())
+    lords_n   = sum(1 for i in items if "lords" in i["chamber"].lower() and "grand" not in i["chamber"].lower())
+    gc_n      = sum(1 for i in items if "grand" in i["chamber"].lower())
     sc_n      = sum(1 for i in items if "committee" in i["chamber"].lower() and "grand" not in i["chamber"].lower())
  
-    grouped: dict[str, list] = {}
+    grouped = {}
     for item in items:
         grouped.setdefault(item["chamber"], []).append(item)
  
@@ -237,54 +225,46 @@ def build_html_email(items: list[dict]) -> tuple[str, str]:
         </td></tr>"""
  
     html = f"""<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"></head>
+<html><head><meta charset="UTF-8"></head>
 <body style="margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:20px 0;">
-  <tr><td align="center">
-    <table width="620" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:6px;overflow:hidden;">
+<tr><td align="center">
+<table width="620" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:6px;overflow:hidden;">
  
-      <!-- Header -->
-      <tr><td style="background:#113B54;padding:20px 24px;">
-        <p style="margin:0;color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:1px;">NRLA</p>
-        <h1 style="margin:4px 0 0;color:#fff;font-size:20px;">Parliamentary Monitor</h1>
-        <p style="margin:4px 0 0;color:#aac4d4;font-size:13px;">{DATE_LABEL}</p>
-      </td></tr>
+  <tr><td style="background:#113B54;padding:20px 24px;">
+    <p style="margin:0;color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:1px;">NRLA</p>
+    <h1 style="margin:4px 0 0;color:#fff;font-size:20px;">Parliamentary Monitor</h1>
+    <p style="margin:4px 0 0;color:#aac4d4;font-size:13px;">{DATE_LABEL}</p>
+  </td></tr>
  
-      <!-- Summary strip -->
-      <tr><td style="background:#E96C19;padding:10px 24px;">
-        <table width="100%" cellpadding="0" cellspacing="0"><tr>
-          <td style="color:#fff;font-size:13px;text-align:center;"><strong>{commons_n}</strong><br>Commons</td>
-          <td style="color:#fff;font-size:13px;text-align:center;"><strong>{lords_n}</strong><br>Lords</td>
-          <td style="color:#fff;font-size:13px;text-align:center;"><strong>{gc_n}</strong><br>Grand Cmte</td>
-          <td style="color:#fff;font-size:13px;text-align:center;"><strong>{sc_n}</strong><br>Committees</td>
-          <td style="color:#fff;font-size:13px;text-align:center;"><strong>{count}</strong><br>Total</td>
-        </tr></table>
-      </td></tr>
+  <tr><td style="background:#E96C19;padding:10px 24px;">
+    <table width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td style="color:#fff;font-size:13px;text-align:center;"><strong>{commons_n}</strong><br>Commons</td>
+      <td style="color:#fff;font-size:13px;text-align:center;"><strong>{lords_n}</strong><br>Lords</td>
+      <td style="color:#fff;font-size:13px;text-align:center;"><strong>{gc_n}</strong><br>Grand Cmte</td>
+      <td style="color:#fff;font-size:13px;text-align:center;"><strong>{sc_n}</strong><br>Committees</td>
+      <td style="color:#fff;font-size:13px;text-align:center;"><strong>{count}</strong><br>Total</td>
+    </tr></table>
+  </td></tr>
  
-      <!-- Results -->
-      <tr><td style="padding:0 24px;">
-        <table width="100%" cellpadding="0" cellspacing="0">
-          {sections_html}{no_activity}
-        </table>
-      </td></tr>
- 
-      <!-- Footer -->
-      <tr><td style="background:#f9f9f9;padding:14px 24px;border-top:1px solid #eee;">
-        <p style="margin:0;font-size:11px;color:#999;">
-          Sources: Hansard, Written Questions &amp; Statements API — parliament.uk<br>
-          Generated automatically on {TODAY.strftime("%-d %B %Y")} · NRLA Parliamentary Monitor
-        </p>
-      </td></tr>
- 
+  <tr><td style="padding:0 24px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      {sections_html}{no_activity}
     </table>
   </td></tr>
+ 
+  <tr><td style="background:#f9f9f9;padding:14px 24px;border-top:1px solid #eee;">
+    <p style="margin:0;font-size:11px;color:#999;">
+      Sources: Hansard, Written Questions &amp; Statements API — parliament.uk<br>
+      Generated automatically on {TODAY.strftime(f"{TODAY.day} %B %Y")} · NRLA Parliamentary Monitor
+    </p>
+  </td></tr>
+ 
 </table>
-</body>
-</html>"""
+</td></tr></table>
+</body></html>"""
  
     return subject, html
- 
  
 # ── SharePoint upload via Microsoft Graph ─────────────────────────────────────
  
@@ -301,35 +281,16 @@ def get_access_token() -> str:
  
  
 def get_sharepoint_site_id(token: str) -> str:
-    # Root site (no /sites/SiteName in URL) — query by hostname only
-    if not SITE_NAME:
-        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}"
-    else:
-        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
+    url  = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
     resp = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
     resp.raise_for_status()
     return resp.json()["id"]
  
  
-def get_drive_id(token: str, site_id: str) -> str:
-    """Find the drive ID for the named document library."""
-    url  = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drives"
-    resp = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
-    resp.raise_for_status()
-    drives = resp.json().get("value", [])
-    for drive in drives:
-        if drive.get("name", "").lower() == LIBRARY_NAME.lower():
-            print(f"Found drive: {drive['name']} ({drive['id']})")
-            return drive["id"]
-    available = [d.get("name") for d in drives]
-    raise RuntimeError(f"Drive '{LIBRARY_NAME}' not found. Available drives: {available}")
- 
- 
 def upload_to_sharepoint(token: str, site_id: str, filename: str, html_content: str):
-    """Upload an HTML file to the correct SharePoint document library via Graph API."""
-    drive_id     = get_drive_id(token, site_id)
+    """Upload an HTML file to the SharePoint folder via Graph API."""
     encoded_path = requests.utils.quote(f"{FOLDER_PATH}/{filename}")
-    url  = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root:/{encoded_path}:/content"
+    url  = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drive/root:/{encoded_path}:/content"
     resp = requests.put(
         url,
         headers={
@@ -342,14 +303,12 @@ def upload_to_sharepoint(token: str, site_id: str, filename: str, html_content: 
     resp.raise_for_status()
     print(f"Uploaded to SharePoint: {filename}")
  
- 
 # ── Main ───────────────────────────────────────────────────────────────────────
  
 def main():
     print(f"Running Parliament PRS Monitor for {DATE_LABEL}…")
  
     items  = []
-    items += fetch_written_questions()
     items += fetch_written_statements()
     items += fetch_hansard()
  
