@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T18:57:56.762981",
+  "lastUpdated": "2026-05-27T18:37:20.720323",
   "questions": [
     {
       "id": 1908894,
@@ -260,12 +260,12 @@
       "dateForAnswer": "Due 20th May",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-18/2009",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "27th May",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the government\u2019s draft Impact Assessment for the draft Commonhold and Leasehold Reform Bill. This was published on 19 March 2026 and can be found on gov.uk here."
     },
     {
       "id": 1906498,
@@ -279,12 +279,12 @@
       "dateForAnswer": "Due 20th May",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-18/2146",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "27th May",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Warm Homes Plan will deliver \u00a315 billion to upgrade Britain\u2019s old housing stock with solar panels, batteries, heat pumps and insulation to cut bills for good. The Government is committed to working in partnership with local government to deliver the P..."
     },
     {
       "id": 1906330,
@@ -298,12 +298,12 @@
       "dateForAnswer": "Due 20th May",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-18/2020",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "27th May",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Through the Renters\u2019 Rights Act, the government is strengthening local authorities\u2019 enforcement powers and extending and increasing ring-fenced civil penalties to support a \u2018polluter pays\u2019 approach to enforcement of the new tenancy system.In accordance wi..."
     },
     {
       "id": 1906110,
