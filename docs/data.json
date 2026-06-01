@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-06-01T21:37:16.152994",
+  "lastUpdated": "2026-06-01T22:13:41.084181",
   "questions": [
+    {
+      "id": 1910848,
+      "uin": "5775",
+      "memberName": "Joe Powell",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, when he plans to bring the increase to the collective enfranchisement threshold for mixed use premises from 25% commercial to 50% into force.",
+      "dateTabled": "1st June",
+      "dateTabledRaw": "2026-06-01",
+      "dateForAnswer": "Due 3rd June",
+      "weekCommencing": "2026-06-01",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-01/5775",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1909928,
       "uin": "4883",
