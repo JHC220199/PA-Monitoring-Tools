@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29T18:58:02.910377",
+  "lastUpdated": "2026-06-01T21:37:16.152994",
   "questions": [
     {
       "id": 1909928,
@@ -317,12 +317,12 @@
       "dateForAnswer": "Due 1st June",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-19/3036",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st June",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Government recognises there is no \u201cone-size-fits-all\u201d approach to tackling the UK\u2019s diverse building stock. We have set out a range of provisions to ensure the cost and compliance burden is fair and proportionate for landlords."
     },
     {
       "id": 1907276,
@@ -336,12 +336,12 @@
       "dateForAnswer": "Due 21st May",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-19/2748",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 127019 on 21 April 2026"
     },
     {
       "id": 1907713,
