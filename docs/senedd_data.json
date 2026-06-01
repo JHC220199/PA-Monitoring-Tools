@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-29T18:20:22.044203Z",
+  "generated": "2026-06-01T21:17:26.812444Z",
   "senedd_start": "2026-05-12",
-  "total": 3,
+  "total": 5,
   "questions": [
     {
       "wq_ref": "WQ98617",
@@ -44,6 +44,34 @@
       "answered_by": "",
       "answered_on": "",
       "party": "Plaid Cymru"
+    },
+    {
+      "wq_ref": "WQ98639",
+      "url_path": "/WrittenQuestion/98639",
+      "tabled_str": "26/05/2026",
+      "answer_str": "02/06/2026",
+      "snippet": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of ...",
+      "member_name": "Kiera Marshall",
+      "member_area": "Caerdydd Penarth",
+      "member_uid": "12166",
+      "full_question": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of the Building Safety Act 2022?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Plaid Cymru"
+    },
+    {
+      "wq_ref": "WQ98740",
+      "url_path": "/WrittenQuestion/98740",
+      "tabled_str": "27/05/2026",
+      "answer_str": "03/06/2026",
+      "snippet": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social ...",
+      "member_name": "Iain McIntosh",
+      "member_area": "Brycheiniog Tawe Nedd",
+      "member_uid": "12170",
+      "full_question": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social landlords?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
     }
   ],
   "weeks": {
@@ -89,6 +117,36 @@
         "answered_by": "",
         "answered_on": "",
         "party": "Plaid Cymru"
+      }
+    ],
+    "2026-05-25": [
+      {
+        "wq_ref": "WQ98639",
+        "url_path": "/WrittenQuestion/98639",
+        "tabled_str": "26/05/2026",
+        "answer_str": "02/06/2026",
+        "snippet": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of ...",
+        "member_name": "Kiera Marshall",
+        "member_area": "Caerdydd Penarth",
+        "member_uid": "12166",
+        "full_question": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of the Building Safety Act 2022?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Plaid Cymru"
+      },
+      {
+        "wq_ref": "WQ98740",
+        "url_path": "/WrittenQuestion/98740",
+        "tabled_str": "27/05/2026",
+        "answer_str": "03/06/2026",
+        "snippet": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social ...",
+        "member_name": "Iain McIntosh",
+        "member_area": "Brycheiniog Tawe Nedd",
+        "member_uid": "12170",
+        "full_question": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social landlords?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
       }
     ]
   }
