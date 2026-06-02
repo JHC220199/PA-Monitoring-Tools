@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01T22:13:41.084181",
+  "lastUpdated": "2026-06-02T12:19:23.871289",
   "questions": [
     {
       "id": 1910848,
@@ -13,6 +13,25 @@
       "dateForAnswer": "Due 3rd June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-01/5775",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1910605,
+      "uin": "5534",
+      "memberName": "Liz Jarvis",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what recent assessment he has made of the adequacy of the affordability and transparency of service charges, ground rents and other costs associated with retirement leasehold pro",
+      "dateTabled": "1st June",
+      "dateTabledRaw": "2026-06-01",
+      "dateForAnswer": "Due 3rd June",
+      "weekCommencing": "2026-06-01",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-01/5534",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
