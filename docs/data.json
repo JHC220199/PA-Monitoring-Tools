@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05T12:30:08.783181",
+  "lastUpdated": "2026-06-08T12:42:54.206067",
   "questions": [
     {
       "id": 1912257,
@@ -374,12 +374,12 @@
       "dateForAnswer": "Due 2nd June",
       "weekCommencing": "2026-05-25",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-29/4250",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "8th June",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "For low income and social households, the Warm Homes: Local Grant and Warm Homes: Social Housing Fund provides funding to support the installation of technologies including heat pumps alongside solar PV, batteries and insulation."
     },
     {
       "id": 1908894,
