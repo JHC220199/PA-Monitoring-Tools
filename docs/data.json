@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-06-09T11:14:59.136428",
+  "lastUpdated": "2026-06-09T12:22:20.390665",
   "questions": [
+    {
+      "id": 1913811,
+      "uin": "7799",
+      "memberName": "Mr Andrew Snowden",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what assessment he has made of the adequacy of powers available to local authorities to address accumulations of waste and unsanitary conditions in rented residential properties.",
+      "dateTabled": "8th June",
+      "dateTabledRaw": "2026-06-08",
+      "dateForAnswer": "Due 10th June",
+      "weekCommencing": "2026-06-08",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-08/7799",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1912257,
       "uin": "6908",
@@ -146,12 +165,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-03/6493",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "8th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government has no plans to introduce rent controls in the private rented sector or to devolve powers to the Mayor of London to do so in the capital. Rent inflation in England has been easing since the end of 2024."
     },
     {
       "id": 1911826,
@@ -165,12 +184,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-03/6492",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "8th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government has no plans to introduce rent controls in the private rented sector or to devolve powers to the Mayor of London to do so in the capital. Rent inflation in England has been easing since the end of 2024."
     },
     {
       "id": 1911615,
@@ -241,12 +260,12 @@
       "dateForAnswer": "Due 3rd June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-01/5534",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "9th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 4726 on 8 June 2026."
     },
     {
       "id": 1909928,
@@ -355,12 +374,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-05-25",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-29/5153",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "8th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Owners of existing leasehold houses will benefit from a number of the provisions of our draft Commonhold and Leasehold Reform Bill including the abolition of forfeiture for leasehold; regulation of estate rentcharges; and the capping of ground rents at \u00a32..."
     },
     {
       "id": 1909232,
@@ -393,12 +412,12 @@
       "dateForAnswer": "Due 1st June",
       "weekCommencing": "2026-05-18",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-05-21/4055",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "9th June",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "Information on the number of older private renters in receipt of Housing Benefit, and if it covers rent (after application of Local Housing Allowance, reductions and deductions), is available on Stat-Xplore via the Housing Benefit official statistics."
     },
     {
       "id": 1908940,
