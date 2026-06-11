@@ -270,6 +270,36 @@ body {
   <div class="stat"><div class="stat-label">Total questions</div><div class="stat-value" id="stat-total">—</div></div>
   <div class="stat"><div class="stat-label">Weeks covered</div><div class="stat-value" id="stat-weeks">—</div></div>
   <div class="stat"><div class="stat-label">Members</div><div class="stat-value" id="stat-members">—</div></div>
+  <div style="margin-left:auto; display:flex; align-items:center;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="180" height="120" style="border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.08); border:1px solid #e2e8f0;">
+      <!-- Welsh flag: white top, green bottom, red dragon -->
+      <rect width="600" height="200" fill="#fff"/>
+      <rect y="200" width="600" height="200" fill="#00AB39"/>
+      <!-- Simplified Y Ddraig Goch (Red Dragon) -->
+      <g transform="translate(300,200) scale(1.1)" fill="#D42B2B">
+        <!-- Body -->
+        <path d="M-60,-30 C-80,-70 -40,-100 0,-90 C40,-100 80,-70 60,-30 C90,-10 100,20 80,40 C60,60 20,70 0,60 C-20,70 -60,60 -80,40 C-100,20 -90,-10 -60,-30Z" opacity="0.95"/>
+        <!-- Head -->
+        <ellipse cx="-95" cy="-50" rx="30" ry="22" />
+        <polygon points="-120,-52 -135,-70 -115,-58" /><!-- upper jaw -->
+        <polygon points="-120,-48 -135,-30 -115,-42" /><!-- lower jaw -->
+        <!-- Eye -->
+        <circle cx="-90" cy="-56" r="4" fill="#fff"/>
+        <circle cx="-89" cy="-56" r="2" fill="#1a1a1a"/>
+        <!-- Wings -->
+        <path d="M-30,-50 C-20,-110 30,-130 70,-120 C50,-100 40,-80 20,-60Z" opacity="0.85"/>
+        <path d="M-10,-45 C0,-105 50,-125 90,-110 C70,-95 55,-75 35,-55Z" opacity="0.75"/>
+        <!-- Tail -->
+        <path d="M70,30 C100,35 130,20 150,0 C160,-10 170,-5 155,10 C140,30 110,50 80,45Z"/>
+        <!-- Legs -->
+        <path d="M-40,40 L-55,75 L-45,75 L-35,50Z"/>
+        <path d="M20,45 L10,80 L20,80 L30,55Z"/>
+        <!-- Claws -->
+        <path d="M-55,75 L-62,72 M-55,75 L-58,80 M-55,75 L-50,80" stroke="#D42B2B" stroke-width="2" fill="none"/>
+        <path d="M10,80 L3,77 M10,80 L7,85 M10,80 L15,85" stroke="#D42B2B" stroke-width="2" fill="none"/>
+      </g>
+    </svg>
+  </div>
 </div>
  
 <div class="main">
