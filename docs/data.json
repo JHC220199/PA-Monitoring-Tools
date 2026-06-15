@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-06-12T12:45:08.489442",
+  "lastUpdated": "2026-06-15T14:14:32.478861",
   "questions": [
+    {
+      "id": 1915604,
+      "uin": "9410",
+      "memberName": "Ben Obese-Jecty",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 8 June 2026 to Question 4883 on Mayors: Elections, whether proposed Police Reform Bill will amend section 21(1)(d) of the Greater London Authority Act 1",
+      "dateTabled": "12nd June",
+      "dateTabledRaw": "2026-06-12",
+      "dateForAnswer": "Due 16th June",
+      "weekCommencing": "2026-06-08",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-12/9410",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1915457,
       "uin": "9257",
@@ -203,12 +222,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-09/8079",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th June",
+      "answeringMember": "Alison McGovern",
+      "answeringParty": "Lab",
+      "answerSummary": "Fewer than 1% of all properties across England will be affected by the High Value Council Tax surcharge. The Valuation Office (VO) will be conducting a targeted valuation exercise to identify and value properties in scope."
     },
     {
       "id": 1914198,
@@ -317,12 +336,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-04/6908",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Impact Assessment for the Renters\u2019 Rights Act can be found here. My Department continues to monitor trends across the private rented sector and is conducting a robust evaluation of the impact of the Renters' Rights Act."
     },
     {
       "id": 1912544,
@@ -336,12 +355,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-04/7022",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department engages regularly with stakeholders to discuss the operation and efficacy of the Tenancy Deposit Protection (TDP) system. This engagement includes gathering information about the difference in service quality between the two types of TDP sch..."
     },
     {
       "id": 1912543,
@@ -355,12 +374,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-04/7021",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department receives data from Tenancy Deposit Protection (TDP) providers regarding the speed of Alternative Dispute Resolution (ADR) in respect of both custodial and insured schemes. My Department also receives information about how quickly a deposit i..."
     },
     {
       "id": 1912535,
@@ -374,12 +393,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-04/7013",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The proposed removal of the insured schemes is based on the objective of ensuring that tenant deposits are as safe as possible.Under the custodial system, money is held by the Tenancy Deposit Protection provider as a neutral third party."
     },
     {
       "id": 1912532,
@@ -393,12 +412,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-04/7010",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department engages regularly with stakeholders to discuss the operation and efficacy of the Tenancy Deposit Protection (TDP) system. This engagement includes gathering information about the difference in service quality between the two types of TDP sch..."
     },
     {
       "id": 1911854,
@@ -412,12 +431,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-03/6342",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Sarah Sackman",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice (including its executive agency His Majesty\u2019s Courts and Tribunals Service) is working closely with the Ministry of Housing, Communities and Local Government to make sure that the courts have sufficient capacity to manage the impac..."
     },
     {
       "id": 1911894,
@@ -431,12 +450,12 @@
       "dateForAnswer": "Due 8th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-03/6417",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "12nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Renters\u2019 Rights Act does not alter how tenancy swaps work for assured periodic tenancies. If all tenants and the landlord agree, then a tenant can be swapped for a new one."
     },
     {
       "id": 1911827,
@@ -488,12 +507,12 @@
       "dateForAnswer": "Due 16th June",
       "weekCommencing": "2026-06-01",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-02/HL572",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th June",
+      "answeringMember": "Lord Livermore",
+      "answeringParty": "Lab",
+      "answerSummary": "Opportunities for social landlords to participate in the contents insurance pilot will open later this year. This is part of the Government\u2019s Financial Inclusion Strategy which encompasses an ambitious package of measures to help people access the product..."
     },
     {
       "id": 1911250,
