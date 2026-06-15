@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T14:14:32.478861",
+  "lastUpdated": "2026-06-15T15:39:00.952693",
   "questions": [
     {
       "id": 1915604,
@@ -260,6 +260,25 @@
       "dateForAnswer": "Due 11st June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-09/8136",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1915772,
+      "uin": "900415",
+      "memberName": "Joe Morris",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what steps he is taking to improve the private rented sector for tenants.",
+      "dateTabled": "9th June",
+      "dateTabledRaw": "2026-06-09",
+      "dateForAnswer": "Due 15th June",
+      "weekCommencing": "2026-06-08",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-09/900415",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
