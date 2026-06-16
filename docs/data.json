@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T13:11:36.307946",
+  "lastUpdated": "2026-06-16T13:57:32.673947",
   "questions": [
     {
       "id": 1916091,
@@ -89,6 +89,25 @@
       "dateForAnswer": "Due 17th June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-15/10004",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1916012,
+      "uin": "9752",
+      "memberName": "James MacCleary",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what assessment his Department has made on the potential impact of the Commonhold and Leasehold Reform Bill on the availability of new housing-with-care schemes for older people.",
+      "dateTabled": "15th June",
+      "dateTabledRaw": "2026-06-15",
+      "dateForAnswer": "Due 17th June",
+      "weekCommencing": "2026-06-15",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-15/9752",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
