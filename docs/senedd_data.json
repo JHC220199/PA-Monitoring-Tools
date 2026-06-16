@@ -1,8 +1,22 @@
 {
-  "generated": "2026-06-15T13:45:24.086933Z",
+  "generated": "2026-06-16T12:45:08.659262Z",
   "senedd_start": "2026-05-12",
-  "total": 5,
+  "total": 7,
   "questions": [
+    {
+      "wq_ref": "WQ99061",
+      "url_path": "/WrittenQuestion/99061",
+      "tabled_str": "15/06/2026",
+      "answer_str": "22/06/2026",
+      "snippet": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly ...",
+      "member_name": "Jason O'Connell",
+      "member_area": "Pontypridd Cynon Merthyr",
+      "member_uid": "12158",
+      "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
+    },
     {
       "wq_ref": "WQ98617",
       "url_path": "/WrittenQuestion/98617",
@@ -72,6 +86,20 @@
       "answered_by": "",
       "answered_on": "",
       "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ98680",
+      "url_path": "/WrittenQuestion/98680",
+      "tabled_str": "27/05/2026",
+      "answer_str": "03/06/2026",
+      "snippet": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and ...",
+      "member_name": "Andrew R.T. Davies",
+      "member_area": "Pen-y-bont Bro Morgannwg",
+      "member_uid": "143",
+      "full_question": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and people who are in this country illegally?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "10/06/2026",
+      "party": "Welsh Conservative Party"
     }
   ],
   "weeks": {
@@ -144,6 +172,36 @@
         "member_area": "Brycheiniog Tawe Nedd",
         "member_uid": "12170",
         "full_question": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social landlords?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ98680",
+        "url_path": "/WrittenQuestion/98680",
+        "tabled_str": "27/05/2026",
+        "answer_str": "03/06/2026",
+        "snippet": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and ...",
+        "member_name": "Andrew R.T. Davies",
+        "member_area": "Pen-y-bont Bro Morgannwg",
+        "member_uid": "143",
+        "full_question": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and people who are in this country illegally?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "10/06/2026",
+        "party": "Welsh Conservative Party"
+      }
+    ],
+    "2026-06-15": [
+      {
+        "wq_ref": "WQ99061",
+        "url_path": "/WrittenQuestion/99061",
+        "tabled_str": "15/06/2026",
+        "answer_str": "22/06/2026",
+        "snippet": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly ...",
+        "member_name": "Jason O'Connell",
+        "member_area": "Pontypridd Cynon Merthyr",
+        "member_uid": "12158",
+        "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
         "answered_by": "",
         "answered_on": "",
         "party": "Reform UK"
