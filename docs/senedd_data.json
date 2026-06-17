@@ -1,8 +1,22 @@
 {
-  "generated": "2026-06-16T12:45:08.659262Z",
+  "generated": "2026-06-17T12:10:07.218052Z",
   "senedd_start": "2026-05-12",
-  "total": 7,
+  "total": 8,
   "questions": [
+    {
+      "wq_ref": "WQ98823",
+      "url_path": "/WrittenQuestion/98823",
+      "tabled_str": "01/06/2026",
+      "answer_str": "08/06/2026",
+      "snippet": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities ...",
+      "member_name": "Darren Millar",
+      "member_area": "Clwyd",
+      "member_uid": "171",
+      "full_question": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities in Wales?",
+      "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+      "answered_on": "10/06/2026",
+      "party": "Welsh Conservative Party"
+    },
     {
       "wq_ref": "WQ99061",
       "url_path": "/WrittenQuestion/99061",
@@ -187,6 +201,22 @@
         "member_uid": "143",
         "full_question": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and people who are in this country illegally?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "10/06/2026",
+        "party": "Welsh Conservative Party"
+      }
+    ],
+    "2026-06-01": [
+      {
+        "wq_ref": "WQ98823",
+        "url_path": "/WrittenQuestion/98823",
+        "tabled_str": "01/06/2026",
+        "answer_str": "08/06/2026",
+        "snippet": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities ...",
+        "member_name": "Darren Millar",
+        "member_area": "Clwyd",
+        "member_uid": "171",
+        "full_question": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities in Wales?",
+        "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
         "answered_on": "10/06/2026",
         "party": "Welsh Conservative Party"
       }
