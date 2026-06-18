@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-06-17T13:23:26.671471",
+  "lastUpdated": "2026-06-18T12:18:33.703245",
   "questions": [
+    {
+      "id": 1917412,
+      "uin": "10892",
+      "memberName": "Dr Danny Chambers",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Defence, what estimate he has made of the proportion of military accommodation in Sir John Moore Barracks and Worthy down that does not meet the Decent Homes Standard.",
+      "dateTabled": "17th June",
+      "dateTabledRaw": "2026-06-17",
+      "dateForAnswer": "Due 22nd June",
+      "weekCommencing": "2026-06-15",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-17/10892",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1916825,
       "uin": "10420",
@@ -355,12 +374,12 @@
       "dateForAnswer": "Due 17th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9123",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "English Housing Survey 2024-2025 data, which can be found on gov.uk here, indicates that the size of the private rented sector remains stable at around 19% of households in England. My Department has made no specific assessment of the availability of rent..."
     },
     {
       "id": 1915368,
@@ -431,12 +450,12 @@
       "dateForAnswer": "Due 17th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9124",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "English Housing Survey 2024-2025 data, which can be found on gov.uk here, indicates that the size of the private rented sector remains stable at around 19% of households in England. My Department has made no specific assessment of the availability of rent..."
     },
     {
       "id": 1914891,
