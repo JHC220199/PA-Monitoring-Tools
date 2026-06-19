@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T12:22:32.160981",
+  "lastUpdated": "2026-06-19T13:08:06.848604",
   "questions": [
     {
       "id": 1917970,
@@ -279,12 +279,12 @@
       "dateForAnswer": "Due 18th June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-15/9656",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "19th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Renters\u2019 Rights Act 2025 provides local authorities with strong investigatory and enforcement powers to bear down on rental discrimination practices in the private rented sector. It addresses both overt discriminatory practices, such as \u2018No DSS\u2019 adver..."
     },
     {
       "id": 1916283,
@@ -450,12 +450,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9132",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "19th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 2020 on 27 May 2026."
     },
     {
       "id": 1915302,
