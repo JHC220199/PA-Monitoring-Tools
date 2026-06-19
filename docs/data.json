@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-06-18T12:48:03.821307",
+  "lastUpdated": "2026-06-19T12:22:32.160981",
   "questions": [
+    {
+      "id": 1917970,
+      "uin": "11163",
+      "memberName": "Mohammad Yasin",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, if he will take steps to ensure the Commonhold and Leasehold Reform Bill contains provisions to ensure housing-with-care is affordable to as many retirees as possible.",
+      "dateTabled": "18th June",
+      "dateTabledRaw": "2026-06-18",
+      "dateForAnswer": "Due 22nd June",
+      "weekCommencing": "2026-06-15",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-18/11163",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1917412,
       "uin": "10892",
