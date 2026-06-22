@@ -1,6 +1,44 @@
 {
-  "lastUpdated": "2026-06-19T13:08:06.848604",
+  "lastUpdated": "2026-06-22T13:51:17.099562",
   "questions": [
+    {
+      "id": 1918219,
+      "uin": "11419",
+      "memberName": "Sir James Cleverly",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, which measure tribunals rely upon when determining market rent under the Renters\u2019 Rights Act where advertised asking rents diverge materially from achieved rents.",
+      "dateTabled": "19th June",
+      "dateTabledRaw": "2026-06-19",
+      "dateForAnswer": "Due 23rd June",
+      "weekCommencing": "2026-06-15",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-19/11419",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1918207,
+      "uin": "11408",
+      "memberName": "Sir James Cleverly",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what assessment he has made of the potential impact of a EU Youth Mobility Scheme on the private rental market in (a) London and (b) England.",
+      "dateTabled": "19th June",
+      "dateTabledRaw": "2026-06-19",
+      "dateForAnswer": "Due 23rd June",
+      "weekCommencing": "2026-06-15",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-19/11408",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1917970,
       "uin": "11163",
@@ -374,12 +412,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9257",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "19th June",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "Housing costs support is available in Housing Benefit or Universal Credit to those who have a liability to pay rent and eligible service charges for the home they live in. The verification process is designed to establish the costs that the claimant has a..."
     },
     {
       "id": 1915299,
@@ -412,12 +450,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9173",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "19th June",
+      "answeringMember": "Sarah Sackman",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice has and continues to work closely with the Ministry of Housing, Communities and Local Government to assess the impact of the implementation of the Renters\u2019 Rights Act and to ensure that the First-tier Tribunal (Property Chamber) ha..."
     },
     {
       "id": 1915352,
@@ -431,12 +469,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-11/9166",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "19th June",
+      "answeringMember": "Sarah Sackman",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice (including its executive agency His Majesty\u2019s Courts and Tribunals Service) has worked closely with the Ministry of Housing, Communities and Local Government to ensure that the courts have sufficient capacity to manage the impact o..."
     },
     {
       "id": 1915310,
@@ -488,12 +526,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-10/8822",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement (HCWS1210) made on 18 December 2025. The two consultations both closed on 12 March 2026."
     },
     {
       "id": 1914604,
@@ -526,12 +564,12 @@
       "dateForAnswer": "Due 15th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-10/8821",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement (HCWS1210) made on 18 December 2025. The two consultations both closed on 12 March 2026."
     },
     {
       "id": 1914496,
