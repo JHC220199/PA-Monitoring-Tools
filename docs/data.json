@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T13:51:17.099562",
+  "lastUpdated": "2026-06-22T15:11:14.890987",
   "questions": [
     {
       "id": 1918219,
@@ -70,12 +70,12 @@
       "dateForAnswer": "Due 22nd June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-17/10892",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd June",
+      "answeringMember": "Luke Pollard",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Defence remains committed to providing Service personnel and their families with high-quality, modern and well-maintained accommodation. As of 15 June 2026, there are 415 Service Family Accommodation (SFA) properties serving Sir John Moore..."
     },
     {
       "id": 1916825,
