@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-19T11:58:20.545649Z",
+  "generated": "2026-06-22T13:25:59.615853Z",
   "senedd_start": "2026-05-12",
-  "total": 8,
+  "total": 10,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -27,6 +27,34 @@
       "member_area": "Pontypridd Cynon Merthyr",
       "member_uid": "12158",
       "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99165",
+      "url_path": "/WrittenQuestion/99165",
+      "tabled_str": "19/06/2026",
+      "answer_str": "26/06/2026",
+      "snippet": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99164",
+      "url_path": "/WrittenQuestion/99164",
+      "tabled_str": "19/06/2026",
+      "answer_str": "26/06/2026",
+      "snippet": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
       "answered_by": "",
       "answered_on": "",
       "party": "Reform UK"
@@ -232,6 +260,34 @@
         "member_area": "Pontypridd Cynon Merthyr",
         "member_uid": "12158",
         "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ99165",
+        "url_path": "/WrittenQuestion/99165",
+        "tabled_str": "19/06/2026",
+        "answer_str": "26/06/2026",
+        "snippet": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ99164",
+        "url_path": "/WrittenQuestion/99164",
+        "tabled_str": "19/06/2026",
+        "answer_str": "26/06/2026",
+        "snippet": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
         "answered_by": "",
         "answered_on": "",
         "party": "Reform UK"
