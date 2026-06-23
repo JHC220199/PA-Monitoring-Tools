@@ -25,7 +25,7 @@ from msal import ConfidentialClientApplication
 TENANT_ID       = os.environ["AZURE_TENANT_ID"]
 CLIENT_ID       = os.environ["AZURE_CLIENT_ID"]
 CLIENT_SECRET   = os.environ["AZURE_CLIENT_SECRET"]
-SITE_NAME       = os.environ["SHAREPOINT_SITE_NAME"]
+SITE_NAME       = os.environ.get("SHAREPOINT_SITE_NAME", "")  # Leave empty for root site
 SHAREPOINT_LIB  = os.environ.get("SHAREPOINT_LIBRARY", "Documents")
 FOLDER_PATH     = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
 SHAREPOINT_HOST = os.environ.get("SHAREPOINT_HOST", "nrla.sharepoint.com")
@@ -282,7 +282,11 @@ def get_access_token() -> str:
  
  
 def get_sharepoint_site_id(token: str) -> str:
-    url  = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
+    # If SITE_NAME is set, target a subsite; otherwise use the root site
+    if SITE_NAME:
+        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}:/sites/{SITE_NAME}"
+    else:
+        url = f"https://graph.microsoft.com/v1.0/sites/{SHAREPOINT_HOST}"
     resp = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
     resp.raise_for_status()
     return resp.json()["id"]
@@ -384,3 +388,4 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
