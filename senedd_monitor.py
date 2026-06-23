@@ -288,10 +288,12 @@ def main():
         print(f"{len(hits)} found, {added} new")
         time.sleep(0.3)
  
-    print(f"\nFetching full text for {new_count} new questions...")
+    # Count how many need fetching (new + unanswered)
+    to_fetch = sum(1 for q in existing.values() if not (q.get("full_question") and q.get("answered_on")))
+    print(f"\nFetching/refreshing {to_fetch} questions (new + unanswered)...")
     for i, (wq_ref, q) in enumerate(existing.items(), 1):
-        if q.get("full_question"):
-            continue  # already have full text
+        if q.get("full_question") and q.get("answered_on"):
+            continue  # already have full text and answer — no need to re-fetch
         detail = fetch_full_question(q["url_path"])
         q.update(detail)
         q["party"] = get_party(q.get("member_uid", ""))
