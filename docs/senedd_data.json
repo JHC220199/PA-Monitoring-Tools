@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-23T10:19:42.860851Z",
+  "generated": "2026-06-23T10:53:25.101148Z",
   "senedd_start": "2026-05-12",
-  "total": 10,
+  "total": 11,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -99,6 +99,20 @@
       "full_question": "What plans does the Welsh Government have to act to speed up remediation work on properties with unsafe cladding and other fire safety defects, including by strengthening oversight and enforcement where developers and freeholders fail to meet agreed deadlines?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
+      "party": "Plaid Cymru"
+    },
+    {
+      "wq_ref": "WQ99186",
+      "url_path": "/WrittenQuestion/99186",
+      "tabled_str": "22/06/2026",
+      "answer_str": "29/06/2026",
+      "snippet": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act ...",
+      "member_name": "Sara Crowley",
+      "member_area": "Pontypridd Cynon Merthyr",
+      "member_uid": "12150",
+      "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
+      "answered_by": "",
+      "answered_on": "",
       "party": "Plaid Cymru"
     },
     {
@@ -291,6 +305,22 @@
         "answered_by": "",
         "answered_on": "",
         "party": "Reform UK"
+      }
+    ],
+    "2026-06-22": [
+      {
+        "wq_ref": "WQ99186",
+        "url_path": "/WrittenQuestion/99186",
+        "tabled_str": "22/06/2026",
+        "answer_str": "29/06/2026",
+        "snippet": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act ...",
+        "member_name": "Sara Crowley",
+        "member_area": "Pontypridd Cynon Merthyr",
+        "member_uid": "12150",
+        "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Plaid Cymru"
       }
     ]
   }
