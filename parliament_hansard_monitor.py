@@ -26,6 +26,7 @@ TENANT_ID       = os.environ["AZURE_TENANT_ID"]
 CLIENT_ID       = os.environ["AZURE_CLIENT_ID"]
 CLIENT_SECRET   = os.environ["AZURE_CLIENT_SECRET"]
 SITE_NAME       = os.environ["SHAREPOINT_SITE_NAME"]
+SHAREPOINT_LIB  = os.environ.get("SHAREPOINT_LIBRARY", "Documents")
 FOLDER_PATH     = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
 SHAREPOINT_HOST = os.environ.get("SHAREPOINT_HOST", "nrla.sharepoint.com")
  
@@ -287,10 +288,25 @@ def get_sharepoint_site_id(token: str) -> str:
     return resp.json()["id"]
  
  
-def upload_to_sharepoint(token: str, site_id: str, filename: str, html_content: str):
-    """Upload an HTML file to the SharePoint folder via Graph API."""
+def get_drive_id(token: str, site_id: str) -> str:
+    """Get the drive ID for the SHAREPOINT_LIBRARY document library."""
+    url   = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drives"
+    resp  = requests.get(url, headers={"Authorization": f"Bearer {token}"}, timeout=20)
+    resp.raise_for_status()
+    drives = resp.json().get("value", [])
+    for drive in drives:
+        if drive.get("name", "").lower() == SHAREPOINT_LIB.lower():
+            return drive["id"]
+    if drives:
+        print(f"Warning: library '{SHAREPOINT_LIB}' not found — using default drive")
+        return drives[0]["id"]
+    raise RuntimeError("No drives found on SharePoint site")
+ 
+ 
+def upload_to_sharepoint(token: str, site_id: str, drive_id: str, filename: str, html_content: str):
+    """Upload an HTML file to the correct SharePoint library via Graph API."""
     encoded_path = requests.utils.quote(f"{FOLDER_PATH}/{filename}")
-    url  = f"https://graph.microsoft.com/v1.0/sites/{site_id}/drive/root:/{encoded_path}:/content"
+    url  = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root:/{encoded_path}:/content"
     resp = requests.put(
         url,
         headers={
@@ -301,7 +317,7 @@ def upload_to_sharepoint(token: str, site_id: str, filename: str, html_content: 
         timeout=30,
     )
     resp.raise_for_status()
-    print(f"Uploaded to SharePoint: {filename}")
+    print(f"Uploaded to SharePoint library '{SHAREPOINT_LIB}': {filename}")
  
 # ── Parliament sitting days check ─────────────────────────────────────────────
  
@@ -358,13 +374,13 @@ def main():
     subject, html = build_html_email(items)
     filename      = f"parliament-monitor-{DATE_STR}.html"
  
-    token   = get_access_token()
-    site_id = get_sharepoint_site_id(token)
-    upload_to_sharepoint(token, site_id, filename, html)
+    token    = get_access_token()
+    site_id  = get_sharepoint_site_id(token)
+    drive_id = get_drive_id(token, site_id)
+    upload_to_sharepoint(token, site_id, drive_id, filename, html)
  
     print(f"Done. Subject: {subject}")
  
  
 if __name__ == "__main__":
     main()
- 
