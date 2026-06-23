@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T11:17:29.611505",
+  "lastUpdated": "2026-06-23T12:32:28.737316",
   "questions": [
     {
       "id": 1918694,
@@ -450,12 +450,12 @@
       "dateForAnswer": "Due 16th June",
       "weekCommencing": "2026-06-08",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-12/9410",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd June",
+      "answeringMember": "Alison McGovern",
+      "answeringParty": "Lab",
+      "answerSummary": "The Government will consider this issue as part of the development of the Police Reform Bill that was announced in the 2026 King\u2019s Speech."
     },
     {
       "id": 1915457,
