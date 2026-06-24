@@ -323,51 +323,10 @@ def upload_to_sharepoint(token: str, site_id: str, drive_id: str, filename: str,
     resp.raise_for_status()
     print(f"Uploaded to SharePoint library '{SHAREPOINT_LIB}': {filename}")
  
-# ── Parliament sitting days check ─────────────────────────────────────────────
- 
-def was_parliament_sitting(date) -> bool:
-    """
-    Returns True if either the Commons or Lords was sitting on the given date.
-    Uses the Parliament whatson API to check for sitting days.
-    Falls through to True if the API is unreachable, so a network error never
-    silently suppresses the monitor.
-    """
-    date_str = date.strftime("%Y-%m-%d")
- 
-    for house in ("Commons", "Lords"):
-        url = (
-            f"https://whatson-api.parliament.uk/calendar/events/list.json"
-            f"?queryParameters.startDate={date_str}"
-            f"&queryParameters.endDate={date_str}"
-            f"&queryParameters.house={house}"
-            f"&queryParameters.take=5"
-        )
-        try:
-            resp = requests.get(url, timeout=15)
-            resp.raise_for_status()
-            data   = resp.json()
-            events = data if isinstance(data, list) else data.get("items", data.get("results", []))
-            for event in events:
-                category = (event.get("category") or event.get("type") or "").lower()
-                if "sitting" in category or "chamber" in category:
-                    print(f"{house} was sitting on {date_str}")
-                    return True
-        except Exception as e:
-            print(f"Sitting check error ({house}): {e} — assuming sitting to be safe")
-            return True
- 
-    print(f"Parliament does not appear to have been sitting on {date_str} — skipping")
-    return False
- 
- 
 # ── Main ───────────────────────────────────────────────────────────────────────
  
 def main():
     print(f"Running Parliament PRS Monitor for {DATE_LABEL}…")
- 
-    if not was_parliament_sitting(YESTERDAY):
-        print("No action taken.")
-        return
  
     items  = []
     items += fetch_written_statements()
