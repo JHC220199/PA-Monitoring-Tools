@@ -1,6 +1,44 @@
 {
-  "lastUpdated": "2026-06-25T12:04:13.169193",
+  "lastUpdated": "2026-06-26T11:06:51.058202",
   "questions": [
+    {
+      "id": 1920388,
+      "uin": "13269",
+      "memberName": "Mr Andrew Snowden",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 24 June 2026 to Question 10293 on Housing Associations: Tenants, when he plans for the consultation to close.",
+      "dateTabled": "25th June",
+      "dateTabledRaw": "2026-06-25",
+      "dateForAnswer": "Due 1st July",
+      "weekCommencing": "2026-06-22",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-25/13269",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1920387,
+      "uin": "13268",
+      "memberName": "Mr Andrew Snowden",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 24 June 2026 to Question 10293 on Housing Associations: Tenants, how the consultation will be advertised to prospective consultees.",
+      "dateTabled": "25th June",
+      "dateTabledRaw": "2026-06-25",
+      "dateForAnswer": "Due 29th June",
+      "weekCommencing": "2026-06-22",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-25/13268",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1919960,
       "uin": "12850",
@@ -412,12 +450,12 @@
       "dateForAnswer": "Due 22nd June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-18/11163",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "25th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 108467 on 3 February 2026."
     },
     {
       "id": 1917412,
