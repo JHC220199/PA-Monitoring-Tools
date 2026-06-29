@@ -30,69 +30,138 @@ SHAREPOINT_LIB  = os.environ.get("SHAREPOINT_LIBRARY", "Documents")
 FOLDER_PATH     = os.environ.get("SHAREPOINT_FOLDER_PATH", "Parliamentary Monitor/Daily Reports")
 SHAREPOINT_HOST = os.environ.get("SHAREPOINT_HOST", "nrla.sharepoint.com")
  
-TODAY      = datetime.utcnow().date()
-YESTERDAY  = TODAY - timedelta(days=1)
+TODAY = datetime.utcnow().date()
+ 
+def get_last_sitting_day():
+    """Returns the most recent weekday. On Monday this returns Friday."""
+    day = TODAY - timedelta(days=1)
+    while day.weekday() >= 5:  # 5=Saturday, 6=Sunday
+        day -= timedelta(days=1)
+    return day
+ 
+YESTERDAY  = get_last_sitting_day()
 DATE_STR   = YESTERDAY.strftime("%Y-%m-%d")
 DATE_LABEL = YESTERDAY.strftime(f"%A {YESTERDAY.day} %B %Y")
  
 # ── PRS keyword tiers (mirrors the WQ tool logic) ─────────────────────────────
  
+EXCLUSIONS = [
+    "social rented", "social housing", "council housing", "council tenant",
+    "commercial landlord", "commercial tenant", "commercial rental",
+    "commercial property", "commercial lease", "park home",
+    "agricultural tenancy", "agricultural tenancies",
+    "scotland", "scottish government", "scottish parliament",
+    "holyrood", "wales", "welsh government", "senedd",
+]
+ 
+# Strong PRS signals — specific enough to include on their own
+# Checked against apostrophe-normalised text so "Renters' Rights Act 2025" matches
 STRONG_SIGNALS = [
-    "section 21", "section 8", "no-fault eviction", "assured shorthold",
-    "tenancy deposit", "letting agent", "landlord", "landlords", "private rented",
-    "private rented sector", "private rental", "rented properties", "rented homes",
-    "rented housing", "hmo", "houses in multiple occupation", "build-to-rent",
-    "rent arrears", "rent control", "rent freeze", "rent cap", "rent stabilisation",
-    "local housing allowance", "lha", "housing benefit", "renters reform",
-    "renters rights", "renters (reform)", "decent homes standard",
-    "decent homes", "property licensing", "selective licensing",
-    "additional licensing", "mandatory licensing",
+    "private rented sector", "private rented", "private rental",
+    "private landlord", "private tenant", "private renting",
+    "privately rented", "rented sector", "rental sector",
+    "renters rights act", "renters rights", "renters reform",
+    "renters (reform)", "renting homes act",
+    "section 21", "no-fault eviction", "no fault eviction",
+    "pre-emptive eviction",
+    "assured shorthold tenancy", "assured shorthold",
+    "tenancy deposit", "deposit protection scheme",
+    "letting agent", "landlord licensing", "landlord registration",
+    "landlord database", "landlord accreditation", "rogue landlord",
+    "buy-to-let", "hmo", "houses in multiple occupation",
+    "house in multiple occupation", "property licensing",
+    "selective licensing", "additional licensing", "mandatory licensing",
+    "local housing allowance", "lha",
+    "ground rent", "leasehold reform", "leasehold and commonhold",
+    "commonhold", "right to enfranchise", "collective enfranchisement",
+    "enfranchisement valuation", "estate management charge",
+    "estate rent charge", "rent control", "rent stabilisation",
+    "rent freeze", "rent cap", "rent determination", "rent tribunal",
+    "build-to-rent", "rental accommodation", "rental housing",
+    "rented properties", "rented homes", "rented housing",
+    "tenant displacement", "right to rent",
+    "section 8 notice", "section 13 notice",
+    "decent homes standard",
 ]
  
-CONTEXTUAL_SIGNALS = [
-    "energy efficiency", "epc", "mees", "minimum energy efficiency",
-    "eco4", "warm homes", "retrofit", "insulation",
+# "landlord"/"tenant" alone are too broad in general debate context
+# — require housing/tenancy context before including
+LANDLORD_CONTEXT = [
+    "tenant", "tenancy", "rented", "rental", "evict",
+    "possession", "letting", "private", "lease",
 ]
  
-CONTEXT_ANCHORS = [
-    "landlord", "tenant", "rental", "rented", "private sector",
-    "letting", "tenancy",
+# Energy terms — must appear with BOTH a rental word AND a housing/property
+# word to avoid picking up unrelated energy debates
+ENERGY_TERMS = [
+    "energy performance certificate", "epc", "mees",
+    "minimum energy efficiency", "eco4", "warm homes",
+    "retrofit", "insulation",
+]
+ENERGY_RENTAL_ANCHORS = [
+    "private rented", "rented home", "rented property",
+    "rental property", "landlord", "tenant", "letting", "tenancy",
+]
+ENERGY_HOUSING_ANCHORS = [
+    "home", "property", "propert", "dwelling",
+    "house", "flat", "building",
 ]
  
+# Leasehold — only with residential context
 LEASEHOLD_TERMS = [
     "leasehold", "enfranchisement", "ground rent", "commonhold",
     "service charge", "managing agent", "right to manage",
     "leasehold reform",
 ]
- 
 LEASEHOLD_ANCHORS = [
     "residential", "flat", "apartment", "leaseholder",
 ]
  
-EXCLUSIONS = [
-    "social rented", "social housing", "council housing", "council tenant",
-    "commercial landlord", "commercial tenant", "commercial rental",
-    "commercial property", "park home", "agricultural tenancy",
-    "agricultural tenancies",
-    "scotland", "scottish government", "scottish parliament",
-    "holyrood", "wales", "welsh government", "senedd",
-]
- 
  
 def is_prs_relevant(text: str) -> bool:
-    """Apply the three-tier keyword logic to determine PRS relevance."""
+    """
+    Determine PRS relevance using a tiered keyword approach.
+    Normalises apostrophes so "Renters' Rights Act 2025" matches correctly.
+    """
+    if not text:
+        return False
+ 
     lower = text.lower()
+ 
+    # Normalise smart/curly apostrophes then strip all apostrophes for matching
+    normalised = lower.replace("\u2019", "'").replace("\u2018", "'").replace("'", "")
+ 
+    # Hard exclusions
     if any(excl in lower for excl in EXCLUSIONS):
         return False
-    if any(sig in lower for sig in STRONG_SIGNALS):
+ 
+    # Strong PRS signals (checked on apostrophe-normalised text)
+    if any(sig in normalised for sig in STRONG_SIGNALS):
         return True
-    if any(ctx in lower for ctx in CONTEXTUAL_SIGNALS):
-        if any(anc in lower for anc in CONTEXT_ANCHORS):
+ 
+    # "landlord" — only include when paired with tenancy/housing context
+    if "landlord" in lower and any(ctx in lower for ctx in LANDLORD_CONTEXT):
+        return True
+ 
+    # "tenant" — only include when not commercial and paired with rental context
+    if "tenant" in lower and "commercial" not in lower:
+        if any(ctx in lower for ctx in LANDLORD_CONTEXT):
             return True
+ 
+    # Energy efficiency — only with BOTH rental AND housing/property context
+    if any(e in lower for e in ENERGY_TERMS):
+        has_rental  = any(r in lower for r in ENERGY_RENTAL_ANCHORS)
+        has_housing = any(h in lower for h in ENERGY_HOUSING_ANCHORS)
+        if has_rental and has_housing:
+            return True
+ 
+    # Leasehold — only with residential context
     if any(lh in lower for lh in LEASEHOLD_TERMS):
-        if any(anc in lower for anc in LEASEHOLD_ANCHORS):
+        if any(a in lower for a in LEASEHOLD_ANCHORS):
             return True
+ 
     return False
+ 
  
 # ── Parliament API helpers ─────────────────────────────────────────────────────
  
