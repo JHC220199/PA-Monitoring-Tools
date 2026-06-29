@@ -1,6 +1,44 @@
 {
-  "lastUpdated": "2026-06-26T12:09:43.616974",
+  "lastUpdated": "2026-06-29T12:48:47.405074",
   "questions": [
+    {
+      "id": 1920980,
+      "uin": "13675",
+      "memberName": "Daniel Francis",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what steps he is taking to ensure greater accountability and transparency from landlords and managing agents.",
+      "dateTabled": "26th June",
+      "dateTabledRaw": "2026-06-26",
+      "dateForAnswer": "Due 30th June",
+      "weekCommencing": "2026-06-22",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-26/13675",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1920979,
+      "uin": "13674",
+      "memberName": "Daniel Francis",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what steps he is taking to improve protection for leaseholders from increases in service charges.",
+      "dateTabled": "26th June",
+      "dateTabledRaw": "2026-06-26",
+      "dateForAnswer": "Due 30th June",
+      "weekCommencing": "2026-06-22",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-26/13674",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1920388,
       "uin": "13269",
@@ -412,12 +450,12 @@
       "dateForAnswer": "Due 23rd June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-19/11419",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "29th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 87776 on 17 November 2025."
     },
     {
       "id": 1918207,
@@ -431,12 +469,12 @@
       "dateForAnswer": "Due 23rd June",
       "weekCommencing": "2026-06-15",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-19/11408",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "29th June",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department has made no specific assessment of the potential impact of a EU Youth Mobility Scheme on the private rental market in either London or England as a whole."
     },
     {
       "id": 1917970,
