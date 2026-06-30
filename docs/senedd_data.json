@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-29T12:20:56.937449Z",
+  "generated": "2026-06-30T10:46:39.197149Z",
   "senedd_start": "2026-05-12",
-  "total": 11,
+  "total": 16,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -27,9 +27,51 @@
       "member_area": "Pontypridd Cynon Merthyr",
       "member_uid": "12158",
       "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Reform UK"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "23/06/2026",
+      "party": ""
+    },
+    {
+      "wq_ref": "WQ99060",
+      "url_path": "/WrittenQuestion/99060",
+      "tabled_str": "15/06/2026",
+      "answer_str": "22/06/2026",
+      "snippet": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership ...",
+      "member_name": "Jason O'Connell",
+      "member_area": "Pontypridd Cynon Merthyr",
+      "member_uid": "12158",
+      "full_question": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership with people with lived experience and organisations such as Crisis Cymru?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "23/06/2026",
+      "party": ""
+    },
+    {
+      "wq_ref": "WQ99062",
+      "url_path": "/WrittenQuestion/99062",
+      "tabled_str": "15/06/2026",
+      "answer_str": "22/06/2026",
+      "snippet": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves ...",
+      "member_name": "Jason O'Connell",
+      "member_area": "Pontypridd Cynon Merthyr",
+      "member_uid": "12158",
+      "full_question": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves into permanent, stable homes in Pontypridd Cynon Merthyr?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "23/06/2026",
+      "party": ""
+    },
+    {
+      "wq_ref": "WQ99116",
+      "url_path": "/WrittenQuestion/99116",
+      "tabled_str": "17/06/2026",
+      "answer_str": "24/06/2026",
+      "snippet": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "23/06/2026",
+      "party": ""
     },
     {
       "wq_ref": "WQ99165",
@@ -43,7 +85,7 @@
       "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Reform UK"
+      "party": ""
     },
     {
       "wq_ref": "WQ99164",
@@ -57,7 +99,7 @@
       "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Reform UK"
+      "party": ""
     },
     {
       "wq_ref": "WQ98617",
@@ -113,7 +155,35 @@
       "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Plaid Cymru"
+      "party": ""
+    },
+    {
+      "wq_ref": "WQ99311",
+      "url_path": "/WrittenQuestion/99311",
+      "tabled_str": "24/06/2026",
+      "answer_str": "01/07/2026",
+      "snippet": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer ...",
+      "member_name": "Darren Millar",
+      "member_area": "Clwyd",
+      "member_uid": "171",
+      "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": ""
+    },
+    {
+      "wq_ref": "WQ99312",
+      "url_path": "/WrittenQuestion/99312",
+      "tabled_str": "24/06/2026",
+      "answer_str": "01/07/2026",
+      "snippet": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
+      "member_name": "Darren Millar",
+      "member_area": "Clwyd",
+      "member_uid": "171",
+      "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": ""
     },
     {
       "wq_ref": "WQ98639",
@@ -274,9 +344,51 @@
         "member_area": "Pontypridd Cynon Merthyr",
         "member_uid": "12158",
         "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Reform UK"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "23/06/2026",
+        "party": ""
+      },
+      {
+        "wq_ref": "WQ99060",
+        "url_path": "/WrittenQuestion/99060",
+        "tabled_str": "15/06/2026",
+        "answer_str": "22/06/2026",
+        "snippet": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership ...",
+        "member_name": "Jason O'Connell",
+        "member_area": "Pontypridd Cynon Merthyr",
+        "member_uid": "12158",
+        "full_question": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership with people with lived experience and organisations such as Crisis Cymru?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "23/06/2026",
+        "party": ""
+      },
+      {
+        "wq_ref": "WQ99062",
+        "url_path": "/WrittenQuestion/99062",
+        "tabled_str": "15/06/2026",
+        "answer_str": "22/06/2026",
+        "snippet": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves ...",
+        "member_name": "Jason O'Connell",
+        "member_area": "Pontypridd Cynon Merthyr",
+        "member_uid": "12158",
+        "full_question": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves into permanent, stable homes in Pontypridd Cynon Merthyr?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "23/06/2026",
+        "party": ""
+      },
+      {
+        "wq_ref": "WQ99116",
+        "url_path": "/WrittenQuestion/99116",
+        "tabled_str": "17/06/2026",
+        "answer_str": "24/06/2026",
+        "snippet": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "23/06/2026",
+        "party": ""
       },
       {
         "wq_ref": "WQ99165",
@@ -290,7 +402,7 @@
         "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Reform UK"
+        "party": ""
       },
       {
         "wq_ref": "WQ99164",
@@ -304,7 +416,7 @@
         "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Reform UK"
+        "party": ""
       }
     ],
     "2026-06-22": [
@@ -320,7 +432,35 @@
         "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Plaid Cymru"
+        "party": ""
+      },
+      {
+        "wq_ref": "WQ99311",
+        "url_path": "/WrittenQuestion/99311",
+        "tabled_str": "24/06/2026",
+        "answer_str": "01/07/2026",
+        "snippet": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer ...",
+        "member_name": "Darren Millar",
+        "member_area": "Clwyd",
+        "member_uid": "171",
+        "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": ""
+      },
+      {
+        "wq_ref": "WQ99312",
+        "url_path": "/WrittenQuestion/99312",
+        "tabled_str": "24/06/2026",
+        "answer_str": "01/07/2026",
+        "snippet": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
+        "member_name": "Darren Millar",
+        "member_area": "Clwyd",
+        "member_uid": "171",
+        "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": ""
       }
     ]
   }
