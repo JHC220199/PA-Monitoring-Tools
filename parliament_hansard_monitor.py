@@ -403,6 +403,10 @@ def main():
  
     print(f"Found {len(items)} PRS-relevant items")
  
+    if not items:
+        print("No PRS-relevant activity found — skipping SharePoint upload. No email will be sent.")
+        return
+ 
     subject, html = build_html_email(items)
     filename      = f"parliament-monitor-{DATE_STR}.html"
  
