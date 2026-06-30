@@ -67,6 +67,22 @@ KEYWORDS = [
     "fire safety defects",
     "building safety",
     "remediation",
+    # Planning & permitted development
+    "permitted development",
+    "article 4",
+    "dwellinghouse",
+    "dwelling house",
+    # Property acquisition & housing policy
+    "right to buy",
+    "second homes",
+    "council tax premium",
+    "empty homes",
+    "housing supply",
+    "affordable housing",
+    "leasehold",
+    "freeholder",
+    "ground rent",
+    "service charge",
 ]
  
 SESSION = requests.Session()
@@ -333,4 +349,5 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
  
