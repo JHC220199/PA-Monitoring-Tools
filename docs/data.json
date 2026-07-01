@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T11:39:51.020194",
+  "lastUpdated": "2026-07-01T12:29:06.939283",
   "questions": [
     {
       "id": 1921704,
@@ -355,12 +355,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12482",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Landlords in the private rented sector are expected to comply with minimum energy efficiency standards by meeting EPC C against the Fabric Performance metric and then EPC C against either the Smart Readiness or Heating System metric."
     },
     {
       "id": 1919379,
@@ -374,12 +374,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12479",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Support is currently available to help landlords improve their properties, including through the Warm Homes: Local Grant and the Boiler Upgrade Scheme, and a zero-rate of VAT until March 2027 on energy saving measures. An eligibility tool is available at ..."
     },
     {
       "id": 1919381,
@@ -393,12 +393,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12481",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The government's Home Energy Model: Energy Performance Certificate consultation closed in March. The consultation included questions on the proposed C rating requirements across the Fabric Performance, Heating System and Smart Readiness metrics, which wil..."
     },
     {
       "id": 1919380,
@@ -412,12 +412,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12480",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The most recent impact assessment was published on 21 January 2026, alongside the government response to the consultation on raising the minimum energy efficiency standard to EPC C by 2030 for privately rented homes. The assessment outlines which exemptio..."
     },
     {
       "id": 1919377,
@@ -450,12 +450,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12475",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "We are committed to supporting the training and upskilling of retrofit workers. Our \u00a315 billion Warm Homes Plan, the biggest public investment in home upgrades in British history, will support up to 180,000 additional jobs in energy efficiency and clean h..."
     },
     {
       "id": 1918955,
