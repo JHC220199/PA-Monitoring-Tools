@@ -15,6 +15,7 @@ Required environment variables (all set as GitHub Secrets):
 """
  
 import os
+import re
 from datetime import datetime, timedelta
  
 import requests
@@ -118,6 +119,59 @@ LEASEHOLD_ANCHORS = [
 ]
  
  
+# Signals that MUST match on a word boundary to avoid substring collisions
+# e.g. "section 21" must not match "section 215"; "lha" must not match inside words;
+# "hmo" must not match inside another token.
+BOUNDARY_SENSITIVE = {
+    "section 21", "section 8 notice", "section 13 notice",
+    "lha", "hmo", "epc", "mees", "eco4",
+}
+ 
+# ── Body-text check terms ─────────────────────────────────────────────────────
+# A DELIBERATELY TIGHT subset of unambiguous PRS terms, used only to decide
+# whether a debate/statement with a NON-PRS title contains a genuine PRS
+# intervention. These are terms that essentially only appear when someone is
+# actually discussing the private rented sector — so a single boundary-safe
+# match is a reliable signal of on-topic substance.
+#
+# Deliberately EXCLUDED from this body check (too collision-prone or too vague
+# to trust on body text alone):
+#   - bare "landlord" / "tenant"  (passing mentions — e.g. "absent landlords")
+#   - "lha"                       (matches inside other tokens / abbreviations)
+#   - "right to rent"             (collides with "right to work" statements)
+#   - "rented homes" / "rented housing" / "rental housing" (generic phrasing)
+SPECIFIC_PRS_TERMS = [
+    "private rented sector", "private rented", "private rental",
+    "private landlord", "private tenant", "private renting",
+    "privately rented",
+    "renters rights act", "renters rights", "renters reform",
+    "renters (reform)", "renting homes act",
+    "section 21", "no-fault eviction", "no fault eviction",
+    "assured shorthold tenancy", "assured shorthold",
+    "tenancy deposit", "deposit protection scheme",
+    "letting agent", "landlord licensing", "landlord registration",
+    "landlord database", "landlord accreditation", "rogue landlord",
+    "buy-to-let", "hmo", "houses in multiple occupation",
+    "house in multiple occupation", "selective licensing",
+    "local housing allowance",
+    "ground rent", "leasehold reform", "collective enfranchisement",
+    "rent control", "rent stabilisation", "rent freeze", "rent cap",
+    "rent tribunal", "build-to-rent",
+    "section 8 notice", "section 13 notice",
+    "decent homes standard",
+]
+ 
+ 
+def _signal_present(signal: str, text: str) -> bool:
+    """Match a signal in text; use word boundaries for collision-prone signals."""
+    if signal in BOUNDARY_SENSITIVE:
+        # \b won't work well around digits/spaces, so assert a non-alphanumeric
+        # (or string end) immediately after the signal
+        pattern = re.escape(signal) + r"(?![a-z0-9])"
+        return re.search(pattern, text) is not None
+    return signal in text
+ 
+ 
 def is_prs_relevant(text: str) -> bool:
     """
     Determine PRS relevance using a tiered keyword approach.
@@ -136,7 +190,7 @@ def is_prs_relevant(text: str) -> bool:
         return False
  
     # Strong PRS signals (checked on apostrophe-normalised text)
-    if any(sig in normalised for sig in STRONG_SIGNALS):
+    if any(_signal_present(sig, normalised) for sig in STRONG_SIGNALS):
         return True
  
     # "landlord" — only include when paired with tenancy/housing context
@@ -182,60 +236,153 @@ def fetch_written_statements() -> list:
         for s in data.get("results", []):
             value = s.get("value", {})
             text  = value.get("text", "")
-            if is_prs_relevant(text):
+            title = value.get("title", "").strip()
+ 
+            # Same two-tier test as debates: include if the TITLE is PRS-relevant,
+            # or the statement body contains an unambiguous specific PRS term.
+            # Using the specific-body check (not the broad is_prs_relevant) keeps
+            # out statements that only mention a PRS term in passing — e.g. a
+            # "right to work" statement that references the "right to rent" scheme.
+            title_relevant = is_prs_relevant(title)
+            body_relevant  = _has_specific_prs_signal(text)
+ 
+            if title_relevant or body_relevant:
+                uin       = value.get("uin", "")
+                made_date = (value.get("dateMade", "") or "")[:10]  # YYYY-MM-DD
+                if uin and made_date:
+                    link = f"https://questions-statements.parliament.uk/written-statements/detail/{made_date}/{uin}"
+                else:
+                    link = "https://questions-statements.parliament.uk/written-statements"
+                type_label = "Written Statement" if title_relevant else "Written Statement (PRS point raised)"
                 results.append({
                     "chamber": value.get("house", "Unknown"),
-                    "type":    "Written Statement",
-                    "title":   value.get("title", ""),
-                    "speaker": value.get("memberName", ""),
+                    "type":    type_label,
+                    "title":   title,
+                    "speaker": value.get("memberRole", "").strip() or value.get("answeringBodyName", ""),
                     "excerpt": text[:300],
-                    "link":    f"https://questions-statements-api.parliament.uk/api/writtenstatements/statements/{value.get('id', '')}",
+                    "link":    link,
                 })
     except Exception as e:
         print(f"Written statements error: {e}")
     return results
  
  
+def _has_specific_prs_signal(text: str) -> bool:
+    """
+    Body-text relevance test. Requires an UNAMBIGUOUS PRS term from
+    SPECIFIC_PRS_TERMS (not just a passing mention of "landlord"/"tenant", and
+    not collision-prone terms like bare "lha" or "right to rent"). Used to catch
+    genuine PRS interventions inside debates/statements whose title is not
+    itself PRS-related. Boundary-safe so "section 21" never matches "section 215".
+    """
+    if not text:
+        return False
+    lower = text.lower()
+    normalised = lower.replace("\u2019", "'").replace("\u2018", "'").replace("'", "")
+    if any(excl in lower for excl in EXCLUSIONS):
+        return False
+    return any(_signal_present(term, normalised) for term in SPECIFIC_PRS_TERMS)
+ 
+ 
+def _slugify(title: str) -> str:
+    """Convert a debate title into the URL slug Hansard uses (CamelCase, no spaces/punctuation)."""
+    # Remove punctuation, split into words, capitalise each, join
+    cleaned = re.sub(r"[^a-zA-Z0-9 ]", "", title or "")
+    words   = cleaned.split()
+    return "".join(w.capitalize() for w in words) or "Debate"
+ 
+ 
 def fetch_hansard() -> list:
-    """Search Hansard for PRS-relevant debates."""
-    results      = []
-    seen_ids     = set()
-    search_terms = [
-        "private rented sector", "landlord tenant", "section 21",
+    """
+    Search Hansard for PRS-relevant contributions using the hansard-api endpoint
+    (the public front-end at hansard.parliament.uk is behind Cloudflare and cannot
+    be queried directly). Groups results by debate so each debate appears once.
+    """
+    results        = []
+    seen_debates   = set()   # dedupe by DebateSectionExtId
+    search_terms   = [
+        "private rented sector", "landlord", "section 21",
         "local housing allowance", "letting agent", "tenancy deposit",
-        "renters reform", "leasehold residential", "HMO licensing",
+        "renters rights", "renters reform", "leasehold", "HMO",
+        "assured tenancy", "ground rent", "buy-to-let",
+        "selective licensing", "rent control", "no-fault eviction",
     ]
+ 
     for term in search_terms:
         url = (
-            f"https://hansard.parliament.uk/search/Contributions"
+            f"https://hansard-api.parliament.uk/search/contributions/Spoken.json"
             f"?queryParameters.searchTerm={requests.utils.quote(term)}"
             f"&queryParameters.startDate={DATE_STR}"
             f"&queryParameters.endDate={DATE_STR}"
-            f"&queryParameters.take=20"
+            f"&queryParameters.take=50"
         )
         try:
-            resp = requests.get(url, timeout=20)
+            resp = requests.get(url, timeout=20, headers={"User-Agent": "NRLA-Monitor/1.0"})
             resp.raise_for_status()
             data = resp.json()
-            for item in data.get("Contributions", []):
-                contrib_id = item.get("ContributionId")
-                if contrib_id in seen_ids:
+ 
+            for item in data.get("Results", []):
+                debate_ext_id = item.get("DebateSectionExtId")
+                if not debate_ext_id or debate_ext_id in seen_debates:
                     continue
-                seen_ids.add(contrib_id)
-                text = f"{item.get('DebateSection', '')} {item.get('Value', '')}"
-                if is_prs_relevant(text):
-                    chamber_raw = item.get("House", "")
-                    chamber     = "Grand Committee" if "grand" in chamber_raw.lower() else chamber_raw
-                    results.append({
-                        "chamber": chamber,
-                        "type":    item.get("ContributionType", "Debate"),
-                        "title":   item.get("DebateSection", ""),
-                        "speaker": item.get("AttributedTo", ""),
-                        "excerpt": item.get("Value", "")[:300],
-                        "link":    f"https://hansard.parliament.uk{item.get('HansardMemberUrl', '')}",
-                    })
+ 
+                # Build the full text to test for relevance
+                full_text = item.get("ContributionTextFull") or item.get("ContributionText") or ""
+                # Strip HTML tags from the excerpt
+                clean_text = re.sub(r"<[^>]+>", "", full_text).strip()
+                debate_title = item.get("DebateSection", "")
+ 
+                # Two ways a debate qualifies:
+                #  (a) the debate TITLE is PRS-relevant — the whole debate is
+                #      on-topic (reliable, catches dedicated PRS debates), OR
+                #  (b) THIS contribution's body contains an unambiguous, specific
+                #      PRS term (from SPECIFIC_PRS_TERMS, boundary-safe) — catches
+                #      genuine PRS interventions inside a broadly-titled debate.
+                #
+                # Bare "landlord"/"tenant" mentions and collision-prone terms do
+                # NOT qualify on body text alone, which keeps out the planning /
+                # high-street / right-to-work style false positives.
+                title_relevant = is_prs_relevant(debate_title)
+                body_relevant  = _has_specific_prs_signal(clean_text)
+ 
+                if not (title_relevant or body_relevant):
+                    continue
+ 
+                seen_debates.add(debate_ext_id)
+ 
+                # Determine chamber — the Section field flags Grand Committee etc.
+                house   = item.get("House", "")
+                section = item.get("Section", "")
+                if "grand committee" in section.lower():
+                    chamber = "Grand Committee"
+                elif house == "Commons":
+                    chamber = "House of Commons"
+                elif house == "Lords":
+                    chamber = "House of Lords"
+                else:
+                    chamber = house or "Unknown"
+ 
+                # Build the public Hansard debate URL
+                sitting = (item.get("SittingDate", "") or "")[:10]  # YYYY-MM-DD
+                slug    = _slugify(debate_title)
+                house_path = house if house in ("Commons", "Lords") else "Commons"
+                link = f"https://hansard.parliament.uk/{house_path}/{sitting}/debates/{debate_ext_id}/{slug}"
+ 
+                # Flag debates matched on a specific intervention (not the title)
+                # so the reader knows why a broadly-titled debate is included.
+                matched_note = "" if title_relevant else " (PRS point raised in debate)"
+ 
+                results.append({
+                    "chamber": chamber,
+                    "type":    "Debate" + matched_note,
+                    "title":   debate_title,
+                    "speaker": item.get("AttributedTo", "") or item.get("MemberName", ""),
+                    "excerpt": clean_text[:300],
+                    "link":    link,
+                })
         except Exception as e:
             print(f"Hansard search error ({term}): {e}")
+ 
     return results
  
 # ── Email HTML builder ─────────────────────────────────────────────────────────
