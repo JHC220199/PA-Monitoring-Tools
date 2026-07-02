@@ -1,6 +1,44 @@
 {
-  "lastUpdated": "2026-07-01T12:29:06.939283",
+  "lastUpdated": "2026-07-02T10:51:59.170743",
   "questions": [
+    {
+      "id": 1922790,
+      "uin": "14822",
+      "memberName": "Mary Glindon",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, whether the Private Rented Sector Landlord Ombudsman will consider previous cases of inadequate conduct by landlords when making decisions on complaints.",
+      "dateTabled": "1st July",
+      "dateTabledRaw": "2026-07-01",
+      "dateForAnswer": "Due 6th July",
+      "weekCommencing": "2026-06-29",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-01/14822",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1923093,
+      "uin": "15043",
+      "memberName": "Nick Timothy",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Justice, how many additional court sitting days they plan to add as a result of the impact of the Renters Rights Act and the Employment Rights Act.",
+      "dateTabled": "1st July",
+      "dateTabledRaw": "2026-07-01",
+      "dateForAnswer": "Due 6th July",
+      "weekCommencing": "2026-06-29",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-01/15043",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1921704,
       "uin": "13908",
@@ -469,12 +507,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12135",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department has worked closely with the Ministry of Justice (MoJ) and HM Courts and Tribunal Service (HMCTS) to ensure that the justice system is well prepared for the ongoing implementation of the Renters\u2019 Rights Act, including the potential impact of ..."
     },
     {
       "id": 1919258,
@@ -488,12 +526,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12404",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "1st July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government is committed to implementing measures in the Leasehold and Freehold Reform Act 2024 to make enfranchisement cheaper and easier. The Act sets the method for calculating the price of a statutory lease extension or freehold acquisition, known ..."
     },
     {
       "id": 1918694,
