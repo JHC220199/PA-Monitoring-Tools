@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T11:55:29.438656",
+  "lastUpdated": "2026-07-03T10:48:53.240812",
   "questions": [
     {
       "id": 1922790,
@@ -184,12 +184,12 @@
       "dateForAnswer": "Due 2nd July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13913",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "2nd July",
+      "answeringMember": "Samantha Dixon",
+      "answeringParty": "Lab",
+      "answerSummary": "We recognise the difficulties facing some leaseholders in buildings under 11 metres who are being asked to pay significant cladding remediation costs. The Department\u2019s investigations indicate that most buildings under 11 metres are safe and do not require..."
     },
     {
       "id": 1920980,
@@ -355,12 +355,12 @@
       "dateForAnswer": "Due 29th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-24/12826",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "3rd July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The Department publishes statistics on measures installed under the Green Homes Grant, ECO4 and the Great British Insulation Scheme, but does not hold specific data on properties with spray foam insulation. We are aware of a small number of cases where sp..."
     },
     {
       "id": 1919998,
