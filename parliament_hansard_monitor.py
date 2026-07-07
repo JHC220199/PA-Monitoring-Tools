@@ -254,12 +254,13 @@ def fetch_written_statements() -> list:
                 else:
                     link = "https://questions-statements.parliament.uk/written-statements"
                 type_label = "Written Statement" if title_relevant else "Written Statement (PRS point raised)"
+                excerpt = text[:300] if title_relevant else _excerpt_around_match(text)
                 results.append({
                     "chamber": value.get("house", "Unknown"),
                     "type":    type_label,
                     "title":   title,
                     "speaker": value.get("memberRole", "").strip() or value.get("answeringBodyName", ""),
-                    "excerpt": text[:300],
+                    "excerpt": excerpt,
                     "link":    link,
                 })
     except Exception as e:
@@ -290,6 +291,40 @@ def _slugify(title: str) -> str:
     cleaned = re.sub(r"[^a-zA-Z0-9 ]", "", title or "")
     words   = cleaned.split()
     return "".join(w.capitalize() for w in words) or "Debate"
+ 
+ 
+def _excerpt_around_match(clean_text: str, max_len: int = 320) -> str:
+    """
+    Return an excerpt centred on the first specific PRS term found, so the reader
+    sees the relevant sentence rather than the opening of a long speech. Falls
+    back to the start of the text if no specific term is located.
+    """
+    if not clean_text:
+        return ""
+    normalised = clean_text.lower().replace("\u2019", "'").replace("\u2018", "'").replace("'", "")
+    # Find the earliest position of any specific PRS term
+    earliest = None
+    for term in SPECIFIC_PRS_TERMS:
+        if term in BOUNDARY_SENSITIVE:
+            m = re.search(re.escape(term) + r"(?![a-z0-9])", normalised)
+            pos = m.start() if m else -1
+        else:
+            pos = normalised.find(term)
+        if pos != -1 and (earliest is None or pos < earliest):
+            earliest = pos
+ 
+    if earliest is None:
+        return clean_text[:max_len].strip()
+ 
+    # Centre a window on the match, snapping to sentence-ish boundaries
+    start = max(0, earliest - max_len // 3)
+    end   = min(len(clean_text), start + max_len)
+    snippet = clean_text[start:end].strip()
+    if start > 0:
+        snippet = "…" + snippet
+    if end < len(clean_text):
+        snippet = snippet + "…"
+    return snippet
  
  
 def fetch_hansard() -> list:
@@ -366,18 +401,34 @@ def fetch_hansard() -> list:
                 sitting = (item.get("SittingDate", "") or "")[:10]  # YYYY-MM-DD
                 slug    = _slugify(debate_title)
                 house_path = house if house in ("Commons", "Lords") else "Commons"
-                link = f"https://hansard.parliament.uk/{house_path}/{sitting}/debates/{debate_ext_id}/{slug}"
+                debate_url = f"https://hansard.parliament.uk/{house_path}/{sitting}/debates/{debate_ext_id}/{slug}"
+ 
+                # If the debate matched on a specific INTERVENTION (not the title),
+                # deep-link straight to that contribution using Hansard's anchor
+                # format, so the reader lands on the relevant speech rather than
+                # the top of a long debate. Title matches link to the debate top
+                # since the whole debate is on-topic.
+                contrib_ext_id = item.get("ContributionExtId", "")
+                if not title_relevant and contrib_ext_id:
+                    link = f"{debate_url}#contribution-{contrib_ext_id}"
+                else:
+                    link = debate_url
  
                 # Flag debates matched on a specific intervention (not the title)
                 # so the reader knows why a broadly-titled debate is included.
                 matched_note = "" if title_relevant else " (PRS point raised in debate)"
+ 
+                # For body-matched debates, centre the excerpt on the PRS term so
+                # the reader immediately sees the relevant passage. For title
+                # matches, the opening of the contribution is fine.
+                excerpt = _excerpt_around_match(clean_text) if not title_relevant else clean_text[:300]
  
                 results.append({
                     "chamber": chamber,
                     "type":    "Debate" + matched_note,
                     "title":   debate_title,
                     "speaker": item.get("AttributedTo", "") or item.get("MemberName", ""),
-                    "excerpt": clean_text[:300],
+                    "excerpt": excerpt,
                     "link":    link,
                 })
         except Exception as e:
