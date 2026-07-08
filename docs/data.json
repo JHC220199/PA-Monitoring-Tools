@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T10:29:32.091749",
+  "lastUpdated": "2026-07-08T11:27:44.667217",
   "questions": [
     {
       "id": 1925089,
@@ -89,6 +89,25 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16659",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1925177,
+      "uin": "16653",
+      "memberName": "Mr Andrew Snowden",
+      "party": "Con",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what changes the Government is considering to simplify the Right to Manage process for social housing tenants.",
+      "dateTabled": "7th July",
+      "dateTabledRaw": "2026-07-07",
+      "dateForAnswer": "Due 9th July",
+      "weekCommencing": "2026-07-06",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16653",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
