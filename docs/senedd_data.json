@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T10:42:45.804672Z",
+  "generated": "2026-07-08T10:03:08.201232Z",
   "senedd_start": "2026-05-12",
   "total": 20,
   "questions": [
@@ -97,9 +97,9 @@
       "member_area": "Casnewydd Islwyn",
       "member_uid": "12147",
       "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Reform UK"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": ""
     },
     {
       "wq_ref": "WQ99164",
@@ -111,9 +111,9 @@
       "member_area": "Casnewydd Islwyn",
       "member_uid": "12147",
       "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Reform UK"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": ""
     },
     {
       "wq_ref": "WQ98617",
@@ -167,9 +167,9 @@
       "member_area": "Pontypridd Cynon Merthyr",
       "member_uid": "12150",
       "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Plaid Cymru"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": ""
     },
     {
       "wq_ref": "WQ99311",
@@ -183,7 +183,7 @@
       "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party"
+      "party": ""
     },
     {
       "wq_ref": "WQ99312",
@@ -197,7 +197,7 @@
       "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party"
+      "party": ""
     },
     {
       "wq_ref": "WQ99262",
@@ -209,9 +209,9 @@
       "member_area": "Casnewydd Islwyn",
       "member_uid": "12147",
       "full_question": "What progress has the Welsh Government made in developing a community right to buy Bill?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Reform UK"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": ""
     },
     {
       "wq_ref": "WQ98639",
@@ -267,7 +267,7 @@
       "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party"
+      "party": ""
     },
     {
       "wq_ref": "WQ99360",
@@ -281,7 +281,7 @@
       "full_question": "When will the Welsh Government introduce a community right to buy?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Labour"
+      "party": ""
     }
   ],
   "weeks": {
@@ -472,9 +472,9 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "12147",
         "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Reform UK"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": ""
       },
       {
         "wq_ref": "WQ99164",
@@ -486,9 +486,9 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "12147",
         "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Reform UK"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": ""
       }
     ],
     "2026-06-22": [
@@ -502,9 +502,9 @@
         "member_area": "Pontypridd Cynon Merthyr",
         "member_uid": "12150",
         "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Plaid Cymru"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": ""
       },
       {
         "wq_ref": "WQ99311",
@@ -518,7 +518,7 @@
         "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party"
+        "party": ""
       },
       {
         "wq_ref": "WQ99312",
@@ -532,7 +532,7 @@
         "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party"
+        "party": ""
       },
       {
         "wq_ref": "WQ99262",
@@ -544,9 +544,9 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "12147",
         "full_question": "What progress has the Welsh Government made in developing a community right to buy Bill?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Reform UK"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": ""
       }
     ],
     "2026-06-29": [
@@ -562,7 +562,7 @@
         "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party"
+        "party": ""
       },
       {
         "wq_ref": "WQ99360",
@@ -576,7 +576,7 @@
         "full_question": "When will the Welsh Government introduce a community right to buy?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Labour"
+        "party": ""
       }
     ]
   }
