@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-07-08T11:27:44.667217",
+  "lastUpdated": "2026-07-09T11:07:39.086707",
   "questions": [
+    {
+      "id": 1925901,
+      "uin": "HL1861",
+      "memberName": "Lord Taylor of Warwick",
+      "party": "Non-aff",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government what assessment they have made of the use of artificial intelligence by tenants to assist in disputes with landlords and letting agents.",
+      "dateTabled": "8th July",
+      "dateTabledRaw": "2026-07-08",
+      "dateForAnswer": "Due 22nd July",
+      "weekCommencing": "2026-07-06",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-08/HL1861",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1925089,
       "uin": "16773",
