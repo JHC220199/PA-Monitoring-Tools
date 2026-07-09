@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-08T10:03:08.201232Z",
+  "generated": "2026-07-09T10:42:49.861082Z",
   "senedd_start": "2026-05-12",
   "total": 20,
   "questions": [
@@ -183,7 +183,7 @@
       "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
       "answered_by": "",
       "answered_on": "",
-      "party": ""
+      "party": "Welsh Conservative Party"
     },
     {
       "wq_ref": "WQ99312",
@@ -197,7 +197,7 @@
       "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
       "answered_by": "",
       "answered_on": "",
-      "party": ""
+      "party": "Welsh Conservative Party"
     },
     {
       "wq_ref": "WQ99262",
@@ -267,7 +267,7 @@
       "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
       "answered_by": "",
       "answered_on": "",
-      "party": ""
+      "party": "Welsh Conservative Party"
     },
     {
       "wq_ref": "WQ99360",
@@ -281,7 +281,7 @@
       "full_question": "When will the Welsh Government introduce a community right to buy?",
       "answered_by": "",
       "answered_on": "",
-      "party": ""
+      "party": "Welsh Labour"
     }
   ],
   "weeks": {
@@ -518,7 +518,7 @@
         "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
         "answered_by": "",
         "answered_on": "",
-        "party": ""
+        "party": "Welsh Conservative Party"
       },
       {
         "wq_ref": "WQ99312",
@@ -532,7 +532,7 @@
         "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
         "answered_by": "",
         "answered_on": "",
-        "party": ""
+        "party": "Welsh Conservative Party"
       },
       {
         "wq_ref": "WQ99262",
@@ -562,7 +562,7 @@
         "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
         "answered_by": "",
         "answered_on": "",
-        "party": ""
+        "party": "Welsh Conservative Party"
       },
       {
         "wq_ref": "WQ99360",
@@ -576,7 +576,7 @@
         "full_question": "When will the Welsh Government introduce a community right to buy?",
         "answered_by": "",
         "answered_on": "",
-        "party": ""
+        "party": "Welsh Labour"
       }
     ]
   }
