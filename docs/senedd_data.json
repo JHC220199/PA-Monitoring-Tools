@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-10T10:41:58.029298Z",
+  "generated": "2026-07-13T09:27:56.158613Z",
   "senedd_start": "2026-05-12",
-  "total": 20,
+  "total": 23,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -16,6 +16,20 @@
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "10/06/2026",
       "party": "Welsh Conservative Party"
+    },
+    {
+      "wq_ref": "WQ99552",
+      "url_path": "/WrittenQuestion/99552",
+      "tabled_str": "08/07/2026",
+      "answer_str": "15/07/2026",
+      "snippet": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain ...",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
     },
     {
       "wq_ref": "WQ99002",
@@ -172,6 +186,20 @@
       "party": ""
     },
     {
+      "wq_ref": "WQ99247",
+      "url_path": "/WrittenQuestion/99247",
+      "tabled_str": "23/06/2026",
+      "answer_str": "30/06/2026",
+      "snippet": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
+      "member_name": "Natasha Asghar",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "336",
+      "full_question": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": "Welsh Conservative Party"
+    },
+    {
       "wq_ref": "WQ99311",
       "url_path": "/WrittenQuestion/99311",
       "tabled_str": "24/06/2026",
@@ -212,6 +240,20 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
       "party": ""
+    },
+    {
+      "wq_ref": "WQ99266",
+      "url_path": "/WrittenQuestion/99266",
+      "tabled_str": "24/06/2026",
+      "answer_str": "01/07/2026",
+      "snippet": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or ...",
+      "member_name": "Tom Montgomery",
+      "member_area": "Clwyd",
+      "member_uid": "12183",
+      "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/06/2026",
+      "party": "Reform UK"
     },
     {
       "wq_ref": "WQ98639",
@@ -507,6 +549,20 @@
         "party": ""
       },
       {
+        "wq_ref": "WQ99247",
+        "url_path": "/WrittenQuestion/99247",
+        "tabled_str": "23/06/2026",
+        "answer_str": "30/06/2026",
+        "snippet": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
+        "member_name": "Natasha Asghar",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "336",
+        "full_question": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": "Welsh Conservative Party"
+      },
+      {
         "wq_ref": "WQ99311",
         "url_path": "/WrittenQuestion/99311",
         "tabled_str": "24/06/2026",
@@ -547,6 +603,20 @@
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
         "party": ""
+      },
+      {
+        "wq_ref": "WQ99266",
+        "url_path": "/WrittenQuestion/99266",
+        "tabled_str": "24/06/2026",
+        "answer_str": "01/07/2026",
+        "snippet": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or ...",
+        "member_name": "Tom Montgomery",
+        "member_area": "Clwyd",
+        "member_uid": "12183",
+        "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/06/2026",
+        "party": "Reform UK"
       }
     ],
     "2026-06-29": [
@@ -577,6 +647,22 @@
         "answered_by": "",
         "answered_on": "",
         "party": "Welsh Labour"
+      }
+    ],
+    "2026-07-06": [
+      {
+        "wq_ref": "WQ99552",
+        "url_path": "/WrittenQuestion/99552",
+        "tabled_str": "08/07/2026",
+        "answer_str": "15/07/2026",
+        "snippet": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain ...",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
       }
     ]
   }
