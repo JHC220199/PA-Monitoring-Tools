@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-13T09:51:49.799338",
+  "lastUpdated": "2026-07-13T11:20:17.154827",
   "questions": [
     {
       "id": 1926575,
@@ -13,6 +13,25 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-10/17858",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1926622,
+      "uin": "17857",
+      "memberName": "Shockat Adam",
+      "party": "Ind",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, what assessment he has made of the impact of levels of Local Housing Allowance on a) poverty b) homelessness among Universal Credit claimants in Leicester South.",
+      "dateTabled": "10th July",
+      "dateTabledRaw": "2026-07-10",
+      "dateForAnswer": "Due 16th July",
+      "weekCommencing": "2026-07-06",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-10/17857",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
