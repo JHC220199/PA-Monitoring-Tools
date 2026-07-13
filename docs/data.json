@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-07-10T12:15:00.730625",
+  "lastUpdated": "2026-07-13T09:51:49.799338",
   "questions": [
+    {
+      "id": 1926575,
+      "uin": "17858",
+      "memberName": "Abtisam Mohamed",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, when the Government plans to bring into force the remaining provisions of the Leasehold and Freehold Reform Act 2024; and whether they will publish a timetable for their implemen",
+      "dateTabled": "10th July",
+      "dateTabledRaw": "2026-07-10",
+      "dateForAnswer": "Due 15th July",
+      "weekCommencing": "2026-07-06",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-10/17858",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1926087,
       "uin": "17583",
@@ -412,12 +431,12 @@
       "dateForAnswer": "Due 6th July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-01/15043",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "10th July",
+      "answeringMember": "Sarah Sackman",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice (MoJ) confirmed in February 2026 the sitting day allocations and funding envelope for His Majesty\u2019s Courts and Tribunals Service for the period 2025-26 to 2028-29, including high allocations for the First-tier Tribunals Courts and ..."
     },
     {
       "id": 1921704,
