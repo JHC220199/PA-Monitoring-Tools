@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-07-13T12:27:07.316645",
+  "lastUpdated": "2026-07-14T10:13:08.920368",
   "questions": [
+    {
+      "id": 1927424,
+      "uin": "18363",
+      "memberName": "Gideon Amos",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what assessment his Department has made of the adequacy of the Energy Performance Certificate methodology for determining eligibility for Government-funded low-carbon heating and energy-effic",
+      "dateTabled": "13rd July",
+      "dateTabledRaw": "2026-07-13",
+      "dateForAnswer": "Due 15th July",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18363",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1926575,
       "uin": "17858",
@@ -260,12 +279,12 @@
       "dateForAnswer": "Due 13rd July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16707",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "13rd July",
+      "answeringMember": "Samantha Dixon",
+      "answeringParty": "Lab",
+      "answerSummary": "Young people represent the future of our country. The Government believes young people must be seen and heard and that ambition is at the heart of major government priorities including Votes at 16."
     },
     {
       "id": 1924630,
@@ -317,12 +336,12 @@
       "dateForAnswer": "Due 8th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-06/16350",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "13rd July",
+      "answeringMember": "Rachel Blake",
+      "answeringParty": "Lab",
+      "answerSummary": "The Breathing Space Scheme was established to support those in problem debt engage with professional debt advice, or to receive crisis treatment for a mental health condition, by providing temporary protections from creditor enforcement action."
     },
     {
       "id": 1924185,
