@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-14T09:44:42.602172Z",
+  "generated": "2026-07-15T08:16:29.526051Z",
   "senedd_start": "2026-05-12",
-  "total": 23,
+  "total": 24,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -321,9 +321,23 @@
       "member_area": "Casnewydd Islwyn",
       "member_uid": "5038",
       "full_question": "When will the Welsh Government introduce a community right to buy?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "06/07/2026",
       "party": "Welsh Labour"
+    },
+    {
+      "wq_ref": "WQ99363",
+      "url_path": "/WrittenQuestion/99363",
+      "tabled_str": "29/06/2026",
+      "answer_str": "06/07/2026",
+      "snippet": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing ...",
+      "member_name": "Nigel Williams",
+      "member_area": "Fflint Wrecsam",
+      "member_uid": "5113",
+      "full_question": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing vacant or underused properties back into productive use?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "06/07/2026",
+      "party": "Reform UK"
     }
   ],
   "weeks": {
@@ -644,9 +658,23 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "5038",
         "full_question": "When will the Welsh Government introduce a community right to buy?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "06/07/2026",
         "party": "Welsh Labour"
+      },
+      {
+        "wq_ref": "WQ99363",
+        "url_path": "/WrittenQuestion/99363",
+        "tabled_str": "29/06/2026",
+        "answer_str": "06/07/2026",
+        "snippet": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing ...",
+        "member_name": "Nigel Williams",
+        "member_area": "Fflint Wrecsam",
+        "member_uid": "5113",
+        "full_question": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing vacant or underused properties back into productive use?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "06/07/2026",
+        "party": "Reform UK"
       }
     ],
     "2026-07-06": [
