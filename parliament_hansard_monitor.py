@@ -63,7 +63,7 @@ STRONG_SIGNALS = [
     "privately rented", "rented sector", "rental sector",
     "renters rights act", "renters rights", "renters reform",
     "renters (reform)", "renting homes act",
-    "section 21", "no-fault eviction", "no fault eviction",
+    "no-fault eviction", "no fault eviction",
     "pre-emptive eviction",
     "assured shorthold tenancy", "assured shorthold",
     "tenancy deposit", "deposit protection scheme",
@@ -81,7 +81,6 @@ STRONG_SIGNALS = [
     "build-to-rent", "rental accommodation", "rental housing",
     "rented properties", "rented homes", "rented housing",
     "tenant displacement", "right to rent",
-    "section 8 notice", "section 13 notice",
     "decent homes standard",
 ]
  
@@ -120,12 +119,26 @@ LEASEHOLD_ANCHORS = [
  
  
 # Signals that MUST match on a word boundary to avoid substring collisions
-# e.g. "section 21" must not match "section 215"; "lha" must not match inside words;
-# "hmo" must not match inside another token.
+# e.g. "lha" must not match inside words; "hmo" must not match inside another token.
 BOUNDARY_SENSITIVE = {
-    "section 21", "section 8 notice", "section 13 notice",
     "lha", "hmo", "epc", "mees", "eco4",
 }
+ 
+# "Section 21/8/13" appear in MANY Acts (e.g. section 21 of the Agriculture Act
+# 2020), so the bare phrase is not a reliable PRS signal. These only count when a
+# housing/eviction context word appears within a short window of the phrase.
+# Handled separately by _section_notice_is_prs() rather than as a plain signal.
+SECTION_NOTICE_PATTERNS = [
+    r"section\s*21(?!\d)",
+    r"section\s*8(?!\d)",
+    r"section\s*13(?!\d)",
+]
+# Context that confirms a housing/PRS meaning for a "section N" reference
+SECTION_NOTICE_CONTEXT = [
+    "evict", "possession", "no-fault", "no fault", "notice to quit",
+    "assured", "shorthold", "tenant", "tenancy", "landlord",
+    "housing act", "renters", "rented", "letting",
+]
  
 # ── Body-text check terms ─────────────────────────────────────────────────────
 # A DELIBERATELY TIGHT subset of unambiguous PRS terms, used only to decide
@@ -146,7 +159,7 @@ SPECIFIC_PRS_TERMS = [
     "privately rented",
     "renters rights act", "renters rights", "renters reform",
     "renters (reform)", "renting homes act",
-    "section 21", "no-fault eviction", "no fault eviction",
+    "no-fault eviction", "no fault eviction",
     "assured shorthold tenancy", "assured shorthold",
     "tenancy deposit", "deposit protection scheme",
     "letting agent", "landlord licensing", "landlord registration",
@@ -157,7 +170,6 @@ SPECIFIC_PRS_TERMS = [
     "ground rent", "leasehold reform", "collective enfranchisement",
     "rent control", "rent stabilisation", "rent freeze", "rent cap",
     "rent tribunal", "build-to-rent",
-    "section 8 notice", "section 13 notice",
     "decent homes standard",
 ]
  
@@ -170,6 +182,27 @@ def _signal_present(signal: str, text: str) -> bool:
         pattern = re.escape(signal) + r"(?![a-z0-9])"
         return re.search(pattern, text) is not None
     return signal in text
+ 
+ 
+def _section_notice_is_prs(text: str) -> bool:
+    """
+    "Section 21/8/13" appear in many Acts (e.g. section 21 of the Agriculture
+    Act 2020), so treat them as PRS only when a housing/eviction context word
+    appears within ~60 characters of the phrase. This keeps genuine PRS eviction
+    references (Housing Act 1988 s21/s8, rent tribunal s13) while excluding
+    unrelated statutory sections that happen to share the same number.
+    """
+    if not text:
+        return False
+    for pat in SECTION_NOTICE_PATTERNS:
+        for m in re.finditer(pat, text):
+            # Window of 60 chars either side of the match
+            start = max(0, m.start() - 60)
+            end   = min(len(text), m.end() + 60)
+            window = text[start:end]
+            if any(ctx in window for ctx in SECTION_NOTICE_CONTEXT):
+                return True
+    return False
  
  
 def is_prs_relevant(text: str) -> bool:
@@ -191,6 +224,10 @@ def is_prs_relevant(text: str) -> bool:
  
     # Strong PRS signals (checked on apostrophe-normalised text)
     if any(_signal_present(sig, normalised) for sig in STRONG_SIGNALS):
+        return True
+ 
+    # "Section 21/8/13" — only when housing/eviction context is nearby
+    if _section_notice_is_prs(normalised):
         return True
  
     # "landlord" — only include when paired with tenancy/housing context
@@ -272,9 +309,9 @@ def _has_specific_prs_signal(text: str) -> bool:
     """
     Body-text relevance test. Requires an UNAMBIGUOUS PRS term from
     SPECIFIC_PRS_TERMS (not just a passing mention of "landlord"/"tenant", and
-    not collision-prone terms like bare "lha" or "right to rent"). Used to catch
-    genuine PRS interventions inside debates/statements whose title is not
-    itself PRS-related. Boundary-safe so "section 21" never matches "section 215".
+    not collision-prone terms like bare "lha" or "right to rent"). Also accepts a
+    "section 21/8/13" reference, but ONLY when a housing/eviction context word is
+    nearby — so "section 21 of the Agriculture Act 2020" does not match.
     """
     if not text:
         return False
@@ -282,7 +319,9 @@ def _has_specific_prs_signal(text: str) -> bool:
     normalised = lower.replace("\u2019", "'").replace("\u2018", "'").replace("'", "")
     if any(excl in lower for excl in EXCLUSIONS):
         return False
-    return any(_signal_present(term, normalised) for term in SPECIFIC_PRS_TERMS)
+    if any(_signal_present(term, normalised) for term in SPECIFIC_PRS_TERMS):
+        return True
+    return _section_notice_is_prs(normalised)
  
  
 def _slugify(title: str) -> str:
@@ -312,6 +351,16 @@ def _excerpt_around_match(clean_text: str, max_len: int = 320) -> str:
             pos = normalised.find(term)
         if pos != -1 and (earliest is None or pos < earliest):
             earliest = pos
+ 
+    # Also consider a context-qualified "section 21/8/13" match
+    for pat in SECTION_NOTICE_PATTERNS:
+        for m in re.finditer(pat, normalised):
+            start = max(0, m.start() - 60)
+            end   = min(len(normalised), m.end() + 60)
+            if any(ctx in normalised[start:end] for ctx in SECTION_NOTICE_CONTEXT):
+                if earliest is None or m.start() < earliest:
+                    earliest = m.start()
+                break
  
     if earliest is None:
         return clean_text[:max_len].strip()
