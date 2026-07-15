@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T10:14:22.954056",
+  "lastUpdated": "2026-07-15T11:12:46.707211",
   "questions": [
     {
       "id": 1927649,
@@ -89,6 +89,25 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18098",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1927114,
+      "uin": "18277",
+      "memberName": "Ann Davies",
+      "party": "PC",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, what assessment he has made of the potential impact of the decision not to uprate Local Housing Allowance on poverty (a) before and (b) after housing costs, particularly for households in Wales.",
+      "dateTabled": "13rd July",
+      "dateTabledRaw": "2026-07-13",
+      "dateForAnswer": "Due 16th July",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18277",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
