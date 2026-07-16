@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T10:32:24.320541",
+  "lastUpdated": "2026-07-16T11:27:58.368290",
   "questions": [
     {
       "id": 1928110,
@@ -355,12 +355,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16438",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "16th July",
+      "answeringMember": "Sarah Jones",
+      "answeringParty": "Lab",
+      "answerSummary": "The Home Office is currently consulting on increasing the duration of closure orders to strengthen the response to high street illegality. The proliferation of illicit businesses is undercutting legitimate businesses and in some cases, forcing them off th..."
     },
     {
       "id": 1925090,
