@@ -1,6 +1,63 @@
 {
-  "lastUpdated": "2026-07-15T11:12:46.707211",
+  "lastUpdated": "2026-07-16T10:32:24.320541",
   "questions": [
+    {
+      "id": 1928110,
+      "uin": "19109",
+      "memberName": "Apsana Begum",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what assessment he has made of the potential impact of the ending of the Renters' Rights transition period on levels of homelessness.",
+      "dateTabled": "15th July",
+      "dateTabledRaw": "2026-07-15",
+      "dateForAnswer": "Due 1st September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-15/19109",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1928134,
+      "uin": "19183",
+      "memberName": "Luke Taylor",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, what steps he plans to take to introduce reforms requiring greater transparency and accountability from letting agents regarding the operational condition of essential residentia",
+      "dateTabled": "15th July",
+      "dateTabledRaw": "2026-07-15",
+      "dateForAnswer": "Due 1st September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-15/19183",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1928365,
+      "uin": "19046",
+      "memberName": "Imran Hussain",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, whether the forthcoming Leasehold and Commonhold Reform Bill will include measures to strengthen protections for residents against unfair or disproportionate service charge incre",
+      "dateTabled": "15th July",
+      "dateTabledRaw": "2026-07-15",
+      "dateForAnswer": "Due 1st September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-15/19046",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1927649,
       "uin": "18680",
@@ -127,12 +184,12 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-10/17858",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement made on 15 July 2026 (HCWS270)."
     },
     {
       "id": 1926622,
@@ -165,12 +222,12 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-09/17583",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department engaged extensively with the student sector when developing the Renters\u2019 Rights Act and its Impact Assessment received a green rating from the RPC. We continue to monitor trends across the private rented sector and are conducting a robust ev..."
     },
     {
       "id": 1926384,
@@ -184,12 +241,12 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-09/17668",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "Based on analysis of Non-Domestic National Energy Efficiency Data-Framework 2025, we estimate that approximately 93% of non-domestic buildings have a floor area of less than or equal to 1,000 square meters. The non-domestic PRS MEES Impact Assessment will..."
     },
     {
       "id": 1926217,
@@ -260,12 +317,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16773",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 78379 on 16 October 2025."
     },
     {
       "id": 1924798,
@@ -279,12 +336,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16445",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 2020 on 27 May 2026."
     },
     {
       "id": 1924784,
@@ -317,12 +374,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16774",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answer given to Question UIN 78379 on 16 October 2025."
     },
     {
       "id": 1925040,
@@ -336,12 +393,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16659",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the answers given to Questions UIN 4726 on 8 June 2026 and UIN 12434 on 30 June 2026, and to the Written Ministerial Statement made on 22 June 2026 (HCWS132)."
     },
     {
       "id": 1925177,
@@ -355,12 +412,12 @@
       "dateForAnswer": "Due 9th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-07/16653",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement made on 16 June 2026 (HCWS117)."
     },
     {
       "id": 1924833,
@@ -393,12 +450,12 @@
       "dateForAnswer": "Due 8th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-06/16352",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "Such a mechanism is already in place. If a customer has a rent arrears of two months or more, for the accommodation they are currently occupying, a landlord may request a deduction from the customer\u2019s Universal Credit."
     },
     {
       "id": 1924628,
@@ -412,12 +469,12 @@
       "dateForAnswer": "Due 8th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-06/16351",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "15th July",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The default position in Universal Credit is that claimants should manage their own finances, including payment of their rent. This encourages self-reliance and eases the transition back into work.Where a claimant is vulnerable or if they get into arrears,..."
     },
     {
       "id": 1924626,
