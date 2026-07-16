@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-15T09:48:00.686503Z",
+  "generated": "2026-07-16T09:54:26.499369Z",
   "senedd_start": "2026-05-12",
-  "total": 24,
+  "total": 25,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -209,8 +209,8 @@
       "member_area": "Clwyd",
       "member_uid": "171",
       "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "07/07/2026",
       "party": "Welsh Conservative Party"
     },
     {
@@ -223,8 +223,8 @@
       "member_area": "Clwyd",
       "member_uid": "171",
       "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "07/07/2026",
       "party": "Welsh Conservative Party"
     },
     {
@@ -253,6 +253,20 @@
       "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99320",
+      "url_path": "/WrittenQuestion/99320",
+      "tabled_str": "25/06/2026",
+      "answer_str": "02/07/2026",
+      "snippet": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
+      "member_name": "Tom Montgomery",
+      "member_area": "Clwyd",
+      "member_uid": "12183",
+      "full_question": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "07/07/2026",
       "party": "Reform UK"
     },
     {
@@ -586,8 +600,8 @@
         "member_area": "Clwyd",
         "member_uid": "171",
         "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "07/07/2026",
         "party": "Welsh Conservative Party"
       },
       {
@@ -600,8 +614,8 @@
         "member_area": "Clwyd",
         "member_uid": "171",
         "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "07/07/2026",
         "party": "Welsh Conservative Party"
       },
       {
@@ -630,6 +644,20 @@
         "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ99320",
+        "url_path": "/WrittenQuestion/99320",
+        "tabled_str": "25/06/2026",
+        "answer_str": "02/07/2026",
+        "snippet": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
+        "member_name": "Tom Montgomery",
+        "member_area": "Clwyd",
+        "member_uid": "12183",
+        "full_question": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "07/07/2026",
         "party": "Reform UK"
       }
     ],
