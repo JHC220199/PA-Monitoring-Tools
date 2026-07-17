@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-16T09:54:26.499369Z",
+  "generated": "2026-07-17T09:44:47.074618Z",
   "senedd_start": "2026-05-12",
-  "total": 25,
+  "total": 26,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -29,6 +29,20 @@
       "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
       "answered_by": "",
       "answered_on": "",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99568",
+      "url_path": "/WrittenQuestion/99568",
+      "tabled_str": "08/07/2026",
+      "answer_str": "15/07/2026",
+      "snippet": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "16/07/2026",
       "party": "Reform UK"
     },
     {
@@ -718,6 +732,20 @@
         "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
         "answered_by": "",
         "answered_on": "",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ99568",
+        "url_path": "/WrittenQuestion/99568",
+        "tabled_str": "08/07/2026",
+        "answer_str": "15/07/2026",
+        "snippet": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "16/07/2026",
         "party": "Reform UK"
       }
     ]
