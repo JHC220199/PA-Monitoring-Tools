@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T10:10:38.538847",
+  "lastUpdated": "2026-07-17T11:11:46.387287",
   "questions": [
     {
       "id": 1928829,
@@ -184,6 +184,25 @@
       "dateForAnswer": "Due 2nd September",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-16/19695",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1928987,
+      "uin": "19651",
+      "memberName": "David Smith",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, what assessment he has made of the impact of levels of Local Housing Allowance on the ability of Universal Credit claimants to secure housing in North Northumberland.",
+      "dateTabled": "16th July",
+      "dateTabledRaw": "2026-07-16",
+      "dateForAnswer": "Due 2nd September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-16/19651",
       "answered": false,
       "isHolding": false,
       "dateAnswered": null,
