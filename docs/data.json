@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T11:11:46.387287",
+  "lastUpdated": "2026-07-20T11:03:51.540822",
   "questions": [
     {
       "id": 1928829,
@@ -211,6 +211,63 @@
       "answerSummary": null
     },
     {
+      "id": 1928775,
+      "uin": "19697",
+      "memberName": "Mr Lee Dillon",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what redress is available to homeowners whose spray foam insulation was incorrectly installed by TrustMark-approved companies that have since ceased trading.",
+      "dateTabled": "16th July",
+      "dateTabledRaw": "2026-07-16",
+      "dateForAnswer": "Due 2nd September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-16/19697",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1928769,
+      "uin": "19696",
+      "memberName": "Mr Lee Dillon",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what steps his Department is taking to help protect homeowners from exploitative firms offering spray foam insulation removal services.",
+      "dateTabled": "16th July",
+      "dateTabledRaw": "2026-07-16",
+      "dateForAnswer": "Due 2nd September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-16/19696",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1928759,
+      "uin": "19694",
+      "memberName": "Mr Lee Dillon",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Energy Security and Net Zero, what steps he is taking to help improve public awareness of the risks associated with spray foam insulation, including the circumstances in which it may affect mortgage lending or insurance.",
+      "dateTabled": "16th July",
+      "dateTabledRaw": "2026-07-16",
+      "dateForAnswer": "Due 2nd September",
+      "weekCommencing": "2026-07-13",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-16/19694",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
       "id": 1928110,
       "uin": "19109",
       "memberName": "Apsana Begum",
@@ -336,12 +393,12 @@
       "dateForAnswer": "Due 16th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18278",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The causes of homelessness are multi-faceted and often complex and they interact dynamically DWP continues to work closely with MHCLG on interactions with homelessness. The Secretary of State for Work and Pensions reviewed Local Housing Allowance (LHA) at..."
     },
     {
       "id": 1926868,
@@ -412,12 +469,12 @@
       "dateForAnswer": "Due 16th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-10/17857",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The Secretary of State for Work and Pensions reviewed Local Housing Allowance (LHA) at the 2025 Autumn Budget and announced that rates would be maintained at their current levels for 2026/27. A range of factors, such as rent levels across the country and ..."
     },
     {
       "id": 1926087,
@@ -469,12 +526,12 @@
       "dateForAnswer": "Due 13rd July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-09/17355",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department publishes a release entitled \u2018Leasehold Dwellings\u2019 which includes statistics on the number of leasehold dwellings in England by tenure, dwelling type, and region. Statistics from 2024-25 can be found on gov.uk here."
     },
     {
       "id": 1925901,
@@ -504,15 +561,15 @@
       "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 30 June 2026 to Question 11892, if his Department will make an assessment of the potential merits of further regulation of fixed estate charges and char",
       "dateTabled": "8th July",
       "dateTabledRaw": "2026-07-08",
-      "dateForAnswer": "Due 13rd July",
+      "dateForAnswer": "",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-08/17190",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement made on 18 December 2025 (HCWS1210)."
     },
     {
       "id": 1925089,
@@ -716,12 +773,12 @@
       "dateForAnswer": "Due 20th July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-06/HL1707",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "Letting agents and property managers in England are required to belong to a government-approved redress scheme. Landlords or agents who take a deposit in relation to an assured periodic tenancy must protect it in a government-approved tenancy deposit prot..."
     },
     {
       "id": 1924499,
@@ -754,12 +811,12 @@
       "dateForAnswer": "Due 17th July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-03/HL1643",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "My department has made no single assessment covering the combined cost of the measures in the Renters\u2019 Rights Act and proposed tax increases.The Impact Assessment for the Renters\u2019 Rights Act can be found here (and attached).At Budget 2025, the Government ..."
     },
     {
       "id": 1924116,
@@ -773,12 +830,12 @@
       "dateForAnswer": "Due 17th July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-03/HL1642",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Baroness Levitt",
+      "answeringParty": "Lab",
+      "answerSummary": "The Renters Rights Act (RRA) received royal assent on the 27 October 2025. A phased implementation of the RRA commenced on 1 May 2026, abolishing Section 21 and introducing the tenancy reforms for the Private Rented Sector.The Ministry of Justice publishe..."
     },
     {
       "id": 1924114,
@@ -792,12 +849,12 @@
       "dateForAnswer": "Due 17th July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-03/HL1644",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "17th July",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "Where a Right to Manage (RTM) company takes over management of a building it is responsible for ensuring compliance with the terms of the lease. In some cases, leases require approval for pets which the RTM is responsible for granting."
     },
     {
       "id": 1922790,
