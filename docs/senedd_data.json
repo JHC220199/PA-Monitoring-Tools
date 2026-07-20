@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-17T09:44:47.074618Z",
+  "generated": "2026-07-20T10:39:47.101874Z",
   "senedd_start": "2026-05-12",
-  "total": 26,
+  "total": 27,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -100,6 +100,20 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
       "party": ""
+    },
+    {
+      "wq_ref": "WQ99809",
+      "url_path": "/WrittenQuestion/99809",
+      "tabled_str": "16/07/2026",
+      "answer_str": "23/07/2026",
+      "snippet": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation ...",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation to build social homes to replace those sold?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
     },
     {
       "wq_ref": "WQ99116",
@@ -746,6 +760,22 @@
         "full_question": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "16/07/2026",
+        "party": "Reform UK"
+      }
+    ],
+    "2026-07-13": [
+      {
+        "wq_ref": "WQ99809",
+        "url_path": "/WrittenQuestion/99809",
+        "tabled_str": "16/07/2026",
+        "answer_str": "23/07/2026",
+        "snippet": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation ...",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation to build social homes to replace those sold?",
+        "answered_by": "",
+        "answered_on": "",
         "party": "Reform UK"
       }
     ]
