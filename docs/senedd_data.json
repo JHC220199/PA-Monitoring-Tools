@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-20T10:39:47.101874Z",
+  "generated": "2026-07-21T10:13:41.760356Z",
   "senedd_start": "2026-05-12",
-  "total": 27,
+  "total": 28,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -128,6 +128,20 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
       "party": ""
+    },
+    {
+      "wq_ref": "WQ99854",
+      "url_path": "/WrittenQuestion/99854",
+      "tabled_str": "17/07/2026",
+      "answer_str": "24/07/2026",
+      "snippet": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "Reform UK"
     },
     {
       "wq_ref": "WQ99165",
@@ -349,8 +363,8 @@
       "member_area": "Pen-y-bont Bro Morgannwg",
       "member_uid": "143",
       "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "08/07/2026",
       "party": "Welsh Conservative Party"
     },
     {
@@ -700,8 +714,8 @@
         "member_area": "Pen-y-bont Bro Morgannwg",
         "member_uid": "143",
         "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "08/07/2026",
         "party": "Welsh Conservative Party"
       },
       {
@@ -774,6 +788,20 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "12147",
         "full_question": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation to build social homes to replace those sold?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "Reform UK"
+      },
+      {
+        "wq_ref": "WQ99854",
+        "url_path": "/WrittenQuestion/99854",
+        "tabled_str": "17/07/2026",
+        "answer_str": "24/07/2026",
+        "snippet": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
         "answered_by": "",
         "answered_on": "",
         "party": "Reform UK"
