@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-21T10:42:37.465897",
+  "lastUpdated": "2026-07-21T11:37:28.603584",
   "questions": [
     {
       "id": 1929406,
@@ -450,12 +450,12 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18363",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "21st July",
+      "answeringMember": "Martin McCluskey",
+      "answeringParty": "Lab",
+      "answerSummary": "The government is reforming Energy Performance Certificates (EPCs) to ensure they provide a more complete assessment of a home's energy performance. We will introduce four headline metrics for domestic EPCs: Fabric Performance, Heating System, Smart Readi..."
     },
     {
       "id": 1927115,
@@ -925,12 +925,12 @@
       "dateForAnswer": "Due 6th July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-01/14822",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Private Rented Sector Landlord Ombudsman will resolve tenant complaints about their landlords\u2019 actions or behaviours. The purpose of Ombudsman redress is to provide fair, independent resolution of complaints and ensure that an individual making a comp..."
     },
     {
       "id": 1923093,
@@ -982,12 +982,12 @@
       "dateForAnswer": "Due 1st July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13907",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Letting agents will be able to support landlords with the registration of their properties on the PRS Database, providing certain property information on their behalf. Both landlords and letting agents have been extensively involved throughout the Databas..."
     },
     {
       "id": 1921702,
@@ -1001,12 +1001,12 @@
       "dateForAnswer": "Due 1st July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13906",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Letting agents will be able to support landlords with the registration of their properties on the PRS Database, providing certain property information on their behalf. Both landlords and letting agents have been extensively involved throughout the Databas..."
     },
     {
       "id": 1921706,
@@ -1020,12 +1020,12 @@
       "dateForAnswer": "Due 1st July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13910",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Letting agents will be able to support landlords with the registration of their properties on the PRS Database, providing certain property information on their behalf. Both landlords and letting agents have been extensively involved throughout the Databas..."
     },
     {
       "id": 1921705,
@@ -1039,12 +1039,12 @@
       "dateForAnswer": "Due 1st July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13909",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Letting agents will be able to support landlords with the registration of their properties on the PRS Database, providing certain property information on their behalf. Both landlords and letting agents have been extensively involved throughout the Databas..."
     },
     {
       "id": 1921587,
@@ -1058,12 +1058,12 @@
       "dateForAnswer": "Due 1st July",
       "weekCommencing": "2026-06-29",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-29/13831",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement made on 22 June 2026 (HCWS132) and the answer given to Question UIN 4726 on 8 June 2026."
     },
     {
       "id": 1921540,
@@ -1381,12 +1381,12 @@
       "dateForAnswer": "Due 25th June",
       "weekCommencing": "2026-06-22",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-23/12477",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "20th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The government will continue to work with local authorities to understand the impact of the PRS Minimum Energy Efficiency Standard (MEES). We have already set out a number of measures designed to ease the compliance burden and to support local authority e..."
     },
     {
       "id": 1919375,
