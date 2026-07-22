@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-21T10:13:41.760356Z",
+  "generated": "2026-07-22T10:12:50.008563Z",
   "senedd_start": "2026-05-12",
-  "total": 28,
+  "total": 30,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -16,6 +16,34 @@
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "10/06/2026",
       "party": "Welsh Conservative Party"
+    },
+    {
+      "wq_ref": "WQ99452",
+      "url_path": "/WrittenQuestion/99452",
+      "tabled_str": "03/07/2026",
+      "answer_str": "10/07/2026",
+      "snippet": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales ...",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales and England have on mobile network quality and investment in Wales?",
+      "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+      "answered_on": "13/07/2026",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99528",
+      "url_path": "/WrittenQuestion/99528",
+      "tabled_str": "06/07/2026",
+      "answer_str": "13/07/2026",
+      "snippet": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when ...",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when upgrading existing sites or deploying mobile infrastructure on rooftops?",
+      "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+      "answered_on": "13/07/2026",
+      "party": "Reform UK"
     },
     {
       "wq_ref": "WQ99552",
@@ -705,6 +733,20 @@
     ],
     "2026-06-29": [
       {
+        "wq_ref": "WQ99452",
+        "url_path": "/WrittenQuestion/99452",
+        "tabled_str": "03/07/2026",
+        "answer_str": "10/07/2026",
+        "snippet": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales ...",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales and England have on mobile network quality and investment in Wales?",
+        "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+        "answered_on": "13/07/2026",
+        "party": "Reform UK"
+      },
+      {
         "wq_ref": "WQ99382",
         "url_path": "/WrittenQuestion/99382",
         "tabled_str": "29/06/2026",
@@ -748,6 +790,20 @@
       }
     ],
     "2026-07-06": [
+      {
+        "wq_ref": "WQ99528",
+        "url_path": "/WrittenQuestion/99528",
+        "tabled_str": "06/07/2026",
+        "answer_str": "13/07/2026",
+        "snippet": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when ...",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when upgrading existing sites or deploying mobile infrastructure on rooftops?",
+        "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+        "answered_on": "13/07/2026",
+        "party": "Reform UK"
+      },
       {
         "wq_ref": "WQ99552",
         "url_path": "/WrittenQuestion/99552",
