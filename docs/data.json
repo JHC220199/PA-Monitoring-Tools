@@ -1,6 +1,44 @@
 {
-  "lastUpdated": "2026-07-21T11:37:28.603584",
+  "lastUpdated": "2026-07-22T10:36:31.170245",
   "questions": [
+    {
+      "id": 1929557,
+      "uin": "HL2417",
+      "memberName": "Lord Gilbert of Panteg",
+      "party": "Con",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government, further to the Written Answer by the Minister of State for Housing and planning on 20 October 2025 (HC78220), whether they remain opposed to rent controls.",
+      "dateTabled": "21st July",
+      "dateTabledRaw": "2026-07-21",
+      "dateForAnswer": "Due 4th August",
+      "weekCommencing": "2026-07-20",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-21/HL2417",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
+    {
+      "id": 1929567,
+      "uin": "HL2410",
+      "memberName": "Lord Gascoigne",
+      "party": "Con",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government what assessment they have made of the impact of introducing rent controls on (1) the functioning of the private rented sector, (2) the quality of rental accommodation, (3) rental housing supply, and (4) the delivery of new ",
+      "dateTabled": "21st July",
+      "dateTabledRaw": "2026-07-21",
+      "dateForAnswer": "Due 4th August",
+      "weekCommencing": "2026-07-20",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-21/HL2410",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1929406,
       "uin": "HL2366",
@@ -488,12 +526,12 @@
       "dateForAnswer": "Due 15th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18098",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "22nd July",
+      "answeringMember": "Sir Stephen Timms",
+      "answeringParty": "Lab",
+      "answerSummary": "The Secretary of State for Work and Pensions reviewed Local Housing Allowance at the 2025 Autumn Budget and announced that rates would be maintained at their current levels for 2026/27. A range of factors, such as rent levels across the country and povert..."
     },
     {
       "id": 1927114,
@@ -507,12 +545,12 @@
       "dateForAnswer": "Due 16th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-13/18277",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "21st July",
+      "answeringMember": "Dame Diana Johnson",
+      "answeringParty": "Lab",
+      "answerSummary": "DWP is committed to delivering for the people of Wales. It is important that the UK Government considers the specific impacts of policy changes in Wales, and the interaction with the devolved matter on housing."
     },
     {
       "id": 1926575,
@@ -627,6 +665,25 @@
       "answeringMember": "",
       "answeringParty": "",
       "answerSummary": null
+    },
+    {
+      "id": 1925793,
+      "uin": "17190",
+      "memberName": "Uma Kumaran",
+      "party": "Lab",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 30 June 2026 to Question 11892, if his Department will make an assessment of the potential merits of further regulation of fixed estate charges and char",
+      "dateTabled": "8th July",
+      "dateTabledRaw": "2026-07-08",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-07-06",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-08/17190",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "17th July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "Member to the Written Ministerial Statement made on 18 December 2025 (HCWS1210)."
     },
     {
       "id": 1925089,
