@@ -1,6 +1,25 @@
 {
-  "lastUpdated": "2026-07-22T11:34:06.215902",
+  "lastUpdated": "2026-07-23T10:36:04.173481",
   "questions": [
+    {
+      "id": 1929609,
+      "uin": "HL2482",
+      "memberName": "Lord Blencathra",
+      "party": "Con",
+      "house": "Lords",
+      "question": "To ask His Majesty's Government what evidence they have gathered in support of their position against rent controls, including regarding their impact on likely levels of (1) rent, and (2) property to rent in the private sector.",
+      "dateTabled": "22nd July",
+      "dateTabledRaw": "2026-07-22",
+      "dateForAnswer": "Due 5th August",
+      "weekCommencing": "2026-07-20",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-22/HL2482",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null
+    },
     {
       "id": 1929557,
       "uin": "HL2417",
@@ -659,31 +678,12 @@
       "dateForAnswer": "Due 22nd July",
       "weekCommencing": "2026-07-06",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-08/HL1861",
-      "answered": false,
-      "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
-    },
-    {
-      "id": 1925793,
-      "uin": "17190",
-      "memberName": "Uma Kumaran",
-      "party": "Lab",
-      "house": "Commons",
-      "question": "To ask the Secretary of State for Housing, Communities and Local Government, pursuant to the Answer of 30 June 2026 to Question 11892, if his Department will make an assessment of the potential merits of further regulation of fixed estate charges and char",
-      "dateTabled": "8th July",
-      "dateTabledRaw": "2026-07-08",
-      "dateForAnswer": "",
-      "weekCommencing": "2026-07-06",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-08/17190",
       "answered": true,
       "isHolding": false,
-      "dateAnswered": "17th July",
-      "answeringMember": "Matthew Pennycook",
+      "dateAnswered": "22nd July",
+      "answeringMember": "Baroness Taylor of Stevenage",
       "answeringParty": "Lab",
-      "answerSummary": "Member to the Written Ministerial Statement made on 18 December 2025 (HCWS1210)."
+      "answerSummary": "The government has not undertaken a formal assessment of the use of artificial intelligence (AI) by tenants to assist in disputes with landlords and letting agents.Government-approved property agent redress schemes operate independently and are responsibl..."
     },
     {
       "id": 1925089,
