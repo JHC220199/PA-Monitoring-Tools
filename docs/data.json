@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-23T11:34:43.716784",
+  "lastUpdated": "2026-07-24T10:25:21.970700",
   "questions": [
     {
       "id": 1929609,
@@ -469,12 +469,12 @@
       "dateForAnswer": "Due 16th July",
       "weekCommencing": "2026-07-13",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-14/18680",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "23rd July",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "The Renters\u2019 Rights Act 2025 extends existing protections against discrimination in the lettings process under the Equality Act 2010 to those in receipt of benefits or with children The Act also provides local authorities with strong investigatory and enf..."
     },
     {
       "id": 1927650,
