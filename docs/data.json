@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27T11:31:32.946880",
+  "lastUpdated": "2026-07-27T12:45:20.338017",
   "questions": [
     {
       "id": 1929609,
@@ -89,12 +89,12 @@
       "dateForAnswer": "Due 3rd August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-20/HL2275",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "27th July",
+      "answeringMember": "Lord Lemos",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Justice publishes quarterly Mortgage and landlord possession statistics - Mortgage and landlord possession statistics - GOV.UK - which details the number of claims and the average time (mean/median) from claim to possession.In 2025, the me..."
     },
     {
       "id": 1929409,
