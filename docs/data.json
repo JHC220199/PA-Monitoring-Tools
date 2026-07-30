@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30T10:35:51.224024",
+  "lastUpdated": "2026-07-30T11:28:02.051935",
   "questions": [
     {
       "id": 1929609,
@@ -108,12 +108,12 @@
       "dateForAnswer": "Due 3rd August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-20/HL2363",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "29th July",
+      "answeringMember": "Baroness Sherlock",
+      "answeringParty": "Lab",
+      "answerSummary": "The Local Housing Allowance (LHA) determines the maximum financial support available for renters in the private rented sector. LHA rates are not intended to meet all rents in all areas."
     },
     {
       "id": 1929410,
