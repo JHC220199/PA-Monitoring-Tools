@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-03T12:50:23.997592",
+  "lastUpdated": "2026-08-04T10:51:01.059221",
   "questions": [
     {
       "id": 1929609,
@@ -70,12 +70,12 @@
       "dateForAnswer": "Due 3rd August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-20/HL2366",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "3rd August",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "The Ministry of Housing, Communities and Local Government (MHCLG) does not currently collect data that would enable an assessment of changes in enforcement activity against landlords at local authority level over the last five years."
     },
     {
       "id": 1929405,
@@ -127,12 +127,12 @@
       "dateForAnswer": "Due 3rd August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-20/HL2362",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "3rd August",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department collects data on income and rent for households via the English Housing Survey and regularly reports on income in relation to housing costs. The latest published data can be found in the 2024-25 Headline Report Annex Table 2.5. and the 2023-..."
     },
     {
       "id": 1928829,
