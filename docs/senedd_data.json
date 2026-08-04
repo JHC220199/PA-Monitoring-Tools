@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-03T11:09:50.084010Z",
+  "generated": "2026-08-04T10:24:24.261194Z",
   "senedd_start": "2026-05-12",
-  "total": 39,
+  "total": 40,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -55,8 +55,8 @@
       "member_area": "Casnewydd Islwyn",
       "member_uid": "12147",
       "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "21/07/2026",
       "party": "Reform UK"
     },
     {
@@ -85,6 +85,20 @@
       "full_question": "What consideration has the Welsh Government given to assessing the feasibility of bringing Penrhos Nature Reserve, Ynys Mon, into public ownership in recognition of its environmental, biodiversity, heritage, recreational and wellbeing value, given that it's currently being marketed for sale by administrators?",
       "answered_by": "Cabinet Minister for Rural Resilience and Sustainability",
       "answered_on": "19/06/2026",
+      "party": "Reform UK"
+    },
+    {
+      "wq_ref": "WQ99700",
+      "url_path": "/WrittenQuestion/99700",
+      "tabled_str": "14/07/2026",
+      "answer_str": "21/07/2026",
+      "snippet": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
+      "member_name": "Dan Thomas",
+      "member_area": "Casnewydd Islwyn",
+      "member_uid": "12147",
+      "full_question": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "21/07/2026",
       "party": "Reform UK"
     },
     {
@@ -940,8 +954,8 @@
         "member_area": "Casnewydd Islwyn",
         "member_uid": "12147",
         "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "21/07/2026",
         "party": "Reform UK"
       },
       {
@@ -960,6 +974,20 @@
       }
     ],
     "2026-07-13": [
+      {
+        "wq_ref": "WQ99700",
+        "url_path": "/WrittenQuestion/99700",
+        "tabled_str": "14/07/2026",
+        "answer_str": "21/07/2026",
+        "snippet": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
+        "member_name": "Dan Thomas",
+        "member_area": "Casnewydd Islwyn",
+        "member_uid": "12147",
+        "full_question": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "21/07/2026",
+        "party": "Reform UK"
+      },
       {
         "wq_ref": "WQ99809",
         "url_path": "/WrittenQuestion/99809",
