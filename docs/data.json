@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-05T10:51:47.830973",
+  "lastUpdated": "2026-08-05T11:41:54.024019",
   "questions": [
     {
       "id": 1929609,
@@ -13,12 +13,12 @@
       "dateForAnswer": "Due 5th August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-22/HL2482",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "5th August",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department regularly reviews research and evidence related to various aspects of the private rented sector.The government has no plans to introduce rent controls in the private rented sector.Rent inflation in England has been easing since the end of 20..."
     },
     {
       "id": 1929557,
