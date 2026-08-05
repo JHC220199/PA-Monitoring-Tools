@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-04T11:38:18.297009",
+  "lastUpdated": "2026-08-05T10:51:47.830973",
   "questions": [
     {
       "id": 1929609,
@@ -32,12 +32,12 @@
       "dateForAnswer": "Due 4th August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-21/HL2417",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "4th August",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "The government has no plans to introduce rent controls in the private rented sector.Rent inflation in England has been easing since the end of 2024. Average rents in England increased by 3.4% in the 12 months to June, down from a peak of 9.2% in November ..."
     },
     {
       "id": 1929567,
@@ -51,12 +51,12 @@
       "dateForAnswer": "Due 4th August",
       "weekCommencing": "2026-07-20",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-07-21/HL2410",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null
+      "dateAnswered": "4th August",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "My Department regularly reviews research and evidence related to various aspects of the private rented sector.The government has no plans to introduce rent controls in the private rented sector.Rent inflation in England has been easing since the end of 20..."
     },
     {
       "id": 1929406,
