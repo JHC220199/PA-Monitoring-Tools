@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T08:59:28.992090Z",
+  "generated": "2026-08-13T08:29:42.673815Z",
   "senedd_start": "2026-05-12",
   "total": 43,
   "questions": [
@@ -15,7 +15,8 @@
       "full_question": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities in Wales?",
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "10/06/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99452",
@@ -29,7 +30,8 @@
       "full_question": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales and England have on mobile network quality and investment in Wales?",
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "13/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99955",
@@ -43,7 +45,8 @@
       "full_question": "What assessment has the Welsh Government made of any additional administrative burdens placed on domestic abuse refuge providers by the Renting Homes (Wales) Act 2016 and what consideration has it given to exempting refuge accommodation from aspects of the Act?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Labour"
+      "party": "Welsh Labour",
+      "emailed": true
     },
     {
       "wq_ref": "WQ100009",
@@ -57,7 +60,8 @@
       "full_question": "What is the total estimated cost of establishing the new national development body and social housing enabler Unnos?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Labour"
+      "party": "Welsh Labour",
+      "emailed": true
     },
     {
       "wq_ref": "WQ100016",
@@ -71,7 +75,8 @@
       "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99528",
@@ -85,7 +90,8 @@
       "full_question": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when upgrading existing sites or deploying mobile infrastructure on rooftops?",
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "13/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99552",
@@ -99,7 +105,8 @@
       "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "21/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99568",
@@ -113,7 +120,8 @@
       "full_question": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "16/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99002",
@@ -127,7 +135,8 @@
       "full_question": "What consideration has the Welsh Government given to assessing the feasibility of bringing Penrhos Nature Reserve, Ynys Mon, into public ownership in recognition of its environmental, biodiversity, heritage, recreational and wellbeing value, given that it's currently being marketed for sale by administrators?",
       "answered_by": "Cabinet Minister for Rural Resilience and Sustainability",
       "answered_on": "19/06/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99700",
@@ -141,7 +150,8 @@
       "full_question": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "21/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99061",
@@ -155,7 +165,8 @@
       "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99060",
@@ -169,7 +180,8 @@
       "full_question": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership with people with lived experience and organisations such as Crisis Cymru?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99062",
@@ -183,7 +195,8 @@
       "full_question": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves into permanent, stable homes in Pontypridd Cynon Merthyr?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99809",
@@ -197,7 +210,8 @@
       "full_question": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation to build social homes to replace those sold?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "24/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99116",
@@ -211,7 +225,8 @@
       "full_question": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "23/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99854",
@@ -225,7 +240,8 @@
       "full_question": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "24/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99838",
@@ -239,7 +255,8 @@
       "full_question": "Will the Welsh Government provide an up-to-date economic impact assessment of the 182-day threshold policy?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "24/11/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99837",
@@ -253,7 +270,8 @@
       "full_question": "How does the Welsh Government ensure genuine, long-established tourism businesses are not disadvantaged because of the 182-day threshold policy?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "24/11/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99836",
@@ -267,7 +285,8 @@
       "full_question": "What is the Welsh Government doing to improve the communication between the Valuation Office Agency and local authorities in administering the 182-day threshold policy?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "24/11/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99835",
@@ -281,7 +300,8 @@
       "full_question": "What is the Welsh Government doing to accelerate the speed of appeals for providers that fail to meet the 182-day threshold?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "24/07/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99834",
@@ -295,7 +315,8 @@
       "full_question": "What is the Welsh Government doing to make the appeals process simpler and more transparent for providers appealing against the 182-day threshold?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "24/07/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99165",
@@ -309,7 +330,8 @@
       "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99164",
@@ -323,7 +345,8 @@
       "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98617",
@@ -337,7 +360,8 @@
       "full_question": "What plans does the Welsh Government have to establish Unnos and what finances have been set aside to make this possible?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98618",
@@ -351,7 +375,8 @@
       "full_question": "What proposals will be made by the Welsh Government to make renting in Wales 'fairer' this Senedd term, as proposed in Plaid Cymru's 'The First 100 Days' document?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "09/06/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98640",
@@ -365,7 +390,8 @@
       "full_question": "What plans does the Welsh Government have to act to speed up remediation work on properties with unsafe cladding and other fire safety defects, including by strengthening oversight and enforcement where developers and freeholders fail to meet agreed deadlines?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
-      "party": "Plaid Cymru"
+      "party": "Plaid Cymru",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99186",
@@ -379,7 +405,8 @@
       "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99247",
@@ -393,7 +420,8 @@
       "full_question": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99311",
@@ -407,7 +435,8 @@
       "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "07/07/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99312",
@@ -421,7 +450,8 @@
       "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "07/07/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99262",
@@ -435,7 +465,8 @@
       "full_question": "What progress has the Welsh Government made in developing a community right to buy Bill?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": ""
+      "party": "",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99266",
@@ -449,7 +480,8 @@
       "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "30/06/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99320",
@@ -463,7 +495,8 @@
       "full_question": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "07/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98639",
@@ -477,7 +510,8 @@
       "full_question": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of the Building Safety Act 2022?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
-      "party": "Plaid Cymru"
+      "party": "Plaid Cymru",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98740",
@@ -491,7 +525,8 @@
       "full_question": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social landlords?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ98680",
@@ -505,7 +540,8 @@
       "full_question": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and people who are in this country illegally?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99382",
@@ -519,7 +555,8 @@
       "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "08/07/2026",
-      "party": "Welsh Conservative Party"
+      "party": "Welsh Conservative Party",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99360",
@@ -533,7 +570,8 @@
       "full_question": "When will the Welsh Government introduce a community right to buy?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "06/07/2026",
-      "party": "Welsh Labour"
+      "party": "Welsh Labour",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99363",
@@ -547,7 +585,8 @@
       "full_question": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing vacant or underused properties back into productive use?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "06/07/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99897",
@@ -559,9 +598,10 @@
       "member_area": "G\u0175yr Abertawe",
       "member_uid": "12190",
       "full_question": "What scrutiny arrangements does the Welsh Government have in place to monitor the performance of Rent Smart Wales?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "Reform UK"
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "05/08/2026",
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99910",
@@ -575,7 +615,8 @@
       "full_question": "Will the Cabinet Minister provide an update on how the Welsh Government will accelerate remedial work on leaseholders\u2019 homes affected by the cladding scandal, with particular reference to provisions laid out in Sections 116-124 of the Building Safety (Wales) Act?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "05/08/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99896",
@@ -589,7 +630,8 @@
       "full_question": "What engagement has the Welsh Government had with the camping and tourism sector regarding the proposed changes to permitted development rights, since the consultation on changes to permitted development rights closed on 1 July 2025?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "07/08/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     },
     {
       "wq_ref": "WQ99916",
@@ -603,7 +645,8 @@
       "full_question": "Will the Cabinet Minister expand permitted development rights for installing electrical vehicle charging points so that listed buildings no longer have to apply for Listed Building Consent?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "03/08/2026",
-      "party": "Reform UK"
+      "party": "Reform UK",
+      "emailed": true
     }
   ],
   "weeks": {
@@ -620,7 +663,8 @@
         "full_question": "What plans does the Welsh Government have to establish Unnos and what finances have been set aside to make this possible?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "10/06/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ98618",
@@ -634,7 +678,8 @@
         "full_question": "What proposals will be made by the Welsh Government to make renting in Wales 'fairer' this Senedd term, as proposed in Plaid Cymru's 'The First 100 Days' document?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "09/06/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ98640",
@@ -648,7 +693,8 @@
         "full_question": "What plans does the Welsh Government have to act to speed up remediation work on properties with unsafe cladding and other fire safety defects, including by strengthening oversight and enforcement where developers and freeholders fail to meet agreed deadlines?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "10/06/2026",
-        "party": "Plaid Cymru"
+        "party": "Plaid Cymru",
+        "emailed": true
       }
     ],
     "2026-05-25": [
@@ -664,7 +710,8 @@
         "full_question": "Will the Cabinet Minister provide a timeline for introducing the regulations required to implement sections 116-124 of the Building Safety Act 2022?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "10/06/2026",
-        "party": "Plaid Cymru"
+        "party": "Plaid Cymru",
+        "emailed": true
       },
       {
         "wq_ref": "WQ98740",
@@ -678,7 +725,8 @@
         "full_question": "Will the Cabinet Minister confirm how many households in Wales are currently in rent arrears with social landlords?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "10/06/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ98680",
@@ -692,7 +740,8 @@
         "full_question": "How will the Welsh Government ensure that British citizens are prioritised for housing over asylum seekers and people who are in this country illegally?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "10/06/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       }
     ],
     "2026-06-01": [
@@ -708,7 +757,8 @@
         "full_question": "What action does the Welsh Government intend to take to promote hydro power and geothermal power opportunities in Wales?",
         "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
         "answered_on": "10/06/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       }
     ],
     "2026-06-08": [
@@ -724,7 +774,8 @@
         "full_question": "What consideration has the Welsh Government given to assessing the feasibility of bringing Penrhos Nature Reserve, Ynys Mon, into public ownership in recognition of its environmental, biodiversity, heritage, recreational and wellbeing value, given that it's currently being marketed for sale by administrators?",
         "answered_by": "Cabinet Minister for Rural Resilience and Sustainability",
         "answered_on": "19/06/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       }
     ],
     "2026-06-15": [
@@ -740,7 +791,8 @@
         "full_question": "How will the Government ensure that the Homelessness and Social Housing Allocation (Wales) Act 2026 is properly resourced and effectively implemented in Pontypridd Cynon Merthyr?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "23/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99060",
@@ -754,7 +806,8 @@
         "full_question": "Will the Cabinet Minister publish a clear national plan to end homelessness in Wales, developed in partnership with people with lived experience and organisations such as Crisis Cymru?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "23/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99062",
@@ -768,7 +821,8 @@
         "full_question": "How will the Government reduce the number of households stuck in temporary accommodation and speed up moves into permanent, stable homes in Pontypridd Cynon Merthyr?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "23/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99116",
@@ -782,7 +836,8 @@
         "full_question": "Will the Cabinet Minister provide the projected cost of the 20,000 social home pledge?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "23/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99165",
@@ -796,7 +851,8 @@
         "full_question": "Will the Cabinet Minister confirm how many members of staff Unnos will have?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99164",
@@ -810,7 +866,8 @@
         "full_question": "Will the Cabinet Minister confirm what the projected cost of establishing Unnos is?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       }
     ],
     "2026-06-22": [
@@ -826,7 +883,8 @@
         "full_question": "What steps is the Welsh Government taking to ensure the effective implementation of the ask and act duty under the Homelessness and Social Housing Allocation (Wales) Act, including guidance, resourcing and accountability across public services?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99247",
@@ -840,7 +898,8 @@
         "full_question": "What consideration has the Cabinet Minister given to supporting young people onto the housing ladder?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99311",
@@ -854,7 +913,8 @@
         "full_question": "Will the Cabinet Minister meet with representatives of major residential developers regarding building safety, before the summer recess?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "07/07/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99312",
@@ -868,7 +928,8 @@
         "full_question": "How is the Welsh Government working with developers to accelerate remediation works on residential buildings?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "07/07/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99262",
@@ -882,7 +943,8 @@
         "full_question": "What progress has the Welsh Government made in developing a community right to buy Bill?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": ""
+        "party": "",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99266",
@@ -896,7 +958,8 @@
         "full_question": "What guidance is the Welsh Government providing to local authorities regarding supporting veterans at risk of, or experiencing homelessness, particularly in relation to the local connection requirements?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "30/06/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99320",
@@ -910,7 +973,8 @@
         "full_question": "What work is the Welsh Government undertaking to review social housing allocation policy across Wales?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "07/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       }
     ],
     "2026-06-29": [
@@ -926,7 +990,8 @@
         "full_question": "What assessment has the Welsh Government made of the impact that differences between planning rules in Wales and England have on mobile network quality and investment in Wales?",
         "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
         "answered_on": "13/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99382",
@@ -940,7 +1005,8 @@
         "full_question": "Will the Cabinet Secretary confirm whether changes to the definition of \u201cdwellinghouse\u201d in the 2026 permitted development legislation were intended to exclude flats from rights for solar panels and heat pumps, and what action will be taken to resolve inconsistencies in Part G, which continues to refer to flats?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "08/07/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99360",
@@ -954,7 +1020,8 @@
         "full_question": "When will the Welsh Government introduce a community right to buy?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "06/07/2026",
-        "party": "Welsh Labour"
+        "party": "Welsh Labour",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99363",
@@ -968,7 +1035,8 @@
         "full_question": "What support is the Welsh Government providing to community-led organisations seeking to regenerate town centres by bringing vacant or underused properties back into productive use?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "06/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       }
     ],
     "2026-07-06": [
@@ -984,7 +1052,8 @@
         "full_question": "What discussions has the Welsh Government had with mobile network operators about the barriers they face when upgrading existing sites or deploying mobile infrastructure on rooftops?",
         "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
         "answered_on": "13/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99552",
@@ -998,7 +1067,8 @@
         "full_question": "What assessment has the Welsh Government made of whether current permitted development rights for mobile infrastructure remain fit for purpose, given changes in mobile technology and the increasing need to upgrade existing sites?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "21/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99568",
@@ -1012,7 +1082,8 @@
         "full_question": "How is Welsh Government ensuring homeless British citizens are prioritised for social housing?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "16/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       }
     ],
     "2026-07-13": [
@@ -1028,7 +1099,8 @@
         "full_question": "What action is the Welsh Government taking to ensure veterans are prioritised for social housing?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "21/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99809",
@@ -1042,7 +1114,8 @@
         "full_question": "What consideration has the Cabinet Minister given to restoring right to buy, but put a legal obligation to build social homes to replace those sold?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "24/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99854",
@@ -1056,7 +1129,8 @@
         "full_question": "Does the Welsh Government support the Hate Crime Awareness training provided by Rent Smart Wales?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "24/07/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99838",
@@ -1070,7 +1144,8 @@
         "full_question": "Will the Welsh Government provide an up-to-date economic impact assessment of the 182-day threshold policy?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "24/11/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99837",
@@ -1084,7 +1159,8 @@
         "full_question": "How does the Welsh Government ensure genuine, long-established tourism businesses are not disadvantaged because of the 182-day threshold policy?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "24/11/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99836",
@@ -1098,7 +1174,8 @@
         "full_question": "What is the Welsh Government doing to improve the communication between the Valuation Office Agency and local authorities in administering the 182-day threshold policy?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "24/11/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99835",
@@ -1112,7 +1189,8 @@
         "full_question": "What is the Welsh Government doing to accelerate the speed of appeals for providers that fail to meet the 182-day threshold?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "24/07/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99834",
@@ -1126,7 +1204,8 @@
         "full_question": "What is the Welsh Government doing to make the appeals process simpler and more transparent for providers appealing against the 182-day threshold?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "24/07/2026",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       }
     ],
     "2026-07-27": [
@@ -1140,9 +1219,10 @@
         "member_area": "G\u0175yr Abertawe",
         "member_uid": "12190",
         "full_question": "What scrutiny arrangements does the Welsh Government have in place to monitor the performance of Rent Smart Wales?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "Reform UK"
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "05/08/2026",
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99910",
@@ -1156,7 +1236,8 @@
         "full_question": "Will the Cabinet Minister provide an update on how the Welsh Government will accelerate remedial work on leaseholders\u2019 homes affected by the cladding scandal, with particular reference to provisions laid out in Sections 116-124 of the Building Safety (Wales) Act?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "05/08/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99896",
@@ -1170,7 +1251,8 @@
         "full_question": "What engagement has the Welsh Government had with the camping and tourism sector regarding the proposed changes to permitted development rights, since the consultation on changes to permitted development rights closed on 1 July 2025?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "07/08/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       },
       {
         "wq_ref": "WQ99916",
@@ -1184,7 +1266,8 @@
         "full_question": "Will the Cabinet Minister expand permitted development rights for installing electrical vehicle charging points so that listed buildings no longer have to apply for Listed Building Consent?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "03/08/2026",
-        "party": "Reform UK"
+        "party": "Reform UK",
+        "emailed": true
       }
     ],
     "2026-08-03": [
@@ -1200,7 +1283,8 @@
         "full_question": "What assessment has the Welsh Government made of any additional administrative burdens placed on domestic abuse refuge providers by the Renting Homes (Wales) Act 2016 and what consideration has it given to exempting refuge accommodation from aspects of the Act?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Labour"
+        "party": "Welsh Labour",
+        "emailed": true
       },
       {
         "wq_ref": "WQ100009",
@@ -1214,7 +1298,8 @@
         "full_question": "What is the total estimated cost of establishing the new national development body and social housing enabler Unnos?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Labour"
+        "party": "Welsh Labour",
+        "emailed": true
       },
       {
         "wq_ref": "WQ100016",
@@ -1228,7 +1313,8 @@
         "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party"
+        "party": "Welsh Conservative Party",
+        "emailed": true
       }
     ]
   }
