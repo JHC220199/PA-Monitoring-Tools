@@ -23,6 +23,14 @@ from bs4 import BeautifulSoup
  
 DATA_FILE = os.path.join("docs", "senedd_data.json")
  
+# Power Automate "When an HTTP request is received" webhook URL.
+# Set as a GitHub secret named SENEDD_EMAIL_WEBHOOK.
+# If not set, email notifications are silently skipped.
+EMAIL_WEBHOOK = os.environ.get("SENEDD_EMAIL_WEBHOOK", "")
+ 
+# Public URL of the dashboard, included in the email footer
+DASHBOARD_URL = "https://jhc220199.github.io/PA-Monitoring-Tools/senedd_index.html"
+ 
 # First sitting of the 7th Senedd — do not fetch questions before this date
 SENEDD_START = date(2026, 5, 12)
  
@@ -261,6 +269,181 @@ def fetch_full_question(url_path: str) -> dict:
         pass
     return result
  
+# ── Email notification ─────────────────────────────────────────────────────────
+ 
+PARTY_ABBREV = {
+    "Labour": "Lab", "Welsh Labour": "Lab",
+    "Welsh Conservatives": "Con", "Welsh Conservative Party": "Con", "Conservative": "Con",
+    "Plaid Cymru": "PC", "Plaid Cymru Group": "PC",
+    "Liberal Democrats": "LD", "Liberal Democrat": "LD", "Welsh Liberal Democrats": "LD",
+    "Reform UK": "Ref", "Reform UK Group": "Ref",
+    "Wales Green Party": "Green", "Green Party": "Green",
+    "Independent": "Ind", "Non-affiliated": "Ind",
+}
+ 
+PARTY_STYLE = {
+    "Lab":   ("#fee2e2", "#991b1b"),
+    "Con":   ("#dbeafe", "#1e40af"),
+    "LD":    ("#fef3c7", "#92400e"),
+    "PC":    ("#99f6e4", "#134e4a"),
+    "Ref":   ("#cffafe", "#0891b2"),
+    "Green": ("#bbf7d0", "#14532d"),
+    "Ind":   ("#f1f5f9", "#475569"),
+}
+ 
+def party_abbrev(party: str) -> str:
+    if party in PARTY_ABBREV:
+        return PARTY_ABBREV[party]
+    for k, v in PARTY_ABBREV.items():
+        if party.startswith(k) or k.startswith(party):
+            return v
+    return party or ""
+ 
+def esc_html(s: str) -> str:
+    return (str(s or "")
+            .replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
+ 
+def build_email_html(new_qs: list) -> str:
+    """Build the HTML body for the notification email."""
+    n = len(new_qs)
+    rows = ""
+    for q in new_qs:
+        abbr = party_abbrev(q.get("party", ""))
+        bg, fg = PARTY_STYLE.get(abbr, ("#f1f5f9", "#475569"))
+        badge = (
+            f'<span style="display:inline-block;padding:2px 8px;border-radius:4px;'
+            f'font-size:11px;font-weight:600;background:{bg};color:{fg};">{esc_html(abbr)}</span>'
+        ) if abbr else ""
+ 
+        q_text = q.get("full_question") or q.get("snippet") or ""
+        q_url  = f"{BASE_URL}{q.get('url_path','')}"
+ 
+        rows += f"""
+        <tr>
+          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
+            <div style="font-weight:600;color:#113B54;font-size:13px;">{esc_html(q.get('member_name',''))}</div>
+            <div style="font-size:11px;color:#94a3b8;margin-top:2px;">{esc_html(q.get('member_area',''))}</div>
+            <div style="margin-top:5px;">{badge}</div>
+          </td>
+          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
+            <div style="font-size:13px;color:#0F2636;line-height:1.5;">{esc_html(q_text)}</div>
+            <a href="{esc_html(q_url)}"
+               style="display:inline-block;margin-top:7px;font-size:12px;color:#E96C19;text-decoration:none;">
+               View on Senedd website &rarr;</a>
+            <div style="font-size:11px;color:#94a3b8;margin-top:4px;">{esc_html(q.get('wq_ref',''))}</div>
+          </td>
+          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;
+                     font-size:12px;color:#64748b;white-space:nowrap;">
+            {esc_html(q.get('tabled_str','—'))}
+          </td>
+          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;
+                     font-size:12px;color:#64748b;white-space:nowrap;">
+            {esc_html(q.get('answer_str','—'))}
+          </td>
+        </tr>"""
+ 
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#F6F7F8;
+     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+  <div style="max-width:900px;margin:0 auto;background:#FCFCFC;">
+ 
+    <div style="background:#113B54;color:#FCFCFC;padding:20px 24px;">
+      <div style="font-size:18px;font-weight:600;">Senedd PRS Written Questions Monitor</div>
+      <div style="font-size:13px;color:rgba(252,252,252,0.65);margin-top:4px;">
+        {n} new question{'s' if n != 1 else ''} identified &middot;
+        {datetime.now().strftime('%d %B %Y')}
+      </div>
+    </div>
+ 
+    <div style="padding:20px 24px;">
+      <p style="font-size:14px;color:#0F2636;margin:0 0 16px;">
+        The following written question{'s have' if n != 1 else ' has'} been tabled in the Senedd
+        and may be relevant to the NRLA:
+      </p>
+ 
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="background:#f8fafc;">
+            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
+                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
+                       border-bottom:1px solid #e2e8f0;">Member</th>
+            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
+                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
+                       border-bottom:1px solid #e2e8f0;">Question</th>
+            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
+                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
+                       border-bottom:1px solid #e2e8f0;">Tabled</th>
+            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
+                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
+                       border-bottom:1px solid #e2e8f0;">Due for answer</th>
+          </tr>
+        </thead>
+        <tbody>{rows}
+        </tbody>
+      </table>
+ 
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;">
+        <a href="{DASHBOARD_URL}"
+           style="display:inline-block;background:#E96C19;color:#FCFCFC;padding:9px 18px;
+                  border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;">
+          View full monitor &rarr;</a>
+      </div>
+ 
+      <p style="font-size:11px;color:#94a3b8;margin-top:20px;line-height:1.5;">
+        Automated notification from the Senedd PRS Written Questions Monitor.
+        Questions are filtered by keyword for potential private rented sector relevance
+        and may require review.
+      </p>
+    </div>
+  </div>
+</body></html>"""
+ 
+ 
+def send_notification(new_qs: list) -> bool:
+    """POST the new questions to the Power Automate webhook. Returns True on success."""
+    if not EMAIL_WEBHOOK:
+        print("  ℹ  No SENEDD_EMAIL_WEBHOOK set — skipping email notification.")
+        return False
+    if not new_qs:
+        return False
+ 
+    n = len(new_qs)
+    subject = (f"Senedd Monitor: {n} new PRS written question"
+               f"{'s' if n != 1 else ''} tabled")
+ 
+    payload = {
+        "subject":   subject,
+        "body":      build_email_html(new_qs),
+        "count":     n,
+        "questions": [
+            {
+                "member":     q.get("member_name", ""),
+                "party":      q.get("party", ""),
+                "area":       q.get("member_area", ""),
+                "question":   q.get("full_question") or q.get("snippet", ""),
+                "url":        f"{BASE_URL}{q.get('url_path','')}",
+                "wq_ref":     q.get("wq_ref", ""),
+                "tabled":     q.get("tabled_str", ""),
+                "due":        q.get("answer_str", ""),
+            }
+            for q in new_qs
+        ],
+    }
+ 
+    try:
+        r = requests.post(EMAIL_WEBHOOK, json=payload, timeout=30)
+        if 200 <= r.status_code < 300:
+            print(f"  ✉  Email notification sent for {n} question{'s' if n != 1 else ''}.")
+            return True
+        print(f"  ⚠  Webhook returned HTTP {r.status_code}: {r.text[:200]}")
+        return False
+    except Exception as e:
+        print(f"  ⚠  Failed to send notification: {e}")
+        return False
+ 
+ 
 # ── Main ───────────────────────────────────────────────────────────────────────
  
 def main():
@@ -317,6 +500,30 @@ def main():
             print(f"  {i}/{len(existing)}", flush=True)
         time.sleep(0.2)
  
+    # ── Email notification for newly-identified questions ──
+    # On the very first run after enabling notifications, mark all existing
+    # questions as already-notified rather than sending a huge backlog email.
+    first_email_run = not any("emailed" in q for q in existing.values())
+ 
+    if first_email_run:
+        for q in existing.values():
+            q["emailed"] = True
+        print("\n  ℹ  First run with notifications enabled — "
+              "existing questions marked as seen, no email sent.")
+    else:
+        pending = [q for q in existing.values() if not q.get("emailed")]
+        if pending:
+            # Sort newest first for the email
+            pending.sort(key=lambda q: parse_dmy(q.get("tabled_str", "")) or date.min,
+                         reverse=True)
+            if send_notification(pending):
+                for q in pending:
+                    q["emailed"] = True
+            else:
+                print("  ℹ  Questions left unmarked — will retry on next run.")
+        else:
+            print("\n  ℹ  No new questions to notify.")
+ 
     # Sort all questions by tabled date
     all_questions = sorted(
         existing.values(),
@@ -349,5 +556,6 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
  
  
