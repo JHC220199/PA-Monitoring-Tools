@@ -92,6 +92,9 @@ KEYWORDS = [
     "freeholder",
     "ground rent",
     "service charge",
+    # Welsh Government PRS schemes
+    "leasing scheme",
+    "leasing scheme wales",
 ]
  
 SESSION = requests.Session()
@@ -576,6 +579,7 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
  
  
  
