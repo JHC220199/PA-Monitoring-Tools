@@ -12,6 +12,7 @@ Install: pip install requests beautifulsoup4
 import json
 import os
 import re
+import sys
 import time
 from datetime import date, datetime, timedelta
 from collections import defaultdict
@@ -447,28 +448,47 @@ def send_notification(new_qs: list) -> bool:
 # ── Main ───────────────────────────────────────────────────────────────────────
  
 def main():
-    today       = date.today()
-    lookback    = max(SENEDD_START, today - timedelta(days=LOOKBACK_DAYS))
-    date_from   = lookback
-    date_to     = today
+    today = date.today()
  
-    print(f"Senedd PRS Monitor — {today.isoformat()}")
-    print(f"Fetching: {date_from} → {date_to}")
-    print(f"Keywords: {len(KEYWORDS)}")
-    print()
+    print(f"Senedd PRS Monitor \u2014 {today.isoformat()}")
  
-    # Load existing data
+    # \u2500\u2500 Load existing data \u2500\u2500
+    # A corrupt or unreadable data file must NEVER silently wipe the archive.
+    # If the file exists but cannot be parsed, abort so the good copy in git
+    # is preserved and can be restored.
     os.makedirs("docs", exist_ok=True)
     existing = {}
-    if os.path.exists(DATA_FILE):
+    file_existed = os.path.exists(DATA_FILE)
+ 
+    if file_existed:
         try:
             with open(DATA_FILE) as f:
                 stored = json.load(f)
             for q in stored.get("questions", []):
-                existing[q["wq_ref"]] = q
+                if q.get("wq_ref"):
+                    existing[q["wq_ref"]] = q
             print(f"Loaded {len(existing)} existing questions from {DATA_FILE}")
         except Exception as e:
-            print(f"Could not load existing data: {e}")
+            print(f"\n\u274c  ABORTING: {DATA_FILE} exists but could not be parsed.")
+            print(f"    Error: {e}")
+            print("    The file has NOT been overwritten \u2014 your data is safe.")
+            print("    Fix the JSON (or revert the file in git) and re-run.")
+            sys.exit(1)
+ 
+    # \u2500\u2500 Decide how far back to search \u2500\u2500
+    # Normally a short rolling window is enough. But if we have no archive
+    # (first ever run, or recovering after a restore), sweep the whole Senedd
+    # term so nothing is missed.
+    if existing:
+        date_from = max(SENEDD_START, today - timedelta(days=LOOKBACK_DAYS))
+        print(f"Fetching: {date_from} \u2192 {today} (rolling {LOOKBACK_DAYS}-day window)")
+    else:
+        date_from = SENEDD_START
+        print(f"Fetching: {date_from} \u2192 {today} (no archive \u2014 full term sweep)")
+ 
+    date_to = today
+    print(f"Keywords: {len(KEYWORDS)}")
+    print()
  
     # Fetch new questions
     seen = set(existing.keys())
@@ -556,6 +576,7 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
  
  
  
