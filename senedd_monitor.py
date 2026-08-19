@@ -309,99 +309,139 @@ def esc_html(s: str) -> str:
             .replace(">", "&gt;").replace('"', "&quot;"))
  
 def build_email_html(new_qs: list) -> str:
-    """Build the HTML body for the notification email."""
+    """Build the HTML body for the notification email (Outlook-safe, NRLA-branded)."""
     n = len(new_qs)
-    rows = ""
+ 
+    cards = ""
     for q in new_qs:
         abbr = party_abbrev(q.get("party", ""))
-        bg, fg = PARTY_STYLE.get(abbr, ("#f1f5f9", "#475569"))
+        bg, fg = PARTY_STYLE.get(abbr, ("#eef0f2", "#4a5a66"))
         badge = (
-            f'<span style="display:inline-block;padding:2px 8px;border-radius:4px;'
-            f'font-size:11px;font-weight:600;background:{bg};color:{fg};">{esc_html(abbr)}</span>'
+            f'<span style="display:inline-block;padding:3px 9px;border-radius:3px;'
+            f'font-size:11px;font-weight:700;letter-spacing:0.03em;'
+            f'background:{bg};color:{fg};">{esc_html(abbr)}</span>'
         ) if abbr else ""
  
         q_text = q.get("full_question") or q.get("snippet") or ""
         q_url  = f"{BASE_URL}{q.get('url_path','')}"
+        area   = esc_html(q.get("member_area", ""))
  
-        rows += f"""
-        <tr>
-          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
-            <div style="font-weight:600;color:#113B54;font-size:13px;">{esc_html(q.get('member_name',''))}</div>
-            <div style="font-size:11px;color:#94a3b8;margin-top:2px;">{esc_html(q.get('member_area',''))}</div>
-            <div style="margin-top:5px;">{badge}</div>
-          </td>
-          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;">
-            <div style="font-size:13px;color:#0F2636;line-height:1.5;">{esc_html(q_text)}</div>
-            <a href="{esc_html(q_url)}"
-               style="display:inline-block;margin-top:7px;font-size:12px;color:#E96C19;text-decoration:none;">
-               View on Senedd website &rarr;</a>
-            <div style="font-size:11px;color:#94a3b8;margin-top:4px;">{esc_html(q.get('wq_ref',''))}</div>
-          </td>
-          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;
-                     font-size:12px;color:#64748b;white-space:nowrap;">
-            {esc_html(q.get('tabled_str','—'))}
-          </td>
-          <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top;
-                     font-size:12px;color:#64748b;white-space:nowrap;">
-            {esc_html(q.get('answer_str','—'))}
-          </td>
-        </tr>"""
+        cards += f"""
+      <tr><td style="padding:0 0 14px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+               style="border:1px solid #dfe3e6;border-radius:6px;background:#FCFCFC;">
+ 
+          <!-- Member header strip -->
+          <tr><td style="padding:14px 18px 10px 18px;border-bottom:1px solid #eef0f2;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="font-family:Arial,Helvetica,sans-serif;">
+                  <span style="font-size:15px;font-weight:700;color:#113B54;">
+                    {esc_html(q.get('member_name','Unknown'))}</span>
+                  &nbsp;{badge}
+                  {f'<div style="font-size:12px;color:#7b8994;margin-top:3px;">{area}</div>' if area else ''}
+                </td>
+                <td align="right" style="font-family:Arial,Helvetica,sans-serif;
+                           font-size:11px;color:#9aa5ad;white-space:nowrap;vertical-align:top;">
+                  {esc_html(q.get('wq_ref',''))}
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+ 
+          <!-- Question text -->
+          <tr><td style="padding:14px 18px 12px 18px;font-family:Arial,Helvetica,sans-serif;
+                     font-size:14px;line-height:1.55;color:#0F2636;">
+            {esc_html(q_text)}
+          </td></tr>
+ 
+          <!-- Meta footer -->
+          <tr><td style="padding:10px 18px 12px 18px;background:#F6F7F8;
+                     border-top:1px solid #eef0f2;border-radius:0 0 6px 6px;
+                     font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5c6b75;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5c6b75;">
+                  <strong style="color:#113B54;">Tabled</strong> {esc_html(q.get('tabled_str','&mdash;'))}
+                  &nbsp;&nbsp;<span style="color:#c8cfd4;">|</span>&nbsp;&nbsp;
+                  <strong style="color:#113B54;">Due for answer</strong> {esc_html(q.get('answer_str','&mdash;'))}
+                </td>
+                <td align="right" style="white-space:nowrap;">
+                  <a href="{esc_html(q_url)}"
+                     style="font-family:Arial,Helvetica,sans-serif;font-size:12px;
+                            font-weight:700;color:#E96C19;text-decoration:none;">
+                     View question &rsaquo;</a>
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+ 
+        </table>
+      </td></tr>"""
  
     return f"""<!DOCTYPE html>
-<html><head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#F6F7F8;
-     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
-  <div style="max-width:900px;margin:0 auto;background:#FCFCFC;">
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#F6F7F8;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="background:#F6F7F8;padding:24px 12px;">
+<tr><td align="center">
  
-    <div style="background:#113B54;color:#FCFCFC;padding:20px 24px;">
-      <div style="font-size:18px;font-weight:600;">Senedd PRS Written Questions Monitor</div>
-      <div style="font-size:13px;color:rgba(252,252,252,0.65);margin-top:4px;">
-        {n} new question{'s' if n != 1 else ''} identified &middot;
-        {datetime.now().strftime('%d %B %Y')}
-      </div>
-    </div>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640"
+         style="width:640px;max-width:100%;background:#FCFCFC;border-radius:8px;overflow:hidden;
+                box-shadow:0 1px 3px rgba(15,38,54,0.08);">
  
-    <div style="padding:20px 24px;">
-      <p style="font-size:14px;color:#0F2636;margin:0 0 16px;">
-        The following written question{'s have' if n != 1 else ' has'} been tabled in the Senedd
-        and may be relevant to the NRLA:
-      </p>
+    <!-- Header -->
+    <tr><td style="background:#113B54;padding:22px 26px 20px 26px;">
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:700;
+                  color:#FCFCFC;letter-spacing:-0.2px;">
+        Senedd PRS Written Questions Monitor</div>
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;
+                  color:#9fb3c1;margin-top:5px;">
+        {n} new question{'s' if n != 1 else ''} &nbsp;&middot;&nbsp;
+        {datetime.now().strftime('%d %B %Y')}</div>
+    </td></tr>
+    <!-- Orange accent rule -->
+    <tr><td style="height:4px;background:#E96C19;font-size:0;line-height:0;">&nbsp;</td></tr>
  
-      <table style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="background:#f8fafc;">
-            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
-                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
-                       border-bottom:1px solid #e2e8f0;">Member</th>
-            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
-                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
-                       border-bottom:1px solid #e2e8f0;">Question</th>
-            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
-                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
-                       border-bottom:1px solid #e2e8f0;">Tabled</th>
-            <th style="padding:9px 10px;text-align:left;font-size:10.5px;font-weight:600;
-                       text-transform:uppercase;letter-spacing:0.07em;color:#94a3b8;
-                       border-bottom:1px solid #e2e8f0;">Due for answer</th>
-          </tr>
-        </thead>
-        <tbody>{rows}
-        </tbody>
+    <!-- Intro -->
+    <tr><td style="padding:22px 26px 4px 26px;font-family:Arial,Helvetica,sans-serif;
+               font-size:14px;line-height:1.6;color:#0F2636;">
+      The following written question{'s have' if n != 1 else ' has'} been tabled in the Senedd
+      and may be relevant to the NRLA.
+    </td></tr>
+ 
+    <!-- Question cards -->
+    <tr><td style="padding:16px 26px 0 26px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+        {cards}
       </table>
+    </td></tr>
  
-      <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;">
-        <a href="{DASHBOARD_URL}"
-           style="display:inline-block;background:#E96C19;color:#FCFCFC;padding:9px 18px;
-                  border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;">
-          View full monitor &rarr;</a>
-      </div>
+    <!-- CTA -->
+    <tr><td style="padding:8px 26px 26px 26px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td style="background:#E96C19;border-radius:5px;">
+          <a href="{DASHBOARD_URL}"
+             style="display:inline-block;padding:11px 24px;font-family:Arial,Helvetica,sans-serif;
+                    font-size:14px;font-weight:700;color:#FCFCFC;text-decoration:none;">
+             View full monitor &rsaquo;</a>
+        </td></tr>
+      </table>
+    </td></tr>
  
-      <p style="font-size:11px;color:#94a3b8;margin-top:20px;line-height:1.5;">
-        Automated notification from the Senedd PRS Written Questions Monitor.
-        Questions are filtered by keyword for potential private rented sector relevance
-        and may require review.
-      </p>
-    </div>
-  </div>
+    <!-- Footer -->
+    <tr><td style="padding:16px 26px 20px 26px;background:#F6F7F8;border-top:1px solid #e6e9eb;
+               font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.6;color:#8b969e;">
+      Automated notification from the Senedd PRS Written Questions Monitor.
+      Questions are filtered by keyword for potential private rented sector relevance
+      and may require review.
+    </td></tr>
+ 
+  </table>
+ 
+</td></tr>
+</table>
 </body></html>"""
  
  
