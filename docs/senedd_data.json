@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T08:22:06.741706Z",
+  "generated": "2026-08-19T08:23:11.351165Z",
   "senedd_start": "2026-05-12",
   "total": 43,
   "questions": [
@@ -60,7 +60,7 @@
       "full_question": "What is the total estimated cost of establishing the new national development body and social housing enabler Unnos?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Labour",
+      "party": "",
       "emailed": true
     },
     {
@@ -75,7 +75,7 @@
       "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party",
+      "party": "",
       "emailed": true
     },
     {
@@ -1298,7 +1298,7 @@
         "full_question": "What is the total estimated cost of establishing the new national development body and social housing enabler Unnos?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Labour",
+        "party": "",
         "emailed": true
       },
       {
@@ -1313,7 +1313,7 @@
         "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party",
+        "party": "",
         "emailed": true
       }
     ]
