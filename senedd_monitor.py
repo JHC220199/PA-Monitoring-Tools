@@ -35,8 +35,11 @@ DASHBOARD_URL = "https://jhc220199.github.io/PA-Monitoring-Tools/senedd_index.ht
 # First sitting of the 7th Senedd — do not fetch questions before this date
 SENEDD_START = date(2026, 5, 12)
  
-# How far back to search on each run (catches any missed questions)
-LOOKBACK_DAYS = 21
+# How far back to search on each run.
+# The Senedd publishes written questions to its search index in batches, with an
+# observed lag of ~2 weeks between tabling and appearing in search. This window
+# must comfortably exceed that lag or questions will be missed permanently.
+LOOKBACK_DAYS = 45
  
 BASE_URL   = "https://record.senedd.wales"
 MEMBER_URL = "https://business.senedd.wales/mgUserInfo.aspx?UID={uid}"
@@ -619,6 +622,7 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
  
  
  
