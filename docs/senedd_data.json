@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-21T09:18:14.250038Z",
+  "generated": "2026-08-24T08:33:33.245598Z",
   "senedd_start": "2026-05-12",
-  "total": 69,
+  "total": 71,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -166,6 +166,36 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "14/08/2026",
       "party": "Welsh Conservative Party",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ99979",
+      "url_path": "/WrittenQuestion/99979",
+      "tabled_str": "05/08/2026",
+      "answer_str": "12/08/2026",
+      "snippet": "What safeguards exist to ensure that care-experienced young people are never placed in accommodation that compromises their ...",
+      "member_name": "Paul Davies",
+      "member_area": "Ceredigion Penfro",
+      "member_uid": "145",
+      "full_question": "What safeguards exist to ensure that care-experienced young people are never placed in accommodation that compromises their safety?",
+      "answered_by": "Deputy Minister for Social Care, Mental Health and Women\u2019s Health",
+      "answered_on": "18/08/2026",
+      "party": "Welsh Conservative Party",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ99997",
+      "url_path": "/WrittenQuestion/99997",
+      "tabled_str": "05/08/2026",
+      "answer_str": "12/08/2026",
+      "snippet": "Why has the Cabinet Minister not expanded the Help to Buy \u2013 Wales scheme to include older ...",
+      "member_name": "Tom Montgomery",
+      "member_area": "Clwyd",
+      "member_uid": "12183",
+      "full_question": "Why has the Cabinet Minister not expanded the Help to Buy \u2013 Wales scheme to include older housing stock?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "17/08/2026",
+      "party": "Reform UK",
       "emailed": true
     },
     {
@@ -2064,6 +2094,36 @@
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "14/08/2026",
         "party": "Welsh Conservative Party",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ99979",
+        "url_path": "/WrittenQuestion/99979",
+        "tabled_str": "05/08/2026",
+        "answer_str": "12/08/2026",
+        "snippet": "What safeguards exist to ensure that care-experienced young people are never placed in accommodation that compromises their ...",
+        "member_name": "Paul Davies",
+        "member_area": "Ceredigion Penfro",
+        "member_uid": "145",
+        "full_question": "What safeguards exist to ensure that care-experienced young people are never placed in accommodation that compromises their safety?",
+        "answered_by": "Deputy Minister for Social Care, Mental Health and Women\u2019s Health",
+        "answered_on": "18/08/2026",
+        "party": "Welsh Conservative Party",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ99997",
+        "url_path": "/WrittenQuestion/99997",
+        "tabled_str": "05/08/2026",
+        "answer_str": "12/08/2026",
+        "snippet": "Why has the Cabinet Minister not expanded the Help to Buy \u2013 Wales scheme to include older ...",
+        "member_name": "Tom Montgomery",
+        "member_area": "Clwyd",
+        "member_uid": "12183",
+        "full_question": "Why has the Cabinet Minister not expanded the Help to Buy \u2013 Wales scheme to include older housing stock?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "17/08/2026",
+        "party": "Reform UK",
         "emailed": true
       }
     ],
