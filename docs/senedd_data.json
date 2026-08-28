@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-27T18:26:57.167903Z",
+  "generated": "2026-08-28T19:40:06.518989Z",
   "senedd_start": "2026-05-12",
   "total": 71,
   "questions": [
@@ -120,7 +120,7 @@
       "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Conservative Party",
+      "party": "",
       "emailed": true
     },
     {
@@ -720,7 +720,7 @@
       "full_question": "What plans does the Welsh Government have for the future development of the Housing Leasing Scheme Wales?",
       "answered_by": "",
       "answered_on": "",
-      "party": "Welsh Labour and Co-operative Party",
+      "party": "",
       "emailed": true
     },
     {
@@ -2048,7 +2048,7 @@
         "full_question": "What assessment has the Welsh Government made of the current status of the affordable housing development in Canton being delivered by Vistry Group for United Welsh, which is receiving Welsh Government social housing grant funding, and whether it remains on schedule and within budget?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Conservative Party",
+        "party": "",
         "emailed": true
       },
       {
@@ -2155,7 +2155,7 @@
         "full_question": "What plans does the Welsh Government have for the future development of the Housing Leasing Scheme Wales?",
         "answered_by": "",
         "answered_on": "",
-        "party": "Welsh Labour and Co-operative Party",
+        "party": "",
         "emailed": true
       }
     ]
