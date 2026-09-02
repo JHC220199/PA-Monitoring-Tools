@@ -27,6 +27,8 @@ jobs:
           python-version: '3.11'
  
       - name: Fetch and update questions
+        env:
+          PRS_EMAIL_WEBHOOK: ${{ secrets.PRS_EMAIL_WEBHOOK }}
         run: python parliament_monitor.py
  
       - name: Commit and push updated data
@@ -40,3 +42,4 @@ jobs:
           git add docs/data.json
           git commit -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
           git push
+ 
