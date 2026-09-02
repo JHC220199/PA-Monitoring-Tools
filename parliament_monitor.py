@@ -13,6 +13,12 @@ DATA_FILE = os.path.join('docs', 'data.json')
 QUESTIONS_API = 'https://questions-statements-api.parliament.uk/api/writtenquestions/questions'
 MEMBERS_API   = 'https://members-api.parliament.uk/api/Members'
  
+# Power Automate "When an HTTP request is received" webhook URL.
+# Set as a GitHub secret named PRS_EMAIL_WEBHOOK.
+# If not set, email notifications are silently skipped.
+EMAIL_WEBHOOK = os.environ.get('PRS_EMAIL_WEBHOOK', '')
+DASHBOARD_URL = 'https://jhc220199.github.io/PA-Monitoring-Tools/'
+ 
  
 KEYWORDS = [
     'landlord', 'section 21', 'renters rights', 'rent repayment order',
@@ -316,6 +322,129 @@ def is_prs(text):
     return False
  
  
+# ── Email notification ─────────────────────────────────────────────────────────
+ 
+PARTY_EMAIL_STYLE = {
+    'Lab':   ('#fee2e2', '#991b1b'),
+    'Con':   ('#dbeafe', '#1e40af'),
+    'LD':    ('#fef3c7', '#92400e'),
+    'SNP':   ('#fef9c3', '#854d0e'),
+    'PC':    ('#99f6e4', '#134e4a'),
+    'Ref':   ('#cffafe', '#0891b2'),
+    'Green': ('#bbf7d0', '#14532d'),
+    'DUP':   ('#fdf4ff', '#7e22ce'),
+    'CB':    ('#f1f5f9', '#475569'),
+    'Ind':   ('#f1f5f9', '#475569'),
+}
+ 
+def esc_html(s):
+    return str(s or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+ 
+def build_email_html(new_qs):
+    n = len(new_qs)
+    cards = ''
+    for q in new_qs:
+        party = q.get('party', '')
+        bg, fg = PARTY_EMAIL_STYLE.get(party, ('#f1f5f9', '#475569'))
+        badge = (
+            f'<span style="display:inline-block;padding:3px 9px;border-radius:3px;'
+            f'font-size:11px;font-weight:700;background:{bg};color:{fg};">{esc_html(party)}</span>'
+        ) if party else ''
+        q_text = q.get('question', '')
+        q_url  = q.get('url', '')
+        uin    = q.get('uin', '')
+        tabled = q.get('dateTabled', '')
+        due    = q.get('dateForAnswer', '').replace('Due ', '')
+        cards += f"""
+        <tr>
+          <td style="padding:0 0 14px 0;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                   style="border:1px solid #dfe3e6;border-radius:6px;background:#FCFCFC;">
+              <tr>
+                <td style="padding:14px 18px 10px 18px;border-bottom:1px solid #eef0f2;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td style="font-family:Arial,Helvetica,sans-serif;">
+                        <span style="font-size:15px;font-weight:700;color:#113B54;">{esc_html(q.get("memberName",""))}</span>
+                        &nbsp;{badge}
+                        <div style="font-size:12px;color:#7b8994;margin-top:3px;">{esc_html(q.get("house",""))}</div>
+                      </td>
+                      <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#9aa5ad;white-space:nowrap;vertical-align:top;">
+                        {esc_html(uin)}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:14px 18px 12px 18px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.55;color:#0F2636;">
+                  {esc_html(q_text)}
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 18px 12px 18px;background:#F6F7F8;border-top:1px solid #eef0f2;border-radius:0 0 6px 6px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5c6b75;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td><strong style="color:#113B54;">Tabled</strong> {esc_html(tabled)} &nbsp;&nbsp;<span style="color:#c8cfd4;">|</span>&nbsp;&nbsp;<strong style="color:#113B54;">Due for answer</strong> {esc_html(due)}</td>
+                      <td align="right" style="white-space:nowrap;"><a href="{esc_html(q_url)}" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#E96C19;text-decoration:none;">View question ›</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>"""
+ 
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#F6F7F8;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F6F7F8;padding:24px 12px;">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640"
+       style="width:640px;max-width:100%;background:#FCFCFC;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(15,38,54,0.08);">
+<tr><td style="background:#113B54;padding:22px 26px 20px 26px;">
+  <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FCFCFC;letter-spacing:-0.2px;">PRS Parliamentary Questions Monitor</div>
+  <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#9fb3c1;margin-top:5px;">{n} new question{"s" if n != 1 else ""} &nbsp;·&nbsp; {datetime.now().strftime("%-d %B %Y")}</div>
+</td></tr>
+<tr><td style="height:4px;background:#E96C19;font-size:0;line-height:0;">&nbsp;</td></tr>
+<tr><td style="padding:22px 26px 4px 26px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#0F2636;">
+  The following written question{"s have" if n != 1 else " has"} been tabled in Parliament and may be relevant to the NRLA.
+</td></tr>
+<tr><td style="padding:16px 26px 0 26px;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody>{cards}</tbody></table>
+</td></tr>
+<tr><td style="padding:20px 26px 24px 26px;">
+  <a href="{DASHBOARD_URL}" style="display:inline-block;background:#E96C19;color:#FCFCFC;padding:10px 20px;border-radius:6px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;text-decoration:none;">View full monitor ›</a>
+  <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#94a3b8;margin-top:16px;line-height:1.5;">Automated notification from the PRS Parliamentary Questions Monitor. Questions are filtered by keyword for private rented sector relevance.</p>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body></html>"""
+ 
+ 
+def send_notification(new_qs):
+    if not EMAIL_WEBHOOK:
+        print("  i  No PRS_EMAIL_WEBHOOK set — skipping email notification.")
+        return False
+    if not new_qs:
+        return False
+    n = len(new_qs)
+    subject = f"PRS Monitor: {n} new written question{'s' if n != 1 else ''} tabled"
+    payload = json.dumps({"subject": subject, "body": build_email_html(new_qs), "count": n})
+    r = subprocess.run(
+        ['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}',
+         '-X', 'POST', '-H', 'Content-Type: application/json', '-d', payload, EMAIL_WEBHOOK],
+        capture_output=True, text=True, timeout=30
+    )
+    status = r.stdout.strip()
+    if status.startswith('2'):
+        print(f"  e  Email sent for {n} new question{'s' if n != 1 else ''}.")
+        return True
+    print(f"  w  Webhook returned HTTP {status}")
+    return False
+ 
+ 
 def main():
     os.makedirs('docs', exist_ok=True)
  
@@ -542,13 +671,31 @@ def main():
         if 'isHolding' not in q:
             q['isHolding'] = False
  
-    # ── Merge and save ─────────────────────────────────────────────────────────
+    # ── Email notification ──────────────────────────────────────────────────────
+    # On first run after enabling notifications, mark all existing questions as
+    # already-emailed so you don't receive a backlog dump of ~200 questions.
+    first_email_run = not any('emailed' in q for q in data['questions'])
+ 
     data['questions'].extend(new_questions)
     data['lastUpdated'] = datetime.now().isoformat()
     cutoff = (datetime.now() - timedelta(weeks=52)).strftime('%Y-%m-%d')
     data['questions'] = [q for q in data['questions'] if q.get('dateTabledRaw','') >= cutoff]
     data['questions'].sort(key=lambda q: q.get('dateTabledRaw',''), reverse=True)
  
+    if first_email_run:
+        for q in data['questions']:
+            q['emailed'] = True
+        print("\n  i  First run with notifications enabled — existing questions marked seen, no email sent.")
+    else:
+        pending = [q for q in data['questions'] if not q.get('emailed')]
+        if pending:
+            if send_notification(pending):
+                for q in pending:
+                    q['emailed'] = True
+        else:
+            print("\n  i  No new questions to notify about.")
+ 
+    # ── Save ─────────────────────────────────────────────────────────────────────
     with open(DATA_FILE,'w') as f: json.dump(data, f, indent=2)
  
     print(f"\n✓ {len(new_questions)} new questions added")
@@ -558,4 +705,5 @@ def main():
  
 if __name__ == '__main__':
     main()
+ 
  
