@@ -98,6 +98,21 @@ KEYWORDS = [
     # Welsh Government PRS schemes
     "leasing scheme",
     "leasing scheme wales",
+    # Plural form — the Senedd search ranks differently and returns
+    # results the singular "landlord" misses
+    "landlords",
+    # HMOs
+    "houses in multiple occupation",
+    "multiple occupation",
+    # Short-term / holiday letting: 182-day threshold, council tax
+    # premiums and the Visitor Accommodation (Register and Levy) Act
+    "self-catering",
+    "182-day",
+    "letting threshold",
+    "visitor accommodation",
+    "visitor levy",
+    # Housing energy efficiency programmes
+    "warm homes",
 ]
  
 SESSION = requests.Session()
