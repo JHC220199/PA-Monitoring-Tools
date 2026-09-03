@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-02T12:19:43.359282Z",
+  "generated": "2026-09-03T12:20:02.018927Z",
   "senedd_start": "2026-05-12",
-  "total": 71,
+  "total": 75,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -16,6 +16,51 @@
       "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
       "answered_on": "10/06/2026",
       "party": "Welsh Conservative Party",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100402",
+      "url_path": "/WrittenQuestion/100402",
+      "tabled_str": "02/09/2026",
+      "answer_str": "09/09/2026",
+      "snippet": "...the Residential Property Tribunals for Remediation Orders and Remediation Contribution Orders against responsible building owners and developers?",
+      "member_name": "Huw Thomas",
+      "member_area": "Caerdydd Penarth",
+      "member_uid": "12156",
+      "full_question": "Will the Cabinet Minister provide a detailed timeline for the implementation of the regulations required to allow Welsh victims of the building safety scandal to apply to the Residential Property Tribunals for Remediation Orders and Remediation Contribution Orders against responsible building owners and developers?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100349",
+      "url_path": "/WrittenQuestion/100349",
+      "tabled_str": "02/09/2026",
+      "answer_str": "09/09/2026",
+      "snippet": "...deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
+      "member_name": "Sam Rowlands",
+      "member_area": "Fflint Wrecsam",
+      "member_uid": "8734",
+      "full_question": "What steps will the Welsh Government take to ensure that Wales does not fall behind England and UK other nations in the deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100404",
+      "url_path": "/WrittenQuestion/100404",
+      "tabled_str": "02/09/2026",
+      "answer_str": "09/09/2026",
+      "snippet": "How many empty homes has the empty homes grant brought back into use in each local authority ...",
+      "member_name": "Huw Thomas",
+      "member_area": "Caerdydd Penarth",
+      "member_uid": "12156",
+      "full_question": "How many empty homes has the empty homes grant brought back into use in each local authority since the scheme began?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
       "emailed": true
     },
     {
@@ -886,6 +931,21 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "10/06/2026",
       "party": "Plaid Cymru",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100279",
+      "url_path": "/WrittenQuestion/100279",
+      "tabled_str": "26/08/2026",
+      "answer_str": "03/09/2026",
+      "snippet": "...the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
+      "member_name": "Paul Davies",
+      "member_area": "Ceredigion Penfro",
+      "member_uid": "145",
+      "full_question": "What assessment has the Welsh Government made of the effect that the 100-metre buffer zone around protected buildings will have on the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
       "emailed": true
     },
     {
@@ -2153,6 +2213,70 @@
         "member_area": "G\u0175yr Abertawe",
         "member_uid": "332",
         "full_question": "What plans does the Welsh Government have for the future development of the Housing Leasing Scheme Wales?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      }
+    ],
+    "2026-08-24": [
+      {
+        "wq_ref": "WQ100279",
+        "url_path": "/WrittenQuestion/100279",
+        "tabled_str": "26/08/2026",
+        "answer_str": "03/09/2026",
+        "snippet": "...the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
+        "member_name": "Paul Davies",
+        "member_area": "Ceredigion Penfro",
+        "member_uid": "145",
+        "full_question": "What assessment has the Welsh Government made of the effect that the 100-metre buffer zone around protected buildings will have on the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      }
+    ],
+    "2026-08-31": [
+      {
+        "wq_ref": "WQ100402",
+        "url_path": "/WrittenQuestion/100402",
+        "tabled_str": "02/09/2026",
+        "answer_str": "09/09/2026",
+        "snippet": "...the Residential Property Tribunals for Remediation Orders and Remediation Contribution Orders against responsible building owners and developers?",
+        "member_name": "Huw Thomas",
+        "member_area": "Caerdydd Penarth",
+        "member_uid": "12156",
+        "full_question": "Will the Cabinet Minister provide a detailed timeline for the implementation of the regulations required to allow Welsh victims of the building safety scandal to apply to the Residential Property Tribunals for Remediation Orders and Remediation Contribution Orders against responsible building owners and developers?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100349",
+        "url_path": "/WrittenQuestion/100349",
+        "tabled_str": "02/09/2026",
+        "answer_str": "09/09/2026",
+        "snippet": "...deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
+        "member_name": "Sam Rowlands",
+        "member_area": "Fflint Wrecsam",
+        "member_uid": "8734",
+        "full_question": "What steps will the Welsh Government take to ensure that Wales does not fall behind England and UK other nations in the deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100404",
+        "url_path": "/WrittenQuestion/100404",
+        "tabled_str": "02/09/2026",
+        "answer_str": "09/09/2026",
+        "snippet": "How many empty homes has the empty homes grant brought back into use in each local authority ...",
+        "member_name": "Huw Thomas",
+        "member_area": "Caerdydd Penarth",
+        "member_uid": "12156",
+        "full_question": "How many empty homes has the empty homes grant brought back into use in each local authority since the scheme began?",
         "answered_by": "",
         "answered_on": "",
         "party": "",
