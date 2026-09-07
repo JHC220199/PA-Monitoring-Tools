@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-07T14:22:31.782861",
+  "lastUpdated": "2026-09-07T15:33:11.673245",
   "questions": [
     {
       "id": 1938218,
@@ -413,12 +413,12 @@
       "dateForAnswer": "Due 3rd September",
       "weekCommencing": "2026-08-24",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/20012",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "7th September",
+      "answeringMember": "Matthew Pennycook",
+      "answeringParty": "Lab",
+      "answerSummary": "We are currently working through the details of how the new PRS Landlord Ombudsman service will operate once it is launched and local authorities are being engaged to that end. Final decisions have not yet been made in respect of the specific circumstance...",
       "emailed": true
     },
     {
