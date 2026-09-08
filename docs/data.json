@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-08T13:09:49.839354",
+  "lastUpdated": "2026-09-08T13:50:31.564519",
   "questions": [
     {
       "id": 1938938,
@@ -593,12 +593,12 @@
       "dateForAnswer": "Due 2nd September",
       "weekCommencing": "2026-08-24",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25780",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "8th September",
+      "answeringMember": "James Murray",
+      "answeringParty": "Lab",
+      "answerSummary": "Making Tax Digital (MTD) for Income Tax is designed to help taxpayers reduce avoidable errors by keeping digital records and using MTD-compatible software to send quarterly updates and end-of-year tax returns to HMRC. As set out in HMRC's press release of...",
       "emailed": true
     },
     {
