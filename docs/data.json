@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T14:09:08.452825",
+  "lastUpdated": "2026-09-10T13:41:24.744238",
   "questions": [
     {
       "id": 1938938,
@@ -613,12 +613,12 @@
       "dateForAnswer": "Due 2nd September",
       "weekCommencing": "2026-08-24",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25779",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "9th September",
+      "answeringMember": "James Murray",
+      "answeringParty": "Lab",
+      "answerSummary": "HMRC has worked extensively with software developers, agents and representative bodies to support the development and testing of compatible software products.There is a range of products available, including solutions designed for agents and customers wit...",
       "emailed": true
     },
     {
@@ -1053,12 +1053,12 @@
       "dateForAnswer": "Due 2nd September",
       "weekCommencing": "2026-08-24",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24725",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "9th September",
+      "answeringMember": "Florence Eshalomi",
+      "answeringParty": "Lab",
+      "answerSummary": "The government expects responsible persons to make sure their buildings are safe and undertake remedial works where necessary. The Leaseholder Protections under the Building Safety Act protect holders of qualifying leases from the costs of remediating rel...",
       "emailed": true
     },
     {
@@ -1093,12 +1093,12 @@
       "dateForAnswer": "Due 2nd September",
       "weekCommencing": "2026-08-24",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/23545",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "9th September",
+      "answeringMember": "Florence Eshalomi",
+      "answeringParty": "Lab",
+      "answerSummary": "The leaseholder protections introduced through the Building Safety Act 2022 provide vital protection for leaseholders from the costs of remediating historical building safety defects.The Government recognises that some leaseholders remain outside the scop...",
       "emailed": true
     },
     {
