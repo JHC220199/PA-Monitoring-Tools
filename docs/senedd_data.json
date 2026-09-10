@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-09T12:34:31.866682Z",
+  "generated": "2026-09-10T12:27:39.298164Z",
   "senedd_start": "2026-05-12",
-  "total": 100,
+  "total": 101,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -913,8 +913,23 @@
       "member_area": "G\u0175yr Abertawe",
       "member_uid": "332",
       "full_question": "What plans does the Welsh Government have for the future development of the Housing Leasing Scheme Wales?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "27/08/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100188",
+      "url_path": "/WrittenQuestion/100188",
+      "tabled_str": "19/08/2026",
+      "answer_str": "26/08/2026",
+      "snippet": "What assessment has the Cabinet Minister made of the potential impact of the UK Government\u2019s early release ...",
+      "member_name": "Tom Montgomery",
+      "member_area": "Clwyd",
+      "member_uid": "12183",
+      "full_question": "What assessment has the Cabinet Minister made of the potential impact of the UK Government\u2019s early release scheme on housing stock in Wales?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "27/08/2026",
       "party": "",
       "emailed": true
     },
@@ -2952,8 +2967,23 @@
         "member_area": "G\u0175yr Abertawe",
         "member_uid": "332",
         "full_question": "What plans does the Welsh Government have for the future development of the Housing Leasing Scheme Wales?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "27/08/2026",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100188",
+        "url_path": "/WrittenQuestion/100188",
+        "tabled_str": "19/08/2026",
+        "answer_str": "26/08/2026",
+        "snippet": "What assessment has the Cabinet Minister made of the potential impact of the UK Government\u2019s early release ...",
+        "member_name": "Tom Montgomery",
+        "member_area": "Clwyd",
+        "member_uid": "12183",
+        "full_question": "What assessment has the Cabinet Minister made of the potential impact of the UK Government\u2019s early release scheme on housing stock in Wales?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "27/08/2026",
         "party": "",
         "emailed": true
       }
