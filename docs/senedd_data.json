@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-11T12:26:29.334342Z",
+  "generated": "2026-09-14T11:38:03.262423Z",
   "senedd_start": "2026-05-12",
-  "total": 101,
+  "total": 102,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -571,6 +571,21 @@
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "21/07/2026",
       "party": "Reform UK",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100507",
+      "url_path": "/WrittenQuestion/100507",
+      "tabled_str": "14/09/2026",
+      "answer_str": "21/09/2026",
+      "snippet": "...towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
+      "member_name": "Iain McIntosh",
+      "member_area": "Brycheiniog Tawe Nedd",
+      "member_uid": "12170",
+      "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
       "emailed": true
     },
     {
@@ -3061,6 +3076,23 @@
         "member_area": "Caerdydd Penarth",
         "member_uid": "12156",
         "full_question": "How many empty homes has the empty homes grant brought back into use in each local authority since the scheme began?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      }
+    ],
+    "2026-09-14": [
+      {
+        "wq_ref": "WQ100507",
+        "url_path": "/WrittenQuestion/100507",
+        "tabled_str": "14/09/2026",
+        "answer_str": "21/09/2026",
+        "snippet": "...towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
+        "member_name": "Iain McIntosh",
+        "member_area": "Brycheiniog Tawe Nedd",
+        "member_uid": "12170",
+        "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
         "answered_by": "",
         "answered_on": "",
         "party": "",
