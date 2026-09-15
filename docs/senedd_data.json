@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-14T14:32:01.486369Z",
+  "generated": "2026-09-15T12:58:36.249888Z",
   "senedd_start": "2026-05-12",
-  "total": 102,
+  "total": 103,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -583,6 +583,21 @@
       "member_area": "Brycheiniog Tawe Nedd",
       "member_uid": "12170",
       "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100530",
+      "url_path": "/WrittenQuestion/100530",
+      "tabled_str": "14/09/2026",
+      "answer_str": "21/09/2026",
+      "snippet": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of ...",
+      "member_name": "John Clark",
+      "member_area": "Bangor Conwy M\u00f4n",
+      "member_uid": "12169",
+      "full_question": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of being let under Home Office accommodation contracts, including whether higher contracted rents are reducing supply and increasing rents for local families and students?",
       "answered_by": "",
       "answered_on": "",
       "party": "",
@@ -3093,6 +3108,21 @@
         "member_area": "Brycheiniog Tawe Nedd",
         "member_uid": "12170",
         "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100530",
+        "url_path": "/WrittenQuestion/100530",
+        "tabled_str": "14/09/2026",
+        "answer_str": "21/09/2026",
+        "snippet": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of ...",
+        "member_name": "John Clark",
+        "member_area": "Bangor Conwy M\u00f4n",
+        "member_uid": "12169",
+        "full_question": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of being let under Home Office accommodation contracts, including whether higher contracted rents are reducing supply and increasing rents for local families and students?",
         "answered_by": "",
         "answered_on": "",
         "party": "",
