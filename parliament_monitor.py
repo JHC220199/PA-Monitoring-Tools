@@ -83,8 +83,10 @@ def fetch_by_uin(uin):
 # ── Date helpers ───────────────────────────────────────────────────────────────
  
 def ordinal(n):
-    s=['th','st','nd','rd']; v=n%100
-    return f"{n}{s[(v-20)%10] if (v-20)%10<4 else s[v] if v<4 else s[0]}"
+    # 11th, 12th, 13th are exceptions — never 11st/12nd/13rd
+    if 11 <= (n % 100) <= 13:
+        return f"{n}th"
+    return f"{n}{['th','st','nd','rd'][n % 10] if n % 10 < 4 else 'th'}"
  
 def fmt_date(iso):
     if not iso: return ''
@@ -172,7 +174,7 @@ def is_prs(text):
         r'private landlord', r'private tenant', r'private renting', r'privately rented',
         r'rented sector', r'rental sector',
         r'renters.{0,5}rights act', r'renters\b',
-        r'rent repayment', r'\bsection 21\b', r'assured shorthold', r'tenancy deposit',
+        r'\brent repayment', r'\bsection 21\b', r'assured shorthold', r'tenancy deposit',
         r'buy.to.let', r'build.to.rent', r'\bhmo\b', r'house in multiple occupation',
         r'local housing allowance', r'\blha\b',
         r'lha (rate|level|freeze|cap)', r'housing allowance (freeze|rate|level)',
@@ -181,10 +183,11 @@ def is_prs(text):
         r'right to manage', r'managing agent', r'right to rent', r'letting agent',
         r'landlord licens', r'landlord registr', r'landlord database',
         r'institutional landlord', r'no.fault eviction', r'section 21 eviction',
-        r'pre.emptive eviction', r'rent appeal', r'property chamber',
+        r'pre.emptive eviction', r'\brent appeal', r'property chamber',
         r'section 13 rent', r'section 13 appeal', r'section 13 determin',
-        r'rent determin', r'market rent determin',
-        r'rent control', r'rent stabilisation', r'rent inflation', r'rent freeze', r'rent cap',
+        r'\brent determin', r'market rent determin',
+        r'\brent control', r'\brent stabilisation', r'\brent inflation',
+        r'\brent freeze', r'\brent cap',
         r'decent homes standard', r'decent homes',
         r'prs database', r'prs ombudsman', r'landlord ombudsman',
         r'awaab', r'rogue landlord',
@@ -662,6 +665,13 @@ def main():
  
     # ── Migrate existing records to include new answer fields if missing ────────
     for q in data['questions']:
+        # Repair ordinals mis-formatted by the old ordinal() bug (11st/12nd/13rd)
+        for fld in ('dateTabled', 'dateForAnswer', 'dateAnswered'):
+            val = q.get(fld)
+            if isinstance(val, str):
+                for bad, good in (('11st','11th'), ('12nd','12th'), ('13rd','13th')):
+                    val = val.replace(bad, good)
+                q[fld] = val
         if 'answered' not in q:
             q['answered'] = False
         if 'answerSummary' not in q:
