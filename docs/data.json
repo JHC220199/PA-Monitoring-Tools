@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2026-09-15T14:40:02.558771",
+  "lastUpdated": "2026-09-16T13:31:18.040572",
   "questions": [
+    {
+      "id": 1943541,
+      "uin": "30295",
+      "memberName": "Ann Davies",
+      "party": "PC",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Work and Pensions, how many households in Wales are in receipt of Local Housing Allowance; and how many of those households include children.",
+      "dateTabled": "15th September",
+      "dateTabledRaw": "2026-09-15",
+      "dateForAnswer": "Due 13rd October",
+      "weekCommencing": "2026-09-14",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30295",
+      "answered": false,
+      "isHolding": false,
+      "dateAnswered": null,
+      "answeringMember": "",
+      "answeringParty": "",
+      "answerSummary": null,
+      "emailed": true
+    },
     {
       "id": 1942628,
       "uin": "29778",
@@ -299,6 +319,26 @@
       "answeringMember": "",
       "answeringParty": "",
       "answerSummary": null,
+      "emailed": true
+    },
+    {
+      "id": 1939343,
+      "uin": "28188",
+      "memberName": "Ben Maguire",
+      "party": "LD",
+      "house": "Commons",
+      "question": "To ask the Secretary of State for Defence, if his Department will consider the potential merits of distributing monies left over in the the \u00a375m LGBT Veterans Financial Recognition Scheme to eligible veterans, amended from the current cap of \u00a350m earmarke",
+      "dateTabled": "8th September",
+      "dateTabledRaw": "2026-09-08",
+      "dateForAnswer": "",
+      "weekCommencing": "2026-09-07",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-08/28188",
+      "answered": true,
+      "isHolding": false,
+      "dateAnswered": "15th September",
+      "answeringMember": "Mr Calvin Bailey",
+      "answeringParty": "Lab",
+      "answerSummary": "To date, the LGBT Financial Recognition Scheme (FRS) has paid out over \u00a358 million to applicants, exceeding the \u00a350 million minimum payout commitment. Defence continues to maximise awareness of the FRS among eligible veterans and encourage applications be...",
       "emailed": true
     },
     {
