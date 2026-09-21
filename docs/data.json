@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-18T13:52:30.511654",
+  "lastUpdated": "2026-09-21T15:21:39.457929",
   "questions": [
     {
       "id": 1943779,
@@ -153,12 +153,12 @@
       "dateForAnswer": "Due 15th September",
       "weekCommencing": "2026-09-07",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-11/29322",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "21st September",
+      "answeringMember": "James Murray",
+      "answeringParty": "Lab",
+      "answerSummary": "The role of the new rent determination function will be to determine the current market rent. It provides a quicker and more proportionate route for resolving disputes and does not change a landlord's ability to propose rents that reflect market condition...",
       "emailed": true
     },
     {
@@ -293,12 +293,12 @@
       "dateForAnswer": "Due 15th September",
       "weekCommencing": "2026-09-07",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-11/29321",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "21st September",
+      "answeringMember": "James Murray",
+      "answeringParty": "Lab",
+      "answerSummary": "We are working across Government to agree the detailed design of this service, which will provide faster and simpler resolutions of rent disputes.",
       "emailed": true
     },
     {
@@ -313,12 +313,12 @@
       "dateForAnswer": "Due 15th September",
       "weekCommencing": "2026-09-07",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-11/29320",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "21st September",
+      "answeringMember": "James Murray",
+      "answeringParty": "Lab",
+      "answerSummary": "The overall cost of the service will depend on the final design and demand volumes.",
       "emailed": true
     },
     {
