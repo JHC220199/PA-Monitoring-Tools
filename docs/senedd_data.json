@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-18T12:27:49.010115Z",
+  "generated": "2026-09-21T14:39:43.385823Z",
   "senedd_start": "2026-05-12",
-  "total": 105,
+  "total": 108,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -43,8 +43,8 @@
       "member_area": "Fflint Wrecsam",
       "member_uid": "8734",
       "full_question": "What steps will the Welsh Government take to ensure that Wales does not fall behind England and UK other nations in the deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "08/09/2026",
       "party": "",
       "emailed": true
     },
@@ -60,6 +60,21 @@
       "full_question": "How many empty homes has the empty homes grant brought back into use in each local authority since the scheme began?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "04/09/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100347",
+      "url_path": "/WrittenQuestion/100347",
+      "tabled_str": "02/09/2026",
+      "answer_str": "09/09/2026",
+      "snippet": "What steps is the Welsh Government taking to ensure that planning regulations support the delivery of advanced ...",
+      "member_name": "Sam Rowlands",
+      "member_area": "Fflint Wrecsam",
+      "member_uid": "8734",
+      "full_question": "What steps is the Welsh Government taking to ensure that planning regulations support the delivery of advanced mobile connectivity, including 5G, in both urban and rural communities?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "08/09/2026",
       "party": "",
       "emailed": true
     },
@@ -583,8 +598,8 @@
       "member_area": "Brycheiniog Tawe Nedd",
       "member_uid": "12170",
       "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Finance",
+      "answered_on": "16/09/2026",
       "party": "",
       "emailed": true
     },
@@ -598,8 +613,8 @@
       "member_area": "Bangor Conwy M\u00f4n",
       "member_uid": "12169",
       "full_question": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of being let under Home Office accommodation contracts, including whether higher contracted rents are reducing supply and increasing rents for local families and students?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "18/09/2026",
       "party": "",
       "emailed": true
     },
@@ -703,8 +718,23 @@
       "member_area": "Bangor Conwy M\u00f4n",
       "member_uid": "12169",
       "full_question": "Are properties in Wales used under Home Office accommodation contracts subject to the same Welsh Government planning and HMO licensing requirements as student houses in multiple occupation?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "18/09/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100545",
+      "url_path": "/WrittenQuestion/100545",
+      "tabled_str": "15/09/2026",
+      "answer_str": "22/09/2026",
+      "snippet": "What action will the Welsh Government take with Gwynedd Council and the UK Government to prevent public ...",
+      "member_name": "John Clark",
+      "member_area": "Bangor Conwy M\u00f4n",
+      "member_uid": "12169",
+      "full_question": "What action will the Welsh Government take with Gwynedd Council and the UK Government to prevent public money inflating the local rental market, in areas where a number of properties are used under Home Office accommodation contracts?",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "18/09/2026",
       "party": "",
       "emailed": true
     },
@@ -1258,8 +1288,8 @@
       "member_area": "Ceredigion Penfro",
       "member_uid": "145",
       "full_question": "What assessment has the Welsh Government made of the effect that the 100-metre buffer zone around protected buildings will have on the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+      "answered_on": "10/09/2026",
       "party": "",
       "emailed": true
     },
@@ -1275,6 +1305,21 @@
       "full_question": "How is the Welsh Government working with social landlords and local authorities to deliver at least 20,000 new social homes by 2030?",
       "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
       "answered_on": "04/09/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100345",
+      "url_path": "/WrittenQuestion/100345",
+      "tabled_str": "26/08/2026",
+      "answer_str": "03/09/2026",
+      "snippet": "What is the Welsh Government's policy on providing illegal immigrants treatment under the NHS?",
+      "member_name": "Joe Martin",
+      "member_area": "Caerdydd Penarth",
+      "member_uid": "12146",
+      "full_question": "What is the Welsh Government's policy on providing illegal immigrants treatment under the NHS?",
+      "answered_by": "Cabinet Minister for Health and Care",
+      "answered_on": "08/09/2026",
       "party": "",
       "emailed": true
     },
@@ -3059,8 +3104,8 @@
         "member_area": "Ceredigion Penfro",
         "member_uid": "145",
         "full_question": "What assessment has the Welsh Government made of the effect that the 100-metre buffer zone around protected buildings will have on the ability of pubs and other small businesses to benefit from permitted development rights for temporary campsites?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Enterprise, Connectivity and Energy",
+        "answered_on": "10/09/2026",
         "party": "",
         "emailed": true
       },
@@ -3076,6 +3121,21 @@
         "full_question": "How is the Welsh Government working with social landlords and local authorities to deliver at least 20,000 new social homes by 2030?",
         "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
         "answered_on": "04/09/2026",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100345",
+        "url_path": "/WrittenQuestion/100345",
+        "tabled_str": "26/08/2026",
+        "answer_str": "03/09/2026",
+        "snippet": "What is the Welsh Government's policy on providing illegal immigrants treatment under the NHS?",
+        "member_name": "Joe Martin",
+        "member_area": "Caerdydd Penarth",
+        "member_uid": "12146",
+        "full_question": "What is the Welsh Government's policy on providing illegal immigrants treatment under the NHS?",
+        "answered_by": "Cabinet Minister for Health and Care",
+        "answered_on": "08/09/2026",
         "party": "",
         "emailed": true
       }
@@ -3106,8 +3166,8 @@
         "member_area": "Fflint Wrecsam",
         "member_uid": "8734",
         "full_question": "What steps will the Welsh Government take to ensure that Wales does not fall behind England and UK other nations in the deployment and upgrading of mobile infrastructure, following the UK Government\u2019s consultation on permitted development rights in England?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "08/09/2026",
         "party": "",
         "emailed": true
       },
@@ -3125,6 +3185,21 @@
         "answered_on": "04/09/2026",
         "party": "",
         "emailed": true
+      },
+      {
+        "wq_ref": "WQ100347",
+        "url_path": "/WrittenQuestion/100347",
+        "tabled_str": "02/09/2026",
+        "answer_str": "09/09/2026",
+        "snippet": "What steps is the Welsh Government taking to ensure that planning regulations support the delivery of advanced ...",
+        "member_name": "Sam Rowlands",
+        "member_area": "Fflint Wrecsam",
+        "member_uid": "8734",
+        "full_question": "What steps is the Welsh Government taking to ensure that planning regulations support the delivery of advanced mobile connectivity, including 5G, in both urban and rural communities?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "08/09/2026",
+        "party": "",
+        "emailed": true
       }
     ],
     "2026-09-14": [
@@ -3138,8 +3213,8 @@
         "member_area": "Brycheiniog Tawe Nedd",
         "member_uid": "12170",
         "full_question": "Will the Cabinet Minister explain why the Welsh Government believes UK tourists, visitors and workers staying overnight in Wales should pay an additional visitor levy towards local services when they already contribute to funding public services through existing UK and Welsh taxation?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Finance",
+        "answered_on": "16/09/2026",
         "party": "",
         "emailed": true
       },
@@ -3153,8 +3228,8 @@
         "member_area": "Bangor Conwy M\u00f4n",
         "member_uid": "12169",
         "full_question": "What assessment has the Welsh Government made of the impact on Bangor\u2019s private rented sector properties of being let under Home Office accommodation contracts, including whether higher contracted rents are reducing supply and increasing rents for local families and students?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "18/09/2026",
         "party": "",
         "emailed": true
       },
@@ -3168,8 +3243,23 @@
         "member_area": "Bangor Conwy M\u00f4n",
         "member_uid": "12169",
         "full_question": "Are properties in Wales used under Home Office accommodation contracts subject to the same Welsh Government planning and HMO licensing requirements as student houses in multiple occupation?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "18/09/2026",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100545",
+        "url_path": "/WrittenQuestion/100545",
+        "tabled_str": "15/09/2026",
+        "answer_str": "22/09/2026",
+        "snippet": "What action will the Welsh Government take with Gwynedd Council and the UK Government to prevent public ...",
+        "member_name": "John Clark",
+        "member_area": "Bangor Conwy M\u00f4n",
+        "member_uid": "12169",
+        "full_question": "What action will the Welsh Government take with Gwynedd Council and the UK Government to prevent public money inflating the local rental market, in areas where a number of properties are used under Home Office accommodation contracts?",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "18/09/2026",
         "party": "",
         "emailed": true
       },
