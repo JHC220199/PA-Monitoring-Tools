@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-21T14:39:43.385823Z",
+  "generated": "2026-09-22T12:53:14.250892Z",
   "senedd_start": "2026-05-12",
-  "total": 108,
+  "total": 109,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -1080,6 +1080,21 @@
       "full_question": "What consideration has the Cabinet Minister given to the estimate by the Taxpayers' Alliance that the Visitor Levy may inflict a \u00a3359 million hit to the Welsh economy when it is implemented?",
       "answered_by": "Cabinet Minister for Finance",
       "answered_on": "03/06/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100631",
+      "url_path": "/WrittenQuestion/100631",
+      "tabled_str": "21/09/2026",
+      "answer_str": "28/09/2026",
+      "snippet": "Why is self-catering accommodation not included in the permanent 30 per cent reduction in business rates from ...",
+      "member_name": "Louise Emery",
+      "member_area": "Clwyd",
+      "member_uid": "12182",
+      "full_question": "Why is self-catering accommodation not included in the permanent 30 per cent reduction in business rates from April 2027?",
+      "answered_by": "",
+      "answered_on": "",
       "party": "",
       "emailed": true
     },
@@ -3273,6 +3288,23 @@
         "member_area": "Caerdydd Ffynnon Taf",
         "member_uid": "12173",
         "full_question": "What discussions has the Cabinet Minister had with animal welfare charities to improve pet friendly provisions within the private rented sector?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      }
+    ],
+    "2026-09-21": [
+      {
+        "wq_ref": "WQ100631",
+        "url_path": "/WrittenQuestion/100631",
+        "tabled_str": "21/09/2026",
+        "answer_str": "28/09/2026",
+        "snippet": "Why is self-catering accommodation not included in the permanent 30 per cent reduction in business rates from ...",
+        "member_name": "Louise Emery",
+        "member_area": "Clwyd",
+        "member_uid": "12182",
+        "full_question": "Why is self-catering accommodation not included in the permanent 30 per cent reduction in business rates from April 2027?",
         "answered_by": "",
         "answered_on": "",
         "party": "",
