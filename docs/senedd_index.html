@@ -321,11 +321,14 @@ function weekLabel(iso) {
 }
  
 function weekCommencing(dmy) {
+  // Returns the Monday (YYYY-MM-DD) of the week containing a DD/MM/YYYY date.
+  // All arithmetic is done in UTC: building the date in local time and then
+  // calling toISOString() shifts Monday 00:00 BST back to Sunday 23:00 UTC.
   if (!dmy) return '';
-  var parts = dmy.split('/').map(Number);
-  var dt = new Date(parts[2], parts[1]-1, parts[0]);
-  var dow = dt.getDay();
-  dt.setDate(dt.getDate() - (dow === 0 ? 6 : dow - 1));
+  var p = dmy.split('/').map(Number);
+  var dt = new Date(Date.UTC(p[2], p[1]-1, p[0]));
+  var dow = dt.getUTCDay();
+  dt.setUTCDate(dt.getUTCDate() - (dow === 0 ? 6 : dow - 1));
   return dt.toISOString().split('T')[0];
 }
  
@@ -509,4 +512,5 @@ load();
 </script>
 </body>
 </html>
+ 
  
