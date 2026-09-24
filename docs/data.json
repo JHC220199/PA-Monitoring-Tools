@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T14:42:24.527588",
+  "lastUpdated": "2026-09-24T13:37:15.714660",
   "questions": [
     {
       "id": 1943779,
@@ -373,12 +373,12 @@
       "dateForAnswer": "Due 24th September",
       "weekCommencing": "2026-09-07",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/HL3413",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "24th September",
+      "answeringMember": "Baroness Curran",
+      "answeringParty": "Lab",
+      "answerSummary": "The Department does not collect information on whether properties supported through these schemes are listed buildings. To the end of July 2026, Grant Recipients reported 11,250 measures installed in 5,470 households through the Local Grant and 25,770 mea...",
       "emailed": true
     },
     {
