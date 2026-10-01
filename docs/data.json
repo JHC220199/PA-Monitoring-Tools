@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T15:12:42.363761",
+  "lastUpdated": "2026-10-01T16:20:04.290793",
   "questions": [
     {
       "id": 1943779,
@@ -53,12 +53,12 @@
       "dateForAnswer": "Due 1st October",
       "weekCommencing": "2026-09-14",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-17/HL3694",
-      "answered": false,
+      "answered": true,
       "isHolding": false,
-      "dateAnswered": null,
-      "answeringMember": "",
-      "answeringParty": "",
-      "answerSummary": null,
+      "dateAnswered": "1st October",
+      "answeringMember": "Baroness Taylor of Stevenage",
+      "answeringParty": "Lab",
+      "answerSummary": "I refer the Noble Baroness to my Right Honourable Friend the Minister for Housing and Planning\u2019s Written Ministerial Statement UIN HCWS270 of 15 July 2026 on the implementation of the Leasehold and Freehold Reform Act 2024. As set out there, the Governmen...",
       "emailed": true
     },
     {
