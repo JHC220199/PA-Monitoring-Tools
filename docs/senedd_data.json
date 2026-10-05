@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-02T14:12:48.082299Z",
+  "generated": "2026-10-05T16:31:52.560037Z",
   "senedd_start": "2026-05-12",
-  "total": 109,
+  "total": 112,
   "questions": [
     {
       "wq_ref": "WQ98823",
@@ -1174,6 +1174,21 @@
       "emailed": true
     },
     {
+      "wq_ref": "WQ100671",
+      "url_path": "/WrittenQuestion/100671",
+      "tabled_str": "23/09/2026",
+      "answer_str": "30/09/2026",
+      "snippet": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable ...",
+      "member_name": "Helen Jenner",
+      "member_area": "Bangor Conwy M\u00f4n",
+      "member_uid": "12153",
+      "full_question": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable housing developments of reduced soil and inert waste disposal capacity in north Wales, including increased disposal and haulage costs?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
+      "emailed": true
+    },
+    {
       "wq_ref": "WQ99266",
       "url_path": "/WrittenQuestion/99266",
       "tabled_str": "24/06/2026",
@@ -1410,6 +1425,36 @@
       "full_question": "Will the Cabinet Minister confirm how many pensioners are currently eligible for means tested financial support towards energy costs?",
       "answered_by": "Deputy First Minister and Cabinet Minister for Social Justice and Equality",
       "answered_on": "03/06/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100705",
+      "url_path": "/WrittenQuestion/100705",
+      "tabled_str": "28/09/2026",
+      "answer_str": "05/10/2026",
+      "snippet": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation ...",
+      "member_name": "John Clark",
+      "member_area": "Bangor Conwy M\u00f4n",
+      "member_uid": "12169",
+      "full_question": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation from April 2027, and will the Cabinet Minister include commercial holiday properties restricted by planning condition to holiday use before the regulations are laid?",
+      "answered_by": "",
+      "answered_on": "",
+      "party": "",
+      "emailed": true
+    },
+    {
+      "wq_ref": "WQ100701",
+      "url_path": "/WrittenQuestion/100701",
+      "tabled_str": "28/09/2026",
+      "answer_str": "05/10/2026",
+      "snippet": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from ...",
+      "member_name": "Darren Millar",
+      "member_area": "Clwyd",
+      "member_uid": "171",
+      "full_question": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from the visitor levy?",
+      "answered_by": "",
+      "answered_on": "",
       "party": "",
       "emailed": true
     },
@@ -3307,6 +3352,53 @@
         "full_question": "Why is self-catering accommodation not included in the permanent 30 per cent reduction in business rates from April 2027?",
         "answered_by": "Cabinet Minister for Finance",
         "answered_on": "22/09/2026",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100671",
+        "url_path": "/WrittenQuestion/100671",
+        "tabled_str": "23/09/2026",
+        "answer_str": "30/09/2026",
+        "snippet": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable ...",
+        "member_name": "Helen Jenner",
+        "member_area": "Bangor Conwy M\u00f4n",
+        "member_uid": "12153",
+        "full_question": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable housing developments of reduced soil and inert waste disposal capacity in north Wales, including increased disposal and haulage costs?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      }
+    ],
+    "2026-09-28": [
+      {
+        "wq_ref": "WQ100705",
+        "url_path": "/WrittenQuestion/100705",
+        "tabled_str": "28/09/2026",
+        "answer_str": "05/10/2026",
+        "snippet": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation ...",
+        "member_name": "John Clark",
+        "member_area": "Bangor Conwy M\u00f4n",
+        "member_uid": "12169",
+        "full_question": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation from April 2027, and will the Cabinet Minister include commercial holiday properties restricted by planning condition to holiday use before the regulations are laid?",
+        "answered_by": "",
+        "answered_on": "",
+        "party": "",
+        "emailed": true
+      },
+      {
+        "wq_ref": "WQ100701",
+        "url_path": "/WrittenQuestion/100701",
+        "tabled_str": "28/09/2026",
+        "answer_str": "05/10/2026",
+        "snippet": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from ...",
+        "member_name": "Darren Millar",
+        "member_area": "Clwyd",
+        "member_uid": "171",
+        "full_question": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from the visitor levy?",
+        "answered_by": "",
+        "answered_on": "",
         "party": "",
         "emailed": true
       }
