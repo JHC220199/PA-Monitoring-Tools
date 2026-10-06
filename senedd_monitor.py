@@ -114,6 +114,14 @@ KEYWORDS = [
     # Housing energy efficiency programmes
     "warm homes",
 ]
+
+# Questions containing any of these phrases are dropped, even if they matched a
+# keyword above. Use this to filter out off-topic hits from broad keywords
+# (e.g. "visitor levy" also catches questions about the performing arts).
+# Matching is case-insensitive against the full question text and snippet.
+EXCLUDE_TERMS = [
+    "performing arts",
+]
  
 SESSION = requests.Session()
 SESSION.headers.update({
@@ -145,6 +153,10 @@ def week_commencing(d: date) -> str:
  
 def buf_date(d: date, days: int) -> str:
     return (d + timedelta(days=days)).strftime("%d/%m/%Y")
+ 
+def is_excluded(q: dict) -> bool:
+    text = f"{q.get('full_question', '')} {q.get('snippet', '')}".lower()
+    return any(term in text for term in EXCLUDE_TERMS)
  
 # ── Data Fetching ──────────────────────────────────────────────────────────────
  
@@ -580,6 +592,16 @@ def main():
         if i % 10 == 0:
             print(f"  {i}/{len(existing)}", flush=True)
         time.sleep(0.2)
+ 
+    # ── Drop excluded (off-topic) questions ──
+    # Done after the full text is fetched and before any email is sent, so an
+    # excluded question is removed from the dashboard and never notified.
+    excluded = [ref for ref, q in existing.items() if is_excluded(q)]
+    for ref in excluded:
+        del existing[ref]
+    if excluded:
+        print(f"\n  ✂  Removed {len(excluded)} excluded question"
+              f"{'s' if len(excluded) != 1 else ''}: {', '.join(sorted(excluded))}")
  
     # ── Email notification for newly-identified questions ──
     # On the very first run after enabling notifications, mark all existing
