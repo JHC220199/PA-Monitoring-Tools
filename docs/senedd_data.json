@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T14:35:07.505185Z",
+  "generated": "2026-10-07T14:51:45.051370Z",
   "senedd_start": "2026-05-12",
   "total": 112,
   "questions": [
@@ -1099,6 +1099,21 @@
       "emailed": true
     },
     {
+      "wq_ref": "WQ100638",
+      "url_path": "/WrittenQuestion/100638",
+      "tabled_str": "21/09/2026",
+      "answer_str": "28/09/2026",
+      "snippet": "What public sector decarbonisation programmes and projects will be funded by the \u00a338.7 million the Cabinet Minister ...",
+      "member_name": "Darren Millar",
+      "member_area": "Clwyd",
+      "member_uid": "171",
+      "full_question": "What public sector decarbonisation programmes and projects will be funded by the \u00a338.7 million the Cabinet Minister agreed for 2026 and 2027, as set out in the Decision Report on 29 June 2026?",
+      "answered_by": "Cabinet Minister for Rural Resilience and Sustainability",
+      "answered_on": "01/10/2026",
+      "party": "",
+      "emailed": true
+    },
+    {
       "wq_ref": "WQ99186",
       "url_path": "/WrittenQuestion/99186",
       "tabled_str": "22/06/2026",
@@ -1183,8 +1198,8 @@
       "member_area": "Bangor Conwy M\u00f4n",
       "member_uid": "12153",
       "full_question": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable housing developments of reduced soil and inert waste disposal capacity in north Wales, including increased disposal and haulage costs?",
-      "answered_by": "",
-      "answered_on": "",
+      "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+      "answered_on": "30/09/2026",
       "party": "",
       "emailed": true
     },
@@ -1438,21 +1453,6 @@
       "member_area": "Bangor Conwy M\u00f4n",
       "member_uid": "12169",
       "full_question": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation from April 2027, and will the Cabinet Minister include commercial holiday properties restricted by planning condition to holiday use before the regulations are laid?",
-      "answered_by": "",
-      "answered_on": "",
-      "party": "",
-      "emailed": true
-    },
-    {
-      "wq_ref": "WQ100701",
-      "url_path": "/WrittenQuestion/100701",
-      "tabled_str": "28/09/2026",
-      "answer_str": "05/10/2026",
-      "snippet": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from ...",
-      "member_name": "Darren Millar",
-      "member_area": "Clwyd",
-      "member_uid": "171",
-      "full_question": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from the visitor levy?",
       "answered_by": "",
       "answered_on": "",
       "party": "",
@@ -3356,6 +3356,21 @@
         "emailed": true
       },
       {
+        "wq_ref": "WQ100638",
+        "url_path": "/WrittenQuestion/100638",
+        "tabled_str": "21/09/2026",
+        "answer_str": "28/09/2026",
+        "snippet": "What public sector decarbonisation programmes and projects will be funded by the \u00a338.7 million the Cabinet Minister ...",
+        "member_name": "Darren Millar",
+        "member_area": "Clwyd",
+        "member_uid": "171",
+        "full_question": "What public sector decarbonisation programmes and projects will be funded by the \u00a338.7 million the Cabinet Minister agreed for 2026 and 2027, as set out in the Decision Report on 29 June 2026?",
+        "answered_by": "Cabinet Minister for Rural Resilience and Sustainability",
+        "answered_on": "01/10/2026",
+        "party": "",
+        "emailed": true
+      },
+      {
         "wq_ref": "WQ100671",
         "url_path": "/WrittenQuestion/100671",
         "tabled_str": "23/09/2026",
@@ -3365,8 +3380,8 @@
         "member_area": "Bangor Conwy M\u00f4n",
         "member_uid": "12153",
         "full_question": "What assessment has the Cabinet Minister made of the impact on the viability and delivery of affordable housing developments of reduced soil and inert waste disposal capacity in north Wales, including increased disposal and haulage costs?",
-        "answered_by": "",
-        "answered_on": "",
+        "answered_by": "Cabinet Minister for Local Government, Housing and Planning",
+        "answered_on": "30/09/2026",
         "party": "",
         "emailed": true
       }
@@ -3382,21 +3397,6 @@
         "member_area": "Bangor Conwy M\u00f4n",
         "member_uid": "12169",
         "full_question": "Why is commercially let self-catering accommodation excluded from the permanent lower non-domestic rates multiplier for visitor accommodation from April 2027, and will the Cabinet Minister include commercial holiday properties restricted by planning condition to holiday use before the regulations are laid?",
-        "answered_by": "",
-        "answered_on": "",
-        "party": "",
-        "emailed": true
-      },
-      {
-        "wq_ref": "WQ100701",
-        "url_path": "/WrittenQuestion/100701",
-        "tabled_str": "28/09/2026",
-        "answer_str": "05/10/2026",
-        "snippet": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from ...",
-        "member_name": "Darren Millar",
-        "member_area": "Clwyd",
-        "member_uid": "171",
-        "full_question": "What consideration has the Welsh Government given to exempting those involved in the performing arts industry from the visitor levy?",
         "answered_by": "",
         "answered_on": "",
         "party": "",
