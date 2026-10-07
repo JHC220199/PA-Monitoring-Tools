@@ -1,45 +1,67 @@
 name: Update Parliamentary Questions
- 
+
 on:
   schedule:
     - cron: '0 8 * * 1-5'   # 9am BST (British Summer Time, late Mar–late Oct)
     - cron: '0 9 * * 1-5'   # 9am GMT (Greenwich Mean Time, late Oct–late Mar)
   workflow_dispatch:
- 
+
 permissions:
   contents: write
- 
+
 concurrency:
   group: parliament-monitor
   cancel-in-progress: false
- 
+
 jobs:
   update:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
- 
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
- 
+
       - name: Fetch and update questions
         env:
           PRS_EMAIL_WEBHOOK: ${{ secrets.PRS_EMAIL_WEBHOOK }}
         run: python parliament_monitor.py
- 
+
       - name: Commit and push updated data
         run: |
           git config user.name  "Parliament Monitor Bot"
           git config user.email "action@github.com"
           cp docs/data.json /tmp/data_updated.json
-          git fetch origin main
-          git reset --hard origin/main
-          cp /tmp/data_updated.json docs/data.json
-          git add docs/data.json
-          git commit -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
-          git push
- 
+
+          # Retry up to 5 times so a transient GitHub error (e.g. a 500 on push)
+          # does not fail the whole scheduled run. Each attempt re-syncs with the
+          # latest main, re-applies our updated data file, and only commits if
+          # something actually changed.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/data_updated.json docs/data.json
+            git add docs/data.json
+
+            if git diff --cached --quiet; then
+              echo "No changes to commit - nothing to push."
+              exit 0
+            fi
+
+            git commit -m "Update questions: $(date -u '+%d %b %Y %H:%M UTC')"
+
+            if git push; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+
+            echo "Push failed on attempt $attempt (likely a transient GitHub error). Retrying in 15s..."
+            sleep 15
+          done
+
+          echo "::error::Push still failing after 5 attempts."
+          exit 1
